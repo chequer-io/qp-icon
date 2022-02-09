@@ -18,13 +18,13 @@ const Template: ComponentStory<typeof IconPalette> = args => (
   <IconPalette {...args} />
 );
 
-export const Base = Template.bind({});
-Base.args = {
-  files: svgFiles.base.files,
-};
-
-
-export const Arrows = Template.bind({});
-Arrows.args = {
-  files: svgFiles.arrows.files,
-};
+// export const Base = Template.bind({});
+// Base.args = {
+//   files: svgFiles.base.files,
+// };
+//
+//
+// export const Arrows = Template.bind({});
+// Arrows.args = {
+//   files: svgFiles.arrows.files,
+// };
