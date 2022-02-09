@@ -2,17 +2,15 @@
   "name": "querypie-icon",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "collecting-svg-files": "npx ts-node scripts/collecting.ts",
+    "storybook": "npm run collecting-svg-files && start-storybook -p 6006",
+    "build-storybook": "npm run collecting-svg-files && build-storybook"
   },
   "dependencies": {
     "next": "12.0.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ts-node": "^10.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
@@ -26,6 +24,7 @@
     "eslint": "8.8.0",
     "eslint-config-next": "12.0.10",
     "eslint-plugin-storybook": "^0.5.6",
+    "prettier": "2.5.1",
     "typescript": "4.5.5"
   }
 }
