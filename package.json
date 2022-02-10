@@ -2,8 +2,8 @@
   "name": "querypie-icon",
   "private": true,
   "scripts": {
-    "collecting-svg-files": "npx ts-node scripts/collecting.ts",
-    "storybook": "npm run collecting-svg-files && start-storybook -p 6006",
+    "generate": "npx ts-node -r tsconfig-paths/register scripts/generate.ts",
+    "storybook": "npm run generate && start-storybook -p 6006",
     "build-storybook": "npm run collecting-svg-files && build-storybook"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
     "@storybook/react": "^6.4.18",
+    "@svgr/cli": "^6.2.1",
     "@types/node": "17.0.15",
     "@types/react": "17.0.39",
     "babel-loader": "^8.2.3",
@@ -26,6 +27,7 @@
     "eslint-config-next": "12.0.10",
     "eslint-plugin-storybook": "^0.5.6",
     "prettier": "2.5.1",
+    "tsconfig-paths": "^3.12.0",
     "typescript": "4.5.5"
   }
 }

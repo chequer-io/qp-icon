@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { IconPalette } from './IconPalette';
-import svgFiles from '../svg-files';
+// import svgFiles from '@svg/tree';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
