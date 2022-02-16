@@ -1,5 +1,5 @@
 import { types as t } from '@babel/core';
-import { Template } from '@svgr/babel-plugin-transform-svg-component';
+import type { Template } from '@svgr/babel-plugin-transform-svg-component';
 
 const template: Template = (variables, { tpl }) => {
   return tpl`
@@ -9,16 +9,19 @@ interface Props extends SVGProps<SVGSVGElement> {
   pathProps?: SVGProps<SVGPathElement>;
 }
 
-const ${variables.componentName.replace(/Svg/, '')} = ({ pathProps = {}, ...props }: Props) => (
+const ${variables.componentName.replace(
+    /Svg/,
+    '',
+  )} = ({ pathProps = {}, ...props }: Props) => (
   ${(() => {
     variables.jsx.children.forEach(c => {
-      if (c.type !== "JSXElement") return;
+      if (c.type !== 'JSXElement') return;
 
       const { name } = c.openingElement;
-      if (name.type === "JSXIdentifier" && name.name === 'path') {
-        c.openingElement.attributes.push(t.jsxSpreadAttribute(
-          t.identifier('pathProps')
-        ))
+      if (name.type === 'JSXIdentifier' && name.name === 'path') {
+        c.openingElement.attributes.push(
+          t.jsxSpreadAttribute(t.identifier('pathProps')),
+        );
       }
     });
 
@@ -27,12 +30,15 @@ const ${variables.componentName.replace(/Svg/, '')} = ({ pathProps = {}, ...prop
 );
 
 ${variables.exports.map(s => {
-    if (s.type === "ExportDefaultDeclaration" && s.declaration.type === "Identifier") {
-      s.declaration.name = s.declaration.name.replace(/Svg/, '');
-    }
-    return s;
-  })};
-`
-}
+  if (
+    s.type === 'ExportDefaultDeclaration' &&
+    s.declaration.type === 'Identifier'
+  ) {
+    s.declaration.name = s.declaration.name.replace(/Svg/, '');
+  }
+  return s;
+})};
+`;
+};
 
 module.exports = template;
