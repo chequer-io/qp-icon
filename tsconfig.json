@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,7 +20,8 @@
       "@scripts/*": ["scripts/*"],
       "@stories/*": ["stories/*"],
       "@components/*": ["components/*"],
-      "@svg/*": ["svg/*"]
+      "@svg/*": ["svg/*"],
+      "@globalStyles/*": ["globalStyles/*"]
     }
   },
   "ts-node": {
@@ -27,6 +29,6 @@
       "module": "CommonJS"
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "typings/**.d.ts"],
   "exclude": ["node_modules"]
 }

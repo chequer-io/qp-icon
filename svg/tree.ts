@@ -37,6 +37,43 @@ const tree = {
 					"path": "svg/arrows/ArrowUpSmall.svg",
 					"name": "ArrowUpSmall.svg",
 					"type": "file"
+				},
+				{
+					"path": "svg/arrows/twoDepths",
+					"name": "twoDepths",
+					"children": [
+						{
+							"path": "svg/arrows/twoDepths/ArrowDown.svg",
+							"name": "ArrowDown.svg",
+							"type": "file"
+						},
+						{
+							"path": "svg/arrows/twoDepths/ArrowDownSmall.svg",
+							"name": "ArrowDownSmall.svg",
+							"type": "file"
+						},
+						{
+							"path": "svg/arrows/twoDepths/ArrowLeft.svg",
+							"name": "ArrowLeft.svg",
+							"type": "file"
+						},
+						{
+							"path": "svg/arrows/twoDepths/ArrowRight.svg",
+							"name": "ArrowRight.svg",
+							"type": "file"
+						},
+						{
+							"path": "svg/arrows/twoDepths/ArrowUp.svg",
+							"name": "ArrowUp.svg",
+							"type": "file"
+						},
+						{
+							"path": "svg/arrows/twoDepths/ArrowUpSmall.svg",
+							"name": "ArrowUpSmall.svg",
+							"type": "file"
+						}
+					],
+					"type": "directory"
 				}
 			],
 			"type": "directory"
