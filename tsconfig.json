@@ -20,6 +20,7 @@
       "@scripts/*": ["scripts/*"],
       "@stories/*": ["stories/*"],
       "@components/*": ["components/*"],
+      "@components": ["components"],
       "@svg/*": ["svg/*"],
       "@globalStyles/*": ["globalStyles/*"]
     }
