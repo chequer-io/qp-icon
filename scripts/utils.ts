@@ -1,7 +1,8 @@
-import { existsSync, mkdirSync } from 'fs';
+import { existsSync, mkdir, mkdirSync } from 'fs';
 import { readFile, writeFile } from 'fs/promises';
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
 import { transform } from '@svgr/core';
+import path from 'path';
 
 export const checkOrCreateDir = async (dirPath: string | string[]) => {
   const checkOrCreate = (path: string) => {
@@ -22,14 +23,23 @@ export const checkOrCreateDir = async (dirPath: string | string[]) => {
 };
 
 export const makeFile = async (filename: string, body: string) => {
-  const data = new Uint8Array(Buffer.from(body));
+  const filePath = path.join(process.cwd(), filename);
 
   try {
-    await writeFile(filename, data);
-  } catch (error) {
-    throw new Error(`Error while generating the file [${filename}]`);
+    mkdir(path.dirname(filePath), { recursive: true }, () => {
+      writeFile(filePath, body);
+    });
+  } catch (err) {
+    console.error(err);
   }
 };
+
+export const toPascalCase = (name: string) =>
+  name
+    .replace(/[a-zA-Z0-9]+/g, w => {
+      return w[0].toUpperCase() + w.slice(1).toLowerCase();
+    })
+    .replace(/[-_]/, '');
 
 export const getTreeFileBody = (jsonTree: string) =>
   `
@@ -38,63 +48,84 @@ const tree = ${jsonTree};
 export default tree;
   `.trim() + '\r\n';
 
-type CreateSvgTreeProps = {
-  targetDir: string;
+type BuildReactComponentsBySvgTreeProps = {
+  svgDir: string;
+  componentDir: string;
   treeFilename: string;
 };
-export const createSvgTree = async ({
-  targetDir,
+export const buildReactComponentsBySvgTree = async ({
+  svgDir,
+  componentDir,
   treeFilename,
-}: CreateSvgTreeProps) => {
-  await checkOrCreateDir(targetDir);
-
-  const svgTree = dirTree(targetDir, {
-    extensions: /\.svg/,
-    attributes: ['type'],
-  });
-  const svgJsonTree = JSON.stringify(svgTree, null, '\t');
-
-  await makeFile(`${targetDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
-};
-
-type ComponentsImportsMap = {
-  [dirPath: string]: {
-    name: string;
-    componentNames: string[];
+}: BuildReactComponentsBySvgTreeProps) => {
+  const toComponentPath = (svgPath: string) => {
+    return svgPath
+      .replace(new RegExp(`^${svgDir}`), componentDir)
+      .replace(/(?<=\/?)([\w-]+)\.svg$/, (_, basename: string) => {
+        return `${toPascalCase(basename)}.tsx`;
+      });
   };
-};
-type BuildReactComponentsFromSvgFilesProps = {
-  sourceDir: string;
-  targetDir: string;
-  treeFilename: string;
-};
-export const buildReactComponentsFromSvgFiles = async ({
-  sourceDir,
-  targetDir,
-  treeFilename,
-}: BuildReactComponentsFromSvgFilesProps): Promise<ComponentsImportsMap> => {
-  const componentImportsMap: ComponentsImportsMap = {};
 
   const onEachFile: DirectoryTreeCallback = async (item, path) => {
     try {
-      const svgPath = path
-        .replace(targetDir, sourceDir)
-        .replace(/\.tsx$/, '.svg');
-      const svgCode = await readFile(svgPath, { encoding: 'utf8', flag: 'r' });
+      const svgCode = await readFile(path, { encoding: 'utf8', flag: 'r' });
 
+      const componentName = toPascalCase(item.name.replace(/\.svg$/, ''));
       const componentCode = await transform(
         svgCode,
         {
           icon: true,
           typescript: true,
+          index: true,
+          plugins: ['@svgr/plugin-jsx', '@svgr/plugin-prettier'],
         },
-        { componentName: item.name.replace(/\.tsx$/, '') },
+        { componentName },
       );
 
-      await makeFile(path, componentCode);
+      await makeFile(toComponentPath(path), componentCode);
     } catch (err) {
       console.error(err);
     }
+  };
+
+  await checkOrCreateDir([componentDir, svgDir]);
+  const svgTree = dirTree(
+    svgDir,
+    {
+      extensions: /\.svg/,
+      attributes: ['type'],
+    },
+    onEachFile,
+  );
+  const svgJsonTree = JSON.stringify(svgTree, null, '\t');
+
+  await makeFile(`${svgDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
+};
+
+type ComponentNames = string[];
+type ComponentImportsMap = {
+  [dirName: string]: ComponentNames;
+};
+type ComponentsExportPhrases = string[];
+type GetComponentModuleInfoByComponentTreeProps = {
+  componentDir: string;
+  treeFilename: string;
+};
+export const getComponentModuleInfoByComponentTree = async ({
+  componentDir,
+  treeFilename,
+}: GetComponentModuleInfoByComponentTreeProps): Promise<{
+  importsMap: ComponentImportsMap;
+  exportPhrases: ComponentsExportPhrases;
+}> => {
+  const importsMap: ComponentImportsMap = {};
+  const exportPhrases: ComponentsExportPhrases = [];
+
+  const onEachFile: DirectoryTreeCallback = (item, path) => {
+    const componentName = item.name.replace(/\.tsx$/, '');
+    const componentPath = `@${path.replace(/\.tsx$/, '')}`;
+    const phrase = `export { default as ${componentName} } from '${componentPath}';`;
+    exportPhrases.push(phrase);
   };
 
   const onEachDirectory: DirectoryTreeCallback = (item, path) => {
@@ -103,15 +134,13 @@ export const buildReactComponentsFromSvgFiles = async ({
 
     if (!hasChildFile) return;
 
-    const isRootDir = item.name === targetDir;
-    componentImportsMap[path] = {
-      name: isRootDir ? 'root' : item.name,
-      componentNames: childFiles.map(file => file.name.replace('.tsx', '')),
-    };
+    const isRootDir = item.name === componentDir;
+    const dirName = isRootDir ? 'root' : item.name;
+    importsMap[dirName] = childFiles.map(file => file.name.replace('.tsx', ''));
   };
 
   const componentsTree = dirTree(
-    targetDir,
+    componentDir,
     {
       extensions: /\.tsx/,
       attributes: ['type'],
@@ -121,42 +150,57 @@ export const buildReactComponentsFromSvgFiles = async ({
   );
   const componentsJsonTree = JSON.stringify(componentsTree, null, '\t');
   await makeFile(
-    `${targetDir}/${treeFilename}`,
+    `${componentDir}/${treeFilename}`,
     getTreeFileBody(componentsJsonTree),
   );
 
-  return componentImportsMap;
+  return {
+    importsMap,
+    exportPhrases,
+  };
+};
+
+type CreateComponentIndexModuleProps = {
+  componentDir: string;
+  exportPhrases: ComponentsExportPhrases;
+};
+export const createComponentIndexModule = async ({
+  componentDir,
+  exportPhrases,
+}: CreateComponentIndexModuleProps) => {
+  const fileBody = exportPhrases.reduce((acc, curr) => {
+    return acc + curr + '\r\n';
+  }, '');
+  await makeFile(`${componentDir}/index.ts`, fileBody);
 };
 
 type CreateStoryProps = {
-  targetDir: string;
-  componentImportsMap: ComponentsImportsMap;
-  storyFilename?: string;
+  componentDir: string;
+  storyDir: string;
+  importsMap: ComponentImportsMap;
 };
 export const createStory = async ({
-  targetDir,
-  componentImportsMap,
+  componentDir,
+  storyDir,
+  importsMap,
 }: CreateStoryProps) => {
-  const importsMapArr = Object.entries(componentImportsMap);
+  const importsMapArr = Object.entries(importsMap);
+  const willImportedComponents = importsMapArr
+    .flatMap(([, componentNames]) => componentNames)
+    .reverse()
+    .join(', ');
 
   const fileBody =
     `
 import React from 'react';
 import { getStoryBase, paletteFactory } from '@stories/StoryBase';
-${importsMapArr.reduceRight((acc, [dirPath, { componentNames }]) => {
-  const importedComponents = componentNames.join(', ');
-  const importLine = `import { ${importedComponents} } from '@${dirPath}'`;
-  return acc + importLine + '\r\n';
-}, '')}
+import { ${willImportedComponents} } from '@${componentDir}';
+
 const base = getStoryBase();
 export default base;
 
-${importsMapArr.reduce((acc, [_, { name, componentNames }]) => {
-  const pascalCaseName = name
-    .replace(/[a-zA-Z0-9]+/g, w => {
-      return w[0].toUpperCase() + w.slice(1).toLowerCase();
-    })
-    .replace(/[-_]/, '');
+${importsMapArr.reduceRight((acc, [dirName, componentNames]) => {
+  const pascalCaseName = toPascalCase(dirName);
   const story = `
 export const ${pascalCaseName} = paletteFactory();
 ${pascalCaseName}.args = {
@@ -168,5 +212,5 @@ ${pascalCaseName}.args = {
 }, '')}
   `.trim() + '\r\n';
 
-  await makeFile(`${targetDir}/Icons.stories.tsx`, fileBody);
+  await makeFile(`${storyDir}/Icons.stories.tsx`, fileBody);
 };

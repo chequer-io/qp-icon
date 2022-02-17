@@ -1,7 +1,8 @@
 import {
-  buildReactComponentsFromSvgFiles,
+  buildReactComponentsBySvgTree,
+  getComponentModuleInfoByComponentTree,
   createStory,
-  createSvgTree,
+  createComponentIndexModule,
 } from '@scripts/utils';
 
 // relative to package.json
@@ -12,23 +13,31 @@ const TREE_FILENAME = `tree.ts`;
 // const SVGR_TEMPLATE_FILENAME = 'scripts/svgrTemplate';
 
 const generate = async () => {
-  console.log(`🚚 Creating [${TREE_FILENAME}] in [${SVG_DIR}/] ...`);
-  await createSvgTree({
-    targetDir: SVG_DIR,
+  console.log(`🚚 Building react components ...`);
+  await buildReactComponentsBySvgTree({
+    svgDir: SVG_DIR,
+    componentDir: COMPONENT_DIR,
     treeFilename: TREE_FILENAME,
   });
 
-  console.log(`🚚 Extracting react components from svg files ...`);
-  const componentImportsMap = await buildReactComponentsFromSvgFiles({
-    sourceDir: SVG_DIR,
-    targetDir: COMPONENT_DIR,
-    treeFilename: TREE_FILENAME,
+  console.log(`🚚 Getting component imports map ...`);
+  const { importsMap, exportPhrases } =
+    await getComponentModuleInfoByComponentTree({
+      componentDir: COMPONENT_DIR,
+      treeFilename: TREE_FILENAME,
+    });
+
+  console.log(`🚚 Creating component's index module ...`);
+  await createComponentIndexModule({
+    componentDir: COMPONENT_DIR,
+    exportPhrases,
   });
 
-  console.log(`🚚 Creating stories ...`);
+  console.log(`🚚 Creating story ...`);
   await createStory({
-    targetDir: STORY_DIR,
-    componentImportsMap,
+    componentDir: COMPONENT_DIR,
+    storyDir: STORY_DIR,
+    importsMap,
   });
 };
 
