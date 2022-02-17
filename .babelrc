@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    [
+      "@svgr/babel-plugin-replace-jsx-attribute-value",
+      {
+        "values": [
+          { "value": "Svg", "newValue": "" }
+        ]
+      }
+    ]
+  ]
+}

@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync } from 'fs';
-import { writeFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
-import { execSync } from 'child_process';
+import { transform } from '@svgr/core';
 
 export const checkOrCreateDir = async (dirPath: string | string[]) => {
   const checkOrCreate = (path: string) => {
@@ -57,55 +57,45 @@ export const createSvgTree = async ({
   await makeFile(`${targetDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
 };
 
-type ExtractReactComponentsFromSvgFilesProps = {
-  sourceDir: string;
-  targetDir: string;
-  svgrTemplateFilename?: string;
-};
-export const extractReactComponentsFromSvgFiles = async ({
-  sourceDir,
-  targetDir,
-  svgrTemplateFilename,
-}: ExtractReactComponentsFromSvgFilesProps) => {
-  const svgr = async (svgrOption = '') => {
-    await checkOrCreateDir([sourceDir, targetDir]);
-    execSync(
-      `
-npx @svgr/cli \
---icon \
---typescript \
-${svgrOption} \
---out-dir ${targetDir} -- ${sourceDir} \
-  `.trim(),
-    );
-  };
-
-  if (!svgrTemplateFilename) {
-    await svgr();
-    return;
-  }
-
-  const templateNameExceptExt = svgrTemplateFilename.replace(/\.ts$/, '');
-  execSync(`tsc ${templateNameExceptExt}.ts`);
-  await svgr(`--template ${templateNameExceptExt}.js`);
-  execSync(`rm ${templateNameExceptExt}.js`);
-};
-
 type ComponentsImportsMap = {
   [dirPath: string]: {
     name: string;
     componentNames: string[];
   };
 };
-type CreateComponentTreeProps = {
+type BuildReactComponentsFromSvgFilesProps = {
+  sourceDir: string;
   targetDir: string;
   treeFilename: string;
 };
-export const createComponentTree = async ({
+export const buildReactComponentsFromSvgFiles = async ({
+  sourceDir,
   targetDir,
   treeFilename,
-}: CreateComponentTreeProps): Promise<ComponentsImportsMap> => {
+}: BuildReactComponentsFromSvgFilesProps): Promise<ComponentsImportsMap> => {
   const componentImportsMap: ComponentsImportsMap = {};
+
+  const onEachFile: DirectoryTreeCallback = async (item, path) => {
+    try {
+      const svgPath = path
+        .replace(targetDir, sourceDir)
+        .replace(/\.tsx$/, '.svg');
+      const svgCode = await readFile(svgPath, { encoding: 'utf8', flag: 'r' });
+
+      const componentCode = await transform(
+        svgCode,
+        {
+          icon: true,
+          typescript: true,
+        },
+        { componentName: item.name.replace(/\.tsx$/, '') },
+      );
+
+      await makeFile(path, componentCode);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const onEachDirectory: DirectoryTreeCallback = (item, path) => {
     const childFiles = item.children?.filter(child => child.type === 'file');
@@ -126,7 +116,7 @@ export const createComponentTree = async ({
       extensions: /\.tsx/,
       attributes: ['type'],
     },
-    undefined,
+    onEachFile,
     onEachDirectory,
   );
   const componentsJsonTree = JSON.stringify(componentsTree, null, '\t');

@@ -1,8 +1,7 @@
 import {
-  createComponentTree,
+  buildReactComponentsFromSvgFiles,
   createStory,
   createSvgTree,
-  extractReactComponentsFromSvgFiles,
 } from '@scripts/utils';
 
 // relative to package.json
@@ -10,7 +9,7 @@ const SVG_DIR = 'svg';
 const COMPONENT_DIR = 'components';
 const STORY_DIR = 'stories';
 const TREE_FILENAME = `tree.ts`;
-const SVGR_TEMPLATE_FILENAME = 'scripts/svgrTemplate';
+// const SVGR_TEMPLATE_FILENAME = 'scripts/svgrTemplate';
 
 const generate = async () => {
   console.log(`🚚 Creating [${TREE_FILENAME}] in [${SVG_DIR}/] ...`);
@@ -20,14 +19,8 @@ const generate = async () => {
   });
 
   console.log(`🚚 Extracting react components from svg files ...`);
-  await extractReactComponentsFromSvgFiles({
+  const componentImportsMap = await buildReactComponentsFromSvgFiles({
     sourceDir: SVG_DIR,
-    targetDir: COMPONENT_DIR,
-    svgrTemplateFilename: SVGR_TEMPLATE_FILENAME,
-  });
-
-  console.log(`🚚 Creating [${TREE_FILENAME}] in [${COMPONENT_DIR}/] ...`);
-  const componentImportsMap = await createComponentTree({
     targetDir: COMPONENT_DIR,
     treeFilename: TREE_FILENAME,
   });
