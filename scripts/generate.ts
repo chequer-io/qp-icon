@@ -1,16 +1,13 @@
-import {
-  buildReactComponentsBySvgTree,
-  getComponentModuleInfoByComponentTree,
-  createStory,
-  createComponentIndexModule,
-} from '@scripts/utils';
-
 // relative to package.json
+import buildReactComponentsBySvgTree from '@scripts/buildReactComponentsBySvgTree';
+import getComponentModuleInfoByComponentTree from '@scripts/getComponentModuleInfoByComponentTree';
+import createComponentIndexModule from '@scripts/createComponentIndexModule';
+import createStory from '@scripts/createStory';
+
 const SVG_DIR = 'svg';
 const COMPONENT_DIR = 'components';
 const STORY_DIR = 'stories';
 const TREE_FILENAME = `tree.ts`;
-// const SVGR_TEMPLATE_FILENAME = 'scripts/svgrTemplate';
 
 const generate = async () => {
   console.log(`🚚 Building react components ...`);
