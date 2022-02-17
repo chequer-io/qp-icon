@@ -132,7 +132,7 @@ export const createStory = async ({
     `
 import React from 'react';
 import { getStoryBase, paletteFactory } from '@stories/StoryBase';
-${importsMapArr.reduce((acc, [dirPath, { componentNames }]) => {
+${importsMapArr.reduceRight((acc, [dirPath, { componentNames }]) => {
   const importedComponents = componentNames.join(', ');
   const importLine = `import { ${importedComponents} } from '@${dirPath}'`;
   return acc + importLine + '\r\n';
