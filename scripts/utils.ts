@@ -2,13 +2,6 @@ import { existsSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
 import { execSync } from 'child_process';
-import {
-  COMPONENT_DIR,
-  STORY_DIR,
-  SVG_DIR,
-  SVR_TEMPLATE_FILENAME,
-  TREE_FILENAME,
-} from '@scripts/generate';
 
 export const checkDir = async (dirPath: string) => {
   try {
@@ -30,34 +23,49 @@ export const makeFile = async (filename: string, body: string) => {
 
 export const getTreeFileBody = (jsonTree: string) =>
   `
-// === made by querypie front-end team
 const tree = ${jsonTree};
 
 export default tree;
-`.trim() + '\r\n';
+  `.trim() + '\r\n';
 
-export const createSvgTree = async () => {
-  const svgTree = dirTree(SVG_DIR, {
+type CreateSvgTreeProps = {
+  targetDir: string;
+  treeFilename: string;
+};
+export const createSvgTree = async ({
+  targetDir,
+  treeFilename,
+}: CreateSvgTreeProps) => {
+  const svgTree = dirTree(targetDir, {
     extensions: /\.svg/,
     attributes: ['type'],
   });
   const svgJsonTree = JSON.stringify(svgTree, null, '\t');
-  await makeFile(`${SVG_DIR}/${TREE_FILENAME}`, getTreeFileBody(svgJsonTree));
+  await makeFile(`${targetDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
 };
 
-export const extractReactComponentsFromSvgFiles = () => {
-  const TEMPLATE_EXCEPT_EXT = SVR_TEMPLATE_FILENAME.replace(/\.tsx$/, '');
+type ExtractReactComponentsFromSvgFilesProps = {
+  sourceDir: string;
+  targetDir: string;
+  svgrTemplateFilename: string;
+};
+export const extractReactComponentsFromSvgFiles = ({
+  sourceDir,
+  targetDir,
+  svgrTemplateFilename,
+}: ExtractReactComponentsFromSvgFilesProps) => {
+  const filenameExceptExtension = svgrTemplateFilename.replace(/\.tsx$/, '');
   execSync(
     `
-tsc ${TEMPLATE_EXCEPT_EXT}.ts \
+tsc ${filenameExceptExtension}.ts \
 && \
 npx @svgr/cli \
 --icon \
 --typescript \
---template ${TEMPLATE_EXCEPT_EXT}.js \
---out-dir ${COMPONENT_DIR} -- ${SVG_DIR} \
+--template ${filenameExceptExtension}.js \
+--out-dir ${sourceDir} -- ${targetDir} \
 && \
-rm ${TEMPLATE_EXCEPT_EXT}.js
+rm ${filenameExceptExtension}.js
   `.trim(),
   );
 };
@@ -68,7 +76,14 @@ type ComponentsImportsMap = {
     componentNames: string[];
   };
 };
-export const createComponentTree = async (): Promise<ComponentsImportsMap> => {
+type CreateComponentTreeProps = {
+  targetDir: string;
+  treeFilename: string;
+};
+export const createComponentTree = async ({
+  targetDir,
+  treeFilename,
+}: CreateComponentTreeProps): Promise<ComponentsImportsMap> => {
   const componentImportsMap: ComponentsImportsMap = {};
 
   const onEachDirectory: DirectoryTreeCallback = (item, path) => {
@@ -77,7 +92,7 @@ export const createComponentTree = async (): Promise<ComponentsImportsMap> => {
 
     if (!hasChildFile) return;
 
-    const isRootDir = item.name === COMPONENT_DIR;
+    const isRootDir = item.name === targetDir;
     componentImportsMap[path] = {
       name: isRootDir ? 'root' : item.name,
       componentNames: childFiles.map(file => file.name.replace('.tsx', '')),
@@ -85,7 +100,7 @@ export const createComponentTree = async (): Promise<ComponentsImportsMap> => {
   };
 
   const componentsTree = dirTree(
-    COMPONENT_DIR,
+    targetDir,
     {
       extensions: /\.tsx/,
       attributes: ['type'],
@@ -95,16 +110,22 @@ export const createComponentTree = async (): Promise<ComponentsImportsMap> => {
   );
   const componentsJsonTree = JSON.stringify(componentsTree, null, '\t');
   await makeFile(
-    `${COMPONENT_DIR}/${TREE_FILENAME}`,
+    `${targetDir}/${treeFilename}`,
     getTreeFileBody(componentsJsonTree),
   );
 
   return componentImportsMap;
 };
 
-export const createStory = async (
-  componentImportsMap: ComponentsImportsMap,
-) => {
+type CreateStoryProps = {
+  targetDir: string;
+  componentImportsMap: ComponentsImportsMap;
+  storyFilename?: string;
+};
+export const createStory = async ({
+  targetDir,
+  componentImportsMap,
+}: CreateStoryProps) => {
   const importsMapArr = Object.entries(componentImportsMap);
 
   const fileBody =
@@ -136,5 +157,5 @@ ${pascalCaseName}.args = {
 }, '')}
   `.trim() + '\r\n';
 
-  await makeFile(`${STORY_DIR}/Icon.stories.tsx`, fileBody);
+  await makeFile(`${targetDir}/Icons.stories.tsx`, fileBody);
 };

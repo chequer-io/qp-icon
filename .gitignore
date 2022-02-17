@@ -15,7 +15,7 @@
 # production
 /build
 /components
-/stories/Icon.stories.tsx
+/stories/Icons.stories.tsx
 
 # misc
 .DS_Store
