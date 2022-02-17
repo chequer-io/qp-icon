@@ -24,4 +24,4 @@ const fn = async (src: string) => {
   }
 };
 
-fn(path.resolve('svg/a.svg'));
+fn(path.resolve('icons/a.icons'));

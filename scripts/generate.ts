@@ -4,13 +4,13 @@ import getComponentModuleInfoByComponentTree from '@scripts/getComponentModuleIn
 import createComponentIndexModule from '@scripts/createComponentIndexModule';
 import createStory from '@scripts/createStory';
 
-const SVG_DIR = 'svg';
+const SVG_DIR = 'icons';
 const COMPONENT_DIR = 'components';
 const STORY_DIR = 'stories';
 const TREE_FILENAME = `tree.ts`;
 
 const generate = async () => {
-  console.log(`🚚 Building react components ...`);
+  console.log(`🚚 Building react components from svg files...`);
   await buildReactComponentsBySvgTree({
     svgDir: SVG_DIR,
     componentDir: COMPONENT_DIR,
