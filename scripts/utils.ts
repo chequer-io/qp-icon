@@ -1,13 +1,23 @@
-import { existsSync } from 'fs';
+import { existsSync, mkdirSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
 import { execSync } from 'child_process';
 
-export const checkDir = async (dirPath: string) => {
+export const checkOrCreateDir = async (dirPath: string | string[]) => {
+  const checkOrCreate = (path: string) => {
+    if (!existsSync(path)) {
+      mkdirSync(path);
+    }
+  };
+
   try {
-    existsSync(dirPath);
+    if (Array.isArray(dirPath)) {
+      dirPath.forEach(v => checkOrCreate(v));
+      return;
+    }
+    checkOrCreate(dirPath);
   } catch (error) {
-    throw new Error(`directory [${dirPath}] is not exist`);
+    throw new Error(`Error while checkOrCreateDir()`);
   }
 };
 
@@ -36,38 +46,49 @@ export const createSvgTree = async ({
   targetDir,
   treeFilename,
 }: CreateSvgTreeProps) => {
+  await checkOrCreateDir(targetDir);
+
   const svgTree = dirTree(targetDir, {
     extensions: /\.svg/,
     attributes: ['type'],
   });
   const svgJsonTree = JSON.stringify(svgTree, null, '\t');
+
   await makeFile(`${targetDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
 };
 
 type ExtractReactComponentsFromSvgFilesProps = {
   sourceDir: string;
   targetDir: string;
-  svgrTemplateFilename: string;
+  svgrTemplateFilename?: string;
 };
-export const extractReactComponentsFromSvgFiles = ({
+export const extractReactComponentsFromSvgFiles = async ({
   sourceDir,
   targetDir,
   svgrTemplateFilename,
 }: ExtractReactComponentsFromSvgFilesProps) => {
-  const filenameExceptExtension = svgrTemplateFilename.replace(/\.tsx$/, '');
-  execSync(
-    `
-tsc ${filenameExceptExtension}.ts \
-&& \
+  const svgr = async (svgrOption = '') => {
+    await checkOrCreateDir([sourceDir, targetDir]);
+    execSync(
+      `
 npx @svgr/cli \
 --icon \
 --typescript \
---template ${filenameExceptExtension}.js \
---out-dir ${sourceDir} -- ${targetDir} \
-&& \
-rm ${filenameExceptExtension}.js
+${svgrOption} \
+--out-dir ${targetDir} -- ${sourceDir} \
   `.trim(),
-  );
+    );
+  };
+
+  if (!svgrTemplateFilename) {
+    await svgr();
+    return;
+  }
+
+  const templateNameExceptExt = svgrTemplateFilename.replace(/\.ts$/, '');
+  execSync(`tsc ${templateNameExceptExt}.ts`);
+  await svgr(`--template ${templateNameExceptExt}.js`);
+  execSync(`rm ${templateNameExceptExt}.js`);
 };
 
 type ComponentsImportsMap = {
