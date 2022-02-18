@@ -1,4 +1,4 @@
-import type { FC, ReactNode, SVGProps } from 'react';
+import type { FC, SVGProps } from 'react';
 
 type SVGElementProps = SVGProps<SVGSVGElement>;
 
@@ -32,9 +32,7 @@ type FilteredSvgElementProps = Omit<
 declare global {
   declare interface CustomizedSVGComponentProps
     extends CustomizedSvgProps,
-      FilteredSvgElementProps {
-    children?: ReactNode;
-  }
+      FilteredSvgElementProps {}
   declare type CustomizedSVGComponent = FC<CustomizedSVGComponentProps>;
 
   declare interface CommonSVGComponentProps
