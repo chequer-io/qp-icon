@@ -1,12 +1,13 @@
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
 import { readFile } from 'fs/promises';
+import { Builder, parseStringPromise } from 'xml2js';
+import { basename } from 'path';
 import {
   checkOrCreateDir,
   getTreeFileBody,
   makeFile,
   toPascalCase,
 } from '@scripts/utils';
-import { Builder, parseStringPromise } from 'xml2js';
 
 type Props = {
   svgDir: string;
@@ -21,9 +22,14 @@ export default async function buildReactComponentsBySvgTree({
   const onEachFile: DirectoryTreeCallback = async (item, path) => {
     try {
       await buildComponentFromSvg({
-        svgPath: path,
-        svgDir,
-        componentDir,
+        svg: {
+          path,
+          dirname: svgDir,
+        },
+        component: {
+          name: toPascalCase(basename(item.name, '.svg')),
+          dirname: componentDir,
+        },
       });
     } catch (err) {
       console.error(err);
@@ -45,15 +51,19 @@ export default async function buildReactComponentsBySvgTree({
 }
 
 async function buildComponentFromSvg({
-  svgPath,
-  svgDir = svgPath.split('/')[0],
-  componentDir,
+  svg,
+  component,
 }: {
-  svgPath: string;
-  svgDir?: string;
-  componentDir: string;
+  svg: {
+    path: string;
+    dirname: string;
+  };
+  component: {
+    name: string;
+    dirname: string;
+  };
 }) {
-  const svgCode = await readFile(svgPath, { encoding: 'utf8', flag: 'r' });
+  const svgCode = await readFile(svg.path, { encoding: 'utf8', flag: 'r' });
   const svgJson = (await parseStringPromise(svgCode)).svg;
 
   const styledJson = {
@@ -73,7 +83,7 @@ async function buildComponentFromSvg({
 import React from 'react';
 import SvgComponent from '@common/SvgComponent';
 
-const A: CustomizedSVGComponent = ({ ...props }) => (
+const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
 ${newSvgCodeXml
   .split('\n')
   .slice(1)
@@ -82,11 +92,11 @@ ${newSvgCodeXml
   .replace(/^(?=.)/gm, '  ')}
 );
 
-export default A;
+export default ${component.name};
       `.trim();
 
-  const componentPath = svgPath
-    .replace(new RegExp(`^${svgDir}`), componentDir)
+  const componentPath = svg.path
+    .replace(new RegExp(`(?<=/?)${svg.dirname}(?=/)`), component.dirname)
     .replace(/(?<=\/?)([\w-]+)\.svg$/, (_, basename: string) => {
       return `${toPascalCase(basename)}.tsx`;
     });
