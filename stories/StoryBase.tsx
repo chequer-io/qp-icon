@@ -1,11 +1,15 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import styles from './StoryBase.module.css';
+import { CSSProperties } from 'react';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
+  // iconColor: CSSProperties['color'];
+  // backgroundColor: CSSProperties['backgroundColor'];
 }
 
-const iconSizes: CustomizedSVGComponentProps['size'][] = [
+type Size = CustomizedSVGComponentProps['size'];
+const iconSizes: NotUndefined<Size>[] = [
   'tiny',
   'small',
   'regular',
@@ -17,11 +21,13 @@ export const Palette = ({ icons }: PaletteProps) => (
   <section className={styles.Palette}>
     {icons.map(Icon => (
       <article key={Icon.displayName} className={styles['icon-box']}>
-        <div className={styles['icon-box__icons-wrapper']}>
+        <section className={styles['icon-box__icons-wrapper']}>
           {iconSizes.map(size => (
-            <Icon key={`${Icon.displayName}--${size}`} size={size} />
+            <section title={size} key={`${Icon.displayName}--${size}`}>
+              <Icon size={size} />
+            </section>
           ))}
-        </div>
+        </section>
         <p className={styles['icon-box__label']}>{Icon.displayName}</p>
       </article>
     ))}
@@ -34,7 +40,22 @@ export const paletteFactory = (): ComponentStory<typeof Palette> => args =>
 const defaultMeta: ComponentMeta<typeof Palette> = {
   title: `querypie-icon`,
   component: Palette,
-  argTypes: {},
+  argTypes: {
+    icons: {
+      table: {
+        disable: true,
+      },
+    },
+    // iconColor: {
+    //   name: '아이콘 색상',
+    //   control: 'color',
+    // },
+    // backgroundColor: {
+    //   name: '배경 색상',
+    //   description: '배경 색상',
+    //   control: 'color',
+    // },
+  },
 };
 export const getStoryBase = (
   appendMeta: ComponentMeta<typeof Palette> = {},
