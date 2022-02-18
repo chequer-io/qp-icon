@@ -6,7 +6,7 @@ import {
   makeFile,
   toPascalCase,
 } from '@scripts/utils';
-import { transform } from '@svgr/core';
+import { Builder, parseStringPromise } from 'xml2js';
 
 type Props = {
   svgDir: string;
@@ -18,31 +18,13 @@ export default async function buildReactComponentsBySvgTree({
   componentDir,
   treeFilename,
 }: Props) {
-  const toComponentPath = (svgPath: string) => {
-    return svgPath
-      .replace(new RegExp(`^${svgDir}`), componentDir)
-      .replace(/(?<=\/?)([\w-]+)\.svg$/, (_, basename: string) => {
-        return `${toPascalCase(basename)}.tsx`;
-      });
-  };
-
   const onEachFile: DirectoryTreeCallback = async (item, path) => {
     try {
-      const svgCode = await readFile(path, { encoding: 'utf8', flag: 'r' });
-
-      const componentName = toPascalCase(item.name.replace(/\.svg$/, ''));
-      const componentCode = await transform(
-        svgCode,
-        {
-          icon: true,
-          typescript: true,
-          index: true,
-          plugins: ['@svgr/plugin-jsx', '@svgr/plugin-prettier'],
-        },
-        { componentName },
-      );
-
-      await makeFile(toComponentPath(path), componentCode);
+      await buildComponentFromSvg({
+        svgPath: path,
+        svgDir,
+        componentDir,
+      });
     } catch (err) {
       console.error(err);
     }
@@ -60,4 +42,54 @@ export default async function buildReactComponentsBySvgTree({
   const svgJsonTree = JSON.stringify(svgTree, null, '\t');
 
   await makeFile(`${svgDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
+}
+
+async function buildComponentFromSvg({
+  svgPath,
+  svgDir = svgPath.split('/')[0],
+  componentDir,
+}: {
+  svgPath: string;
+  svgDir?: string;
+  componentDir: string;
+}) {
+  const svgCode = await readFile(svgPath, { encoding: 'utf8', flag: 'r' });
+  const svgJson = (await parseStringPromise(svgCode)).svg;
+
+  const styledJson = {
+    SvgComponent: {
+      ...svgJson,
+      $: {
+        viewBox: svgJson['$']['viewBox'],
+        temp: 'x',
+      },
+    },
+  };
+
+  const xmlBuilder = new Builder();
+  const newSvgCodeXml = xmlBuilder.buildObject(styledJson);
+
+  const componentCode = `
+import React from 'react';
+import SvgComponent from '@common/SvgComponent';
+
+const A: CustomizedSVGComponent = ({ ...props }) => (
+${newSvgCodeXml
+  .split('\n')
+  .slice(1)
+  .join('\n')
+  .replace('temp="x"', '{...props}') //
+  .replace(/^(?=.)/gm, '  ')}
+);
+
+export default A;
+      `.trim();
+
+  const componentPath = svgPath
+    .replace(new RegExp(`^${svgDir}`), componentDir)
+    .replace(/(?<=\/?)([\w-]+)\.svg$/, (_, basename: string) => {
+      return `${toPascalCase(basename)}.tsx`;
+    });
+
+  await makeFile(componentPath, componentCode);
 }

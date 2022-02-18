@@ -17,12 +17,13 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./*"],
+      "@common/*": ["common/*"],
       "@scripts/*": ["scripts/*"],
       "@stories/*": ["stories/*"],
       "@components/*": ["components/*"],
       "@components": ["components"],
-      "@svg/*": ["svg/*"],
-      "@globalStyles/*": ["globalStyles/*"]
+      "@icons/*": ["icons/*"]
     }
   },
   "ts-node": {

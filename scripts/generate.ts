@@ -1,13 +1,15 @@
-// relative to package.json
 import buildReactComponentsBySvgTree from '@scripts/buildReactComponentsBySvgTree';
 import getComponentModuleInfoByComponentTree from '@scripts/getComponentModuleInfoByComponentTree';
 import createComponentIndexModule from '@scripts/createComponentIndexModule';
 import createStory from '@scripts/createStory';
+import checkDirnames from '@scripts/checkDirnames';
 
 const SVG_DIR = 'icons';
 const COMPONENT_DIR = 'components';
 const STORY_DIR = 'stories';
 const TREE_FILENAME = `tree.ts`;
+
+checkDirnames(SVG_DIR, COMPONENT_DIR, STORY_DIR);
 
 const generate = async () => {
   console.log(`🚚 Building react components from svg files...`);
