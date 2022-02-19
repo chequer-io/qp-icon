@@ -1,5 +1,5 @@
 import { existsSync, mkdir, mkdirSync } from 'fs';
-import { writeFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
 
 export const checkOrCreateDir = async (dirPath: string | string[]) => {
@@ -20,16 +20,37 @@ export const checkOrCreateDir = async (dirPath: string | string[]) => {
   }
 };
 
-export const makeFile = async (filename: string, body: string) => {
+export const makeFile = async (
+  filename: string,
+  content: string,
+  options: { usePrettier?: boolean } = {},
+) => {
   const filePath = path.join(process.cwd(), filename);
+
+  let fileContent = content;
+  if (options.usePrettier) {
+    const prettierConfig = await prettier.resolveConfig(filePath);
+    fileContent = prettier.format(fileContent, {
+      ...prettierConfig,
+      filepath: filePath,
+    });
+  }
 
   try {
     mkdir(path.dirname(filePath), { recursive: true }, () => {
-      writeFile(filePath, body);
+      writeFile(filePath, fileContent);
     });
   } catch (err) {
     console.error(err);
   }
+};
+
+type FilePath = Parameters<typeof readFile>[0];
+export const readFileWithUTF8 = async (filePath: FilePath) => {
+  return await readFile(filePath, {
+    flag: 'r',
+    encoding: 'utf8',
+  });
 };
 
 export const toPascalCase = (name: string) =>

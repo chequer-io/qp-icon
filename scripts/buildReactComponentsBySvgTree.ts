@@ -1,11 +1,11 @@
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
-import { readFile } from 'fs/promises';
 import { Builder, parseStringPromise } from 'xml2js';
 import { basename } from 'path';
 import {
   checkOrCreateDir,
   getTreeFileBody,
   makeFile,
+  readFileWithUTF8,
   toPascalCase,
 } from '@scripts/utils';
 
@@ -63,7 +63,7 @@ async function buildComponentFromSvg({
     dirname: string;
   };
 }) {
-  const svgCode = await readFile(svg.path, { encoding: 'utf8', flag: 'r' });
+  const svgCode = await readFileWithUTF8(svg.path);
   const svgJson = (await parseStringPromise(svgCode)).svg;
 
   const styledJson = {
