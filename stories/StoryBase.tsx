@@ -2,12 +2,6 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import styles from './StoryBase.module.css';
 import { CSSProperties } from 'react';
 
-interface PaletteProps {
-  icons: CustomizedSVGComponent[];
-  // iconColor: CSSProperties['color'];
-  // backgroundColor: CSSProperties['backgroundColor'];
-}
-
 type Size = CustomizedSVGComponentProps['size'];
 const iconSizes: NotUndefined<Size>[] = [
   'tiny',
@@ -17,11 +11,19 @@ const iconSizes: NotUndefined<Size>[] = [
   'large',
 ];
 
-export const Palette = ({ icons }: PaletteProps) => (
+interface PaletteProps {
+  icons: CustomizedSVGComponent[];
+  backgroundColor: CSSProperties['backgroundColor'];
+}
+
+export const Palette = ({ icons, backgroundColor }: PaletteProps) => (
   <section className={styles.Palette}>
     {icons.map(Icon => (
       <article key={Icon.displayName} className={styles['icon-box']}>
-        <section className={styles['icon-box__icons-wrapper']}>
+        <section
+          className={styles['icon-box__icons-wrapper']}
+          style={{ backgroundColor }}
+        >
           {iconSizes.map(size => (
             <section title={size} key={`${Icon.displayName}--${size}`}>
               <Icon size={size} />
@@ -46,15 +48,12 @@ const defaultMeta: ComponentMeta<typeof Palette> = {
         disable: true,
       },
     },
-    // iconColor: {
-    //   name: '아이콘 색상',
-    //   control: 'color',
-    // },
-    // backgroundColor: {
-    //   name: '배경 색상',
-    //   description: '배경 색상',
-    //   control: 'color',
-    // },
+    backgroundColor: {
+      name: '배경 색상',
+      description: '배경 색상',
+      control: 'color',
+      defaultValue: '#ffffff',
+    },
   },
 };
 export const getStoryBase = (
