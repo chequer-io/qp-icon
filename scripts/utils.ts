@@ -1,6 +1,7 @@
 import { existsSync, mkdir, mkdirSync } from 'fs';
 import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
+import prettier from 'prettier';
 
 export const checkOrCreateDir = async (dirPath: string | string[]) => {
   const checkOrCreate = (path: string) => {

@@ -85,11 +85,10 @@ import SvgComponent from '@common/SvgComponent';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
 ${newSvgCodeXml
-  .split('\n')
+  .split('\n') //
   .slice(1)
   .join('\n')
-  .replace('temp="x"', '{...props}') //
-  .replace(/^(?=.)/gm, '  ')}
+  .replace('temp="x"', '{...props}')}
 );
 
 export default ${component.name};
@@ -101,5 +100,5 @@ export default ${component.name};
       return `${toPascalCase(basename)}.tsx`;
     });
 
-  await makeFile(componentPath, componentCode);
+  await makeFile(componentPath, componentCode, { usePrettier: true });
 }
