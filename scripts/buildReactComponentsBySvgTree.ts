@@ -65,30 +65,31 @@ async function buildComponentFromSvg({
 }) {
   const svgCode = await readFileWithUTF8(svg.path);
   const svgJson = (await parseStringPromise(svgCode)).svg;
+  const innerComponentName = 'SvgComponent';
 
   const styledJson = {
-    SvgComponent: {
+    [innerComponentName]: {
       ...svgJson,
       $: {
         viewBox: svgJson['$']['viewBox'],
-        temp: 'x',
+        temp: '{...props}',
       },
     },
   };
 
   const xmlBuilder = new Builder();
-  const newSvgCodeXml = xmlBuilder.buildObject(styledJson);
+  const newSvgCodeXml = xmlBuilder
+    .buildObject(styledJson)
+    .split('\n') // Remove the first line starting with "<xml...".
+    .slice(1)
+    .join('\n');
 
   const componentCode = `
 import React from 'react';
-import SvgComponent from '@common/SvgComponent';
+import ${innerComponentName} from '@common/${innerComponentName}';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
-${newSvgCodeXml
-  .split('\n') //
-  .slice(1)
-  .join('\n')
-  .replace('temp="x"', '{...props}')}
+${newSvgCodeXml.replace('temp="{...props}"', '{...props}')}
 );
 
 export default ${component.name};
