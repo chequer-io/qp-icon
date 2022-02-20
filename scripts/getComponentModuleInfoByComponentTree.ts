@@ -28,7 +28,7 @@ export default async function getComponentModuleInfoByComponentTree({
     exportPhrases.push(phrase);
   };
 
-  const onEachDirectory: DirectoryTreeCallback = (item, path) => {
+  const onEachDirectory: DirectoryTreeCallback = item => {
     const childFiles = item.children?.filter(child => child.type === 'file');
     const hasChildFile = childFiles && childFiles.length !== 0;
 
