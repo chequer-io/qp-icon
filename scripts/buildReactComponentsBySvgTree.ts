@@ -100,5 +100,5 @@ export default ${component.name};
       return `${toPascalCase(basename)}.tsx`;
     });
 
-  await makeFile(componentPath, componentCode, { usePrettier: true });
+  await makeFile(componentPath, componentCode);
 }

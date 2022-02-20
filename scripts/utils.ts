@@ -21,10 +21,15 @@ export const checkOrCreateDir = async (dirPath: string | string[]) => {
   }
 };
 
+type MakeFileOptions =
+  | {
+      usePrettier?: boolean;
+    }
+  | undefined;
 export const makeFile = async (
   filename: string,
   content: string,
-  options: { usePrettier?: boolean } = {},
+  options: MakeFileOptions = { usePrettier: true },
 ) => {
   const filePath = path.join(process.cwd(), filename);
 

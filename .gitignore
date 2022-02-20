@@ -16,6 +16,7 @@
 /build
 /components
 /stories/Icons.stories.tsx
+**/tree.ts
 
 # misc
 .DS_Store
