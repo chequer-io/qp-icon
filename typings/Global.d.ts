@@ -10,7 +10,7 @@ type IconSize =
   | 'large'
   | 'responsive';
 
-type SizeAffectStyleProps = 'width' | 'height';
+type SizeAffectStyleProps = 'width' | 'height' | 'viewBox';
 
 interface CustomizedSvgProps {
   /**
