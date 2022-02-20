@@ -51,6 +51,6 @@ ${pascalCaseName}.args = {
 }, '')}
   `.trim();
 
-  await makeFile(`${storyDir}/IconRoot.stories.tsx`, rootFile);
+  await makeFile(`${storyDir}/Icon.stories.tsx`, rootFile);
   await makeFile(`${storyDir}/IconCategories.stories.tsx`, categoriesFile);
 }
