@@ -35,7 +35,7 @@ export default async function getComponentModuleInfoByComponentTree({
     if (!hasChildFile) return;
 
     const isRootDir = item.name === componentDir;
-    const dirName = isRootDir ? 'root' : item.name;
+    const dirName = isRootDir ? 'none' : item.name;
     importsMap[dirName] = childFiles.map(file => file.name.replace('.tsx', ''));
   };
 

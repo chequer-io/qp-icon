@@ -1,7 +1,7 @@
 import { makeFile, toPascalCase } from '@scripts/utils';
 import type { ComponentImportsMap } from '@scripts/getComponentModuleInfoByComponentTree';
 
-type CreateStoryProps = {
+type Props = {
   componentDir: string;
   storyDir: string;
   importsMap: ComponentImportsMap;
@@ -10,21 +10,33 @@ export default async function createStory({
   componentDir,
   storyDir,
   importsMap,
-}: CreateStoryProps) {
+}: Props) {
   const importsMapArr = Object.entries(importsMap);
   const willImportedComponents = importsMapArr
     .flatMap(([, componentNames]) => componentNames)
     .reverse()
     .join(', ');
 
-  const fileBody =
+  const getFileHeader = ({ subTitle = '' } = {}) =>
     `
-import React from 'react';
 import { getStoryBase, paletteFactory } from '@stories/StoryBase';
 import { ${willImportedComponents} } from '@${componentDir}';
 
-const base = getStoryBase();
+const base = getStoryBase('${subTitle}');
 export default base;
+  `.trim();
+
+  const rootFile = `
+${getFileHeader()}
+
+export const All = paletteFactory();
+All.args = {
+  icons: [${willImportedComponents}],
+};
+  `.trim();
+
+  const categoriesFile = `
+${getFileHeader({ subTitle: 'categories' })}
 
 ${importsMapArr.reduceRight((acc, [dirName, componentNames]) => {
   const pascalCaseName = toPascalCase(dirName);
@@ -37,7 +49,8 @@ ${pascalCaseName}.args = {
 
   return acc + story + '\r\n\r\n';
 }, '')}
-  `.trim() + '\r\n';
+  `.trim();
 
-  await makeFile(`${storyDir}/Icons.stories.tsx`, fileBody);
+  await makeFile(`${storyDir}/IconRoot.stories.tsx`, rootFile);
+  await makeFile(`${storyDir}/IconCategories.stories.tsx`, categoriesFile);
 }

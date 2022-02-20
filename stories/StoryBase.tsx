@@ -46,7 +46,6 @@ export const paletteFactory = (): ComponentStory<typeof Palette> => args =>
   <Palette {...args} />;
 
 const defaultMeta: ComponentMeta<typeof Palette> = {
-  title: `querypie-icon`,
   component: Palette,
   argTypes: {
     icons: {
@@ -70,9 +69,7 @@ const defaultMeta: ComponentMeta<typeof Palette> = {
     },
   },
 };
-export const getStoryBase = (
-  appendMeta: ComponentMeta<typeof Palette> = {},
-) => ({
+export const getStoryBase = (subTitle?: string) => ({
   ...defaultMeta,
-  appendMeta,
+  title: `querypie-icon${subTitle ? `/${subTitle}` : ''}`,
 });

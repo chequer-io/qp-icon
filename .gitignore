@@ -15,7 +15,7 @@
 # production
 /build
 /components
-/stories/Icons.stories.tsx
+**/*.stories.tsx
 **/tree.ts
 
 # misc
