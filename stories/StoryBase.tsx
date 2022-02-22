@@ -1,46 +1,5 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import styles from './styles.module.css';
-import { CSSProperties } from 'react';
-import useComponentNameSearch from '@stories/useComponentNameSearch';
-import IconBox from '@stories/IconBox';
-
-interface PaletteProps {
-  icons: CustomizedSVGComponent[];
-  backgroundColor: CSSProperties['backgroundColor'];
-  isExpand: boolean;
-}
-export const Palette = ({ icons, backgroundColor, isExpand }: PaletteProps) => {
-  const {
-    searchWord,
-    onChangeSearchWord,
-    filteredComponents: filteredIcons,
-  } = useComponentNameSearch<CustomizedSVGComponent>(icons);
-
-  return (
-    <main className={styles.Palette}>
-      <header className={styles['Palette__header']}>
-        <input
-          value={searchWord}
-          onChange={onChangeSearchWord}
-          placeholder="아이콘 검색..."
-          autoComplete="false"
-          className={styles['Palette__header__search-input']}
-        />
-      </header>
-
-      <section className={styles['icon-gallery']}>
-        {filteredIcons.map(Icon => (
-          <IconBox
-            key={Icon.name}
-            Icon={Icon}
-            backgroundColor={backgroundColor}
-            isExpand={isExpand}
-          />
-        ))}
-      </section>
-    </main>
-  );
-};
+import Palette from '@stories/Palette';
 
 export const paletteFactory = (): ComponentStory<typeof Palette> => args =>
   <Palette {...args} />;

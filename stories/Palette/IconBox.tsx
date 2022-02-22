@@ -1,5 +1,5 @@
 import { CSSProperties, FC } from 'react';
-import styles from '@stories/styles.module.css';
+import styles from '@stories/Palette/styles.module.css';
 
 type Size = CustomizedSVGComponentProps['size'];
 const iconSizes: NotUndefined<Size>[] = [
