@@ -7,7 +7,7 @@ type SVGWidthOrHeight = NotUndefined<
   SVGElementProps['width'] | SVGElementProps['height']
 >;
 
-const sizeMap: { [key in Size]: SVGWidthOrHeight } = {
+export const sizeMap: { [key in Size]: SVGWidthOrHeight } = {
   tiny: 9,
   small: 12,
   regular: 15,

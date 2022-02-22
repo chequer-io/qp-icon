@@ -14,7 +14,7 @@ const defaultMeta: ComponentMeta<typeof Palette> = {
     },
     isExpand: {
       name: '확장',
-      description: `true로 설정 시 모든 사이즈와 이름 표시, false일 경우 "1em" 사이즈 아이콘만 표시`,
+      description: `false일 경우 "1em" 사이즈 아이콘만 표시`,
       type: 'boolean',
       control: 'boolean',
       defaultValue: false,
