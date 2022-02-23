@@ -7,10 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
-  backgroundColor: CSSProperties['backgroundColor'];
   isExpand: boolean;
 }
-export const Palette = ({ icons, backgroundColor, isExpand }: PaletteProps) => {
+export const Palette = ({ icons, isExpand }: PaletteProps) => {
   const {
     searchWord,
     onChangeSearchWord,
@@ -67,7 +66,6 @@ export const Palette = ({ icons, backgroundColor, isExpand }: PaletteProps) => {
               data-role="icon-box"
               data-component-name={Icon.name}
               Icon={Icon}
-              backgroundColor={backgroundColor}
               isExpand={isExpand}
             />
           ))}

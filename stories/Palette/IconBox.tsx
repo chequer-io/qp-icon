@@ -1,21 +1,14 @@
-import { CSSProperties, FC, HTMLAttributes, useCallback } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import styles from '@stories/Palette/styles.module.css';
-// import { sizeMap } from '@common/SvgComponent';
 
 type Size = CustomizedSVGComponentProps['size'];
 const iconSizes: NotUndefined<Size>[] = ['S', 'M', 'L', 'XL'];
 
 interface IconBoxProps extends HTMLAttributes<HTMLElement> {
   Icon: CustomizedSVGComponent;
-  backgroundColor: CSSProperties['backgroundColor'];
   isExpand: boolean;
 }
-const IconBox: FC<IconBoxProps> = ({
-  Icon,
-  backgroundColor,
-  isExpand,
-  ...rest
-}) => {
+const IconBox: FC<IconBoxProps> = ({ Icon, isExpand, ...rest }) => {
   const label = Icon.name;
 
   if (!isExpand) {
@@ -39,7 +32,7 @@ const IconBox: FC<IconBoxProps> = ({
               key={`${label}--icon-${size}`}
               className={styles['icon-gallery__box__icon-wrapper']}
             >
-              <Icon size={size} style={{ backgroundColor }} />
+              <Icon size={size} />
             </section>
           ))}
         </article>
