@@ -41,6 +41,12 @@
 .icon-gallery__box {
   border: 1px solid #ddd;
   border-radius: 2px;
+  cursor: pointer;
+}
+
+.icon-gallery__box:hover,
+.icon-gallery__box:focus {
+  background-color: #ccc;
 }
 
 .icon-gallery__box__label {
@@ -71,10 +77,10 @@
 .icon-gallery__box__icon-wrapper {
 }
 
-.icon-gallery__box__icon-wrapper > svg{
-  border: 1px solid #ddd;
-  border-radius: 2px;
-}
+/*.icon-gallery__box__icon-wrapper > svg{*/
+/*  border: 1px solid #ddd;*/
+/*  border-radius: 2px;*/
+/*}*/
 
 .icon-gallery__box__icon-text {
   display: grid;
@@ -88,4 +94,16 @@
 
 .icon-gallery__box__icon-text > svg {
   justify-self: end;
+}
+
+.toast {
+  font-weight: bold;
+}
+
+.toast code {
+  color: #df4576;
+}
+
+.toast code span{
+  color: #32ae85;
 }

@@ -60,11 +60,7 @@ export const readFileWithUTF8 = async (filePath: FilePath) => {
 };
 
 export const toPascalCase = (name: string) =>
-  name
-    .replace(/[a-zA-Z0-9]+/g, w => {
-      return w[0].toUpperCase() + w.slice(1).toLowerCase();
-    })
-    .replace(/[-_]/, '');
+  name.replace(/[-_]([a-z])/gi, (_, $1) => $1.toUpperCase());
 
 export const getTreeFileBody = (jsonTree: string) =>
   `
