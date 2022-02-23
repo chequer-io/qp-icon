@@ -1,7 +1,6 @@
 import { MouseEventHandler, useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import styles from '@stories/Palette/styles.module.css';
-import SvgComponent from '@common/SvgComponent';
 
 export default function useIconCopyClick() {
   const [clickedIconName, setClickedIconName] = useState('');

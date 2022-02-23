@@ -31,6 +31,7 @@ ${getFileHeader()}
 
 export const All = paletteFactory();
 All.args = {
+  pageTitle: 'All Icons',
   icons: [${willImportedComponents}],
 };
   `.trim();
@@ -43,6 +44,7 @@ ${importsMapArr.reduceRight((acc, [dirName, componentNames]) => {
   const story = `
 export const ${pascalCaseName} = paletteFactory();
 ${pascalCaseName}.args = {
+  pageTitle: '${pascalCaseName.replace(/Icons?/, '')} Icons',
   icons: [${componentNames.join(', ')}],
 };
   `.trim();

@@ -4,13 +4,14 @@ import IconBox from '@stories/Palette/IconBox';
 import 'react-toastify/dist/ReactToastify.css';
 import useIconCopyClick from '@stories/Palette/useIconCopyClick';
 import { ToastContainer } from 'react-toastify';
-import ImportCodeBox from '@stories/Palette/ImportCodeBox';
+// import ImportCodeBox from '@stories/Palette/ImportCodeBox';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
   isExpand: boolean;
+  pageTitle?: string;
 }
-export const Palette = ({ icons, isExpand }: PaletteProps) => {
+export const Palette = ({ icons, isExpand, pageTitle }: PaletteProps) => {
   const {
     searchWord,
     onChangeSearchWord,
@@ -33,7 +34,7 @@ export const Palette = ({ icons, isExpand }: PaletteProps) => {
         {/*</section>*/}
         <section className={styles['Palette__section']}>
           <header className={styles['Palette__section__header']}>
-            <h2>Icons</h2>
+            <h2>{pageTitle ?? 'Icons'}</h2>
             <input
               value={searchWord}
               onChange={onChangeSearchWord}
