@@ -23,7 +23,9 @@ const SvgComponent: CommonSVGComponent = ({
   size = 'responsive',
   style = {},
   viewBox,
+  className,
   children,
+  ...rest
 }) => {
   const iconSize = sizeMap[size];
 
@@ -33,7 +35,8 @@ const SvgComponent: CommonSVGComponent = ({
       style={style}
       width={iconSize}
       height={iconSize}
-      className={styles.SvgComponent}
+      className={`${styles.SvgComponent} ${className}`}
+      {...rest}
     >
       {children}
     </svg>
