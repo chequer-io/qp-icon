@@ -1,18 +1,21 @@
 import styles from '@common/SvgComponent.module.css';
 import type { SVGProps } from 'react';
 
-type Size = NotUndefined<CommonSVGComponentProps['size']>;
+type IconSize = NotUndefined<CommonSVGComponentProps['size']>;
 type SVGElementProps = SVGProps<SVGSVGElement>;
 type SVGWidthOrHeight = NotUndefined<
   SVGElementProps['width'] | SVGElementProps['height']
 >;
 
-export const sizeMap: { [key in Size]: SVGWidthOrHeight } = {
-  tiny: 9,
-  small: 12,
-  regular: 15,
+export const sizeMap: { [key in IconSize]: SVGWidthOrHeight } = {
+  S: 16,
+  M: 20,
+  L: 24,
+  XL: 32,
+  small: 16,
   medium: 20,
   large: 24,
+  extraLarge: 32,
   responsive: '1em',
 };
 

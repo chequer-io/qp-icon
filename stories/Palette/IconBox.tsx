@@ -3,13 +3,7 @@ import styles from '@stories/Palette/styles.module.css';
 import { sizeMap } from '@common/SvgComponent';
 
 type Size = CustomizedSVGComponentProps['size'];
-const iconSizes: NotUndefined<Size>[] = [
-  'tiny',
-  'small',
-  'regular',
-  'medium',
-  'large',
-];
+const iconSizes: NotUndefined<Size>[] = ['S', 'M', 'L', 'XL'];
 
 type IconBoxProps = {
   Icon: CustomizedSVGComponent;
