@@ -6,6 +6,7 @@ import {
   getTreeFileBody,
   makeFile,
   readFileWithUTF8,
+  toCamelCase,
   toPascalCase,
 } from '@scripts/utils';
 
@@ -83,7 +84,7 @@ async function buildComponentFromSvg({
     .split('\n') // Remove the first line starting with "<xml...".
     .slice(1)
     .join('\n')
-    .replace(/([^\s]+-.+)(?==".+")/gm, w => toPascalCase(w));
+    .replace(/([^\s]+-.+)(?==".+")/gm, w => toCamelCase(w));
 
   const componentCode = `
 import ${innerComponentName} from '@common/${innerComponentName}';

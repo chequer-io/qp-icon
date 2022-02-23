@@ -11,10 +11,19 @@ export default async function createStory({
   storyDir,
   importsMap,
 }: Props) {
-  const importsMapArr = Object.entries(importsMap);
-  const willImportedComponents = importsMapArr
+  const sortedImportsMapArr = Object.entries(importsMap).sort(
+    ([dirnameA], [dirnameB]) => {
+      if (dirnameA < dirnameB) {
+        return -1;
+      }
+      if (dirnameA > dirnameB) {
+        return 1;
+      }
+      return 0;
+    },
+  );
+  const willImportedComponents = sortedImportsMapArr
     .flatMap(([, componentNames]) => componentNames)
-    .reverse()
     .join(', ');
 
   const getFileHeader = ({ subTitle = '' } = {}) =>
@@ -39,12 +48,13 @@ All.args = {
   const categoriesFile = `
 ${getFileHeader({ subTitle: 'categories' })}
 
-${importsMapArr.reduceRight((acc, [dirName, componentNames]) => {
-  const pascalCaseName = toPascalCase(dirName);
+${sortedImportsMapArr.reduce((acc, [dirName, componentNames]) => {
+  const categoryName = dirName.toLowerCase().replace(/(-|_|icons?$)/gi, '');
+
   const story = `
-export const ${pascalCaseName} = paletteFactory();
-${pascalCaseName}.args = {
-  pageTitle: '${pascalCaseName.replace(/Icons?/, '')} Icons',
+export const ${categoryName} = paletteFactory();
+${categoryName}.args = {
+  pageTitle: '${toPascalCase(categoryName)} Icons',
   icons: [${componentNames.join(', ')}],
 };
   `.trim();
