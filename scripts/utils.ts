@@ -60,10 +60,12 @@ export const readFileWithUTF8 = async (filePath: FilePath) => {
 };
 
 export const toPascalCase = (name: string) =>
-  name.replace(/((?<=^)[a-z]|(?<=[-_])[a-z])/gi, (_, $1) => $1.toUpperCase());
+  name.replace(/((?<=^)[a-z]|(?<=[-_])[a-zA-Z])/gi, (_, $1) =>
+    $1.toUpperCase(),
+  );
 
 export const toCamelCase = (name: string) =>
-  name.replace(/[-_]([a-z])/gi, (_, $1) => $1.toUpperCase());
+  name.replace(/[-_]([a-zA-Z])/gi, (_, $1) => $1.toUpperCase());
 
 export const getTreeFileBody = (jsonTree: string) =>
   `
