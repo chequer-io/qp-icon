@@ -13,4 +13,5 @@ export default async function createComponentIndexModule({
     return acc + curr + '\r\n';
   }, '');
   await makeFile(`${componentDir}/index.ts`, fileBody);
+  await makeFile(`dist/index.d.ts`, fileBody);
 }
