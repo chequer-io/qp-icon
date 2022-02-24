@@ -8,8 +8,18 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
         exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['solid'],
+            },
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
       },
     ],
   },
