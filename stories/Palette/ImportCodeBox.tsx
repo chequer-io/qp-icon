@@ -2,6 +2,7 @@ import styles from '@stories/Palette/styles.module.css';
 import SvgComponent from '@common/SvgComponent';
 import { useCallback, useRef } from 'react';
 import { toast } from 'react-toastify';
+import { Code } from '@stories/Palette/styles';
 
 const CopyIcon: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent viewBox="0 0 32 32" {...props}>
@@ -35,22 +36,19 @@ const ImportCodeBox = () => {
   }, []);
 
   return (
-    <p className={styles['Palette__code']} ref={codeBoxRef}>
-      <span className={styles['Palette__code__token--cyan']}>import</span>{' '}
-      <span className={styles['Palette__code__token--purple']}>{`{`}</span>{' '}
-      <span className={styles['Palette__code__token--white']}>IconName</span>{' '}
-      <span className={styles['Palette__code__token--purple']}>{`}`}</span>{' '}
-      <span className={styles['Palette__code__token--cyan']}>from</span>{' '}
-      <span className={styles['Palette__code__token--green']}>
-        'querypie-icons'
-      </span>
+    <Code ref={codeBoxRef}>
+      <span data-color="cyan">import</span>{' '}
+      <span data-color="purple">{`{`}</span>{' '}
+      <span data-color="white">IconName</span>{' '}
+      <span data-color="purple">{`}`}</span> <span data-color="cyan">from</span>{' '}
+      <span data-color="green">'querypie-icons'</span>
       <span className={styles['Palette__code__token--purple']}>;</span>
       <CopyIcon
         size="S"
         className={styles['Palette__code__copy-icon']}
         onClick={handleClickCopyIcon}
       />
-    </p>
+    </Code>
   );
 };
 

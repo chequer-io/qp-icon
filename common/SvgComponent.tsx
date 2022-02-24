@@ -1,4 +1,3 @@
-import styles from '@common/SvgComponent.module.css';
 import type { SVGProps } from 'react';
 
 type IconSize = NotUndefined<CommonSVGComponentProps['size']>;
@@ -23,7 +22,6 @@ const SvgComponent: CommonSVGComponent = ({
   size = 'responsive',
   style = {},
   viewBox,
-  className,
   children,
   ...rest
 }) => {
@@ -35,7 +33,6 @@ const SvgComponent: CommonSVGComponent = ({
       style={style}
       width={iconSize}
       height={iconSize}
-      className={`${styles.SvgComponent} ${className}`}
       {...rest}
     >
       {children}

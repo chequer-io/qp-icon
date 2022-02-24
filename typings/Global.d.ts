@@ -48,5 +48,3 @@ declare global {
 
   declare type NotUndefined<T> = T extends undefined ? never : T;
 }
-
-declare module '*.module.css';

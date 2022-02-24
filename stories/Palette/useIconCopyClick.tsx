@@ -2,11 +2,18 @@ import { MouseEventHandler, useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import styles from '@stories/Palette/styles.module.css';
 
-export default function useIconCopyClick() {
+type Props = {
+  selector: string;
+  iconComponentNameDataSetKey: string;
+};
+export default function useIconCopyClick({
+  selector,
+  iconComponentNameDataSetKey,
+}: Props) {
   const [clickedIconName, setClickedIconName] = useState('');
 
   const getClosestIconBox = useCallback((el: HTMLElement) => {
-    return el.closest<Element>('[data-role="icon-box"]');
+    return el.closest<Element>(selector);
   }, []);
 
   const copyClickedIconName: MouseEventHandler<HTMLElement> = useCallback(
@@ -15,7 +22,8 @@ export default function useIconCopyClick() {
       const closestIconBox = getClosestIconBox(target);
 
       if (closestIconBox instanceof HTMLElement) {
-        const { componentName } = closestIconBox.dataset;
+        const componentName =
+          closestIconBox.dataset[iconComponentNameDataSetKey];
         if (!componentName) return;
 
         setClickedIconName(componentName);

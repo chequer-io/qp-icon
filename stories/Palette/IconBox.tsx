@@ -1,6 +1,10 @@
 import { FC, HTMLAttributes, memo } from 'react';
-import styles from '@stories/Palette/styles.module.css';
-// import { sizeMap } from '@common/SvgComponent';
+import {
+  IconBoxContent,
+  IconBoxLabel,
+  IconsContianer,
+  StyledIconBox,
+} from '@stories/Palette/styles';
 
 type Size = CustomizedSVGComponentProps['size'];
 const iconSizes: NotUndefined<Size>[] = ['S', 'M', 'L', 'XL'];
@@ -12,46 +16,38 @@ interface IconBoxProps extends HTMLAttributes<HTMLElement> {
 }
 const IconBox: FC<IconBoxProps> = ({ Icon, isClicked, isExpand, ...rest }) => {
   const label = Icon.name;
-  const boxClassname = `${styles['icon-gallery__box']} ${
-    isClicked ? styles['icon-gallery__box--clicked'] : ''
-  }`.trim();
 
   return (
-    <article className={boxClassname} {...rest}>
-      <section className={styles['icon-gallery__box__content']}>
+    <StyledIconBox isClicked={isClicked} {...rest}>
+      <IconBoxContent>
         {!isExpand ? (
           <Icon size="XL" />
         ) : (
           <>
-            <article className={styles['icon-gallery__box__icons-container']}>
+            <IconsContianer>
               {iconSizes.map(size => (
-                <section
-                  title={size}
-                  key={`${label}--icon-${size}`}
-                  className={styles['icon-gallery__box__icon-wrapper']}
-                >
+                <section title={size} key={`${label}--icon-${size}`}>
                   <Icon size={size} />
                 </section>
               ))}
-            </article>
+            </IconsContianer>
             {/*<article>*/}
             {/*  {iconSizes.map(size => (*/}
-            {/*    <section*/}
+            {/*    <IconText*/}
             {/*      title={size}*/}
             {/*      key={`${label}--icon-text-${size}`}*/}
             {/*      style={{ fontSize: sizeMap[size] }}*/}
-            {/*      className={styles['icon-gallery__box__icon-text']}*/}
             {/*    >*/}
             {/*      <Icon size={size} /> {size} Text*/}
-            {/*    </section>*/}
+            {/*    </IconText>*/}
             {/*  ))}*/}
             {/*</article>*/}
           </>
         )}
-      </section>
+      </IconBoxContent>
 
-      <p className={styles['icon-gallery__box__label']}>{label}</p>
-    </article>
+      <IconBoxLabel>{label}</IconBoxLabel>
+    </StyledIconBox>
   );
 };
 

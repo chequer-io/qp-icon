@@ -1,10 +1,15 @@
 import useComponentNameSearch from '@stories/Palette/useComponentNameSearch';
-import styles from '@stories/Palette/styles.module.css';
 import IconBox from '@stories/Palette/IconBox';
 import 'react-toastify/dist/ReactToastify.css';
 import useIconCopyClick from '@stories/Palette/useIconCopyClick';
-import { ToastContainer } from 'react-toastify';
-// import ImportCodeBox from '@stories/Palette/ImportCodeBox';
+import {
+  IconGallery,
+  SearchInput,
+  StyledPalette,
+  ToastContainer,
+  toastGlobalStyles,
+} from '@stories/Palette/styles';
+import { Global } from '@emotion/react';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
@@ -18,35 +23,35 @@ export const Palette = ({ icons, isExpand, pageTitle }: PaletteProps) => {
     filteredComponents: filteredIcons,
   } = useComponentNameSearch<CustomizedSVGComponent>(icons);
 
-  const { clickedIconName, copyClickedIconName } = useIconCopyClick();
+  const { clickedIconName, copyClickedIconName } = useIconCopyClick({
+    selector: '[data-role="icon-box"]',
+    iconComponentNameDataSetKey: 'componentName',
+  });
 
   return (
     <>
-      <main className={styles.Palette}>
-        {/*<header className={styles['Palette__header']}>*/}
+      <Global styles={toastGlobalStyles} />
+      <StyledPalette>
+        {/*<header>*/}
         {/*  <h1>Querypie Icons</h1>*/}
         {/*</header>*/}
-        {/*<section className={styles['Palette__section']}>*/}
-        {/*  <header className={styles['Palette__section__header']}>*/}
+        {/*<section>*/}
+        {/*  <header>*/}
         {/*    <h2>Import</h2>*/}
         {/*  </header>*/}
         {/*  <ImportCodeBox />*/}
         {/*</section>*/}
-        <section className={styles['Palette__section']}>
-          <header className={styles['Palette__section__header']}>
+        <section>
+          <header>
             <h2>{pageTitle ?? 'Icons'}</h2>
-            <input
+            <SearchInput
               value={searchWord}
               onChange={onChangeSearchWord}
               placeholder="Search icons here, click icon to copy code ..."
               autoComplete="false"
-              className={styles['Palette__search-input']}
             />
           </header>
-          <section
-            className={styles['icon-gallery']}
-            onClick={copyClickedIconName}
-          >
+          <IconGallery onClick={copyClickedIconName}>
             {filteredIcons.map(Icon => (
               <IconBox
                 key={Icon.name}
@@ -57,10 +62,10 @@ export const Palette = ({ icons, isExpand, pageTitle }: PaletteProps) => {
                 isExpand={isExpand}
               />
             ))}
-          </section>
+          </IconGallery>
         </section>
-      </main>
-      <ToastContainer autoClose={3000} className={styles['toast-container']} />
+      </StyledPalette>
+      <ToastContainer autoClose={3000} />
     </>
   );
 };
