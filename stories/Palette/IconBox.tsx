@@ -2,7 +2,7 @@ import { FC, HTMLAttributes, memo } from 'react';
 import {
   IconBoxContent,
   IconBoxLabel,
-  IconsContianer,
+  IconsContainer,
   StyledIconBox,
 } from '@stories/Palette/styles';
 
@@ -24,13 +24,13 @@ const IconBox: FC<IconBoxProps> = ({ Icon, isClicked, isExpand, ...rest }) => {
           <Icon size="XL" />
         ) : (
           <>
-            <IconsContianer>
+            <IconsContainer>
               {iconSizes.map(size => (
                 <section title={size} key={`${label}--icon-${size}`}>
                   <Icon size={size} />
                 </section>
               ))}
-            </IconsContianer>
+            </IconsContainer>
             {/*<article>*/}
             {/*  {iconSizes.map(size => (*/}
             {/*    <IconText*/}

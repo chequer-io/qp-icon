@@ -126,7 +126,7 @@ export const IconBoxContent = styled.div`
   padding: 1rem;
 `;
 
-export const IconsContianer = styled.div`
+export const IconsContainer = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 1rem;

@@ -1,6 +1,5 @@
 import { MouseEventHandler, useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import styles from '@stories/Palette/styles.module.css';
 
 type Props = {
   selector: string;
@@ -32,16 +31,16 @@ export default function useIconCopyClick({
 
         toast(
           <>
-            <span className={styles['toast__check']}>✓</span> Copied{' '}
-            <code className={styles['toast__code']}>
-              <span className={styles['toast__code__bracket']}>{`<`}</span>
+            <span className="toast__check">✓</span> Copied{' '}
+            <code className="toast__code">
+              <span className="toast__code__bracket">{`<`}</span>
               {componentName}
-              <span className={styles['toast__code__bracket']}>{` />`}</span>
+              <span className="toast__code__bracket">{` />`}</span>
             </code>
           </>,
           {
             position: toast.POSITION.TOP_CENTER,
-            className: styles['toast'],
+            className: 'toast',
           },
         );
       }

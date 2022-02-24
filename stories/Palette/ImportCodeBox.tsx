@@ -1,4 +1,3 @@
-import styles from '@stories/Palette/styles.module.css';
 import SvgComponent from '@common/SvgComponent';
 import { useCallback, useRef } from 'react';
 import { toast } from 'react-toastify';
@@ -30,7 +29,7 @@ const ImportCodeBox = () => {
       </p>,
       {
         position: toast.POSITION.TOP_CENTER,
-        className: styles['toast'],
+        className: 'toast',
       },
     );
   }, []);
@@ -42,12 +41,8 @@ const ImportCodeBox = () => {
       <span data-color="white">IconName</span>{' '}
       <span data-color="purple">{`}`}</span> <span data-color="cyan">from</span>{' '}
       <span data-color="green">'querypie-icons'</span>
-      <span className={styles['Palette__code__token--purple']}>;</span>
-      <CopyIcon
-        size="S"
-        className={styles['Palette__code__copy-icon']}
-        onClick={handleClickCopyIcon}
-      />
+      <span data-color="purple">;</span>
+      <CopyIcon size="S" onClick={handleClickCopyIcon} />
     </Code>
   );
 };

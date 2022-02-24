@@ -1,0 +1,35 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/typescript"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [
+          ".ts"
+        ],
+        "root": [
+          "."
+        ],
+        "alias": {
+          "@": ["."],
+          "@common": ["./common"],
+          "@scripts": ["./scripts"],
+          "@stories": ["./stories"],
+          "@components": ["./components"],
+          "@icons": ["./icons"]
+        }
+      }
+    ]
+  ],
+  "comments": false
+}
