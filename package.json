@@ -5,7 +5,7 @@
   "types": "dist/components/index.d.ts",
   "scripts": {
     "build": "webpack",
-    "prepublishOnly": "yarn build",
+    "prepublish": "yarn build",
     "prepare-generate": "ts-node -r tsconfig-paths/register -T scripts/prepareGenerate.ts",
     "generate": "yarn prepare-generate && ts-node -r tsconfig-paths/register -T scripts/generate.ts",
     "storybook": "yarn generate && start-storybook -p 6006"
