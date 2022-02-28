@@ -11,6 +11,9 @@
     "@typescript-eslint",
     "prettier"
   ],
+  "ignorePatterns": [
+    "dist/**"
+  ],
   "rules": {
     "react/display-name": 1
   }

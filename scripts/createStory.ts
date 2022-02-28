@@ -29,7 +29,7 @@ export default async function createStory({
   const getFileHeader = ({ subTitle = '' } = {}) =>
     `
 import { getStoryBase, paletteFactory } from '@stories/StoryBase';
-import { ${willImportedComponents} } from '@${componentDir}';
+import { ${willImportedComponents} } from '@';
 
 const base = getStoryBase('${subTitle}');
 export default base;

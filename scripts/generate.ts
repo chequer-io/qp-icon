@@ -15,7 +15,6 @@ const generate = async () => {
 
   console.log(`🚚 Creating component's index module ...`);
   await createComponentIndexModule({
-    componentDir: COMPONENT_DIR,
     exportPhrases,
   });
 
