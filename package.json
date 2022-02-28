@@ -1,5 +1,6 @@
 {
   "name": "querypie-icon",
+  "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
