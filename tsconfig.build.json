@@ -17,10 +17,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@": ["."],
       "@/*": ["./*"],
-      "@common/*": ["common/*"],
-      "@components/*": ["components/*"],
-      "@components": ["components"],
+      "@common/*": ["src/common/*"],
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components"]
     }
   },
   "ts-node": {
@@ -30,7 +31,7 @@
   },
   "include": [
     "typings/**.d.ts",
-    "components/**.*",
+    "src/components/**.*",
     "index.ts"
   ],
   "exclude": [

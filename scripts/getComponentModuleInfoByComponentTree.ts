@@ -21,10 +21,10 @@ export default async function getComponentModuleInfoByComponentTree({
   const importsMap: ComponentImportsMap = {};
   const exportPhrases: ComponentsExportPhrases = [];
 
-  const onEachFile: DirectoryTreeCallback = (item, path) => {
+  const onEachFile: DirectoryTreeCallback = (item, itemPath) => {
     const componentName = item.name.replace(/\.tsx$/, '');
-    const componentPath = `@${path.replace(/\.tsx$/, '')}`;
-    const phrase = `export { default as ${componentName} } from '${componentPath}';`;
+    const componentAlias = `@/${itemPath.replace(/\.tsx$/, '')}`;
+    const phrase = `export { default as ${componentName} } from '${componentAlias}';`;
     exportPhrases.push(phrase);
   };
 

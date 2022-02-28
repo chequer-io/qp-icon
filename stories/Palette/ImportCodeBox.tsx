@@ -1,4 +1,4 @@
-import SvgComponent from '@common/SvgComponent';
+import SvgComponent from '@/src/common/SvgComponent';
 import { useCallback, useRef } from 'react';
 import { toast } from 'react-toastify';
 import { Code } from '@stories/Palette/styles';
