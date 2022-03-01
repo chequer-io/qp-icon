@@ -1,2 +1,0 @@
-declare const ExclamationCircleLine: CustomizedSVGComponent;
-export default ExclamationCircleLine;
