@@ -24,11 +24,6 @@
       "@components": ["src/components"]
     }
   },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
-  "include": ["typings/**.d.ts", "src/components", "index.ts"],
+  "include": ["typings/**.d.ts", "src/components", "src/index.ts"],
   "exclude": ["node_modules", "**/tree.ts"]
 }
