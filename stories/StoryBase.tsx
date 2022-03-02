@@ -24,6 +24,20 @@ const defaultMeta: ComponentMeta<typeof Palette> = {
       control: 'boolean',
       defaultValue: false,
     },
+    color: {
+      name: 'color',
+      description: '',
+      type: 'string',
+      control: 'color',
+      defaultValue: '#000',
+    },
+    backgroundColor: {
+      name: 'backgroundColor',
+      description: '',
+      type: 'string',
+      control: 'color',
+      defaultValue: '#fff',
+    },
   },
 };
 export const getStoryBase = (subTitle?: string) => ({

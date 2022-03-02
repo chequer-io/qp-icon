@@ -13,13 +13,22 @@ interface IconBoxProps extends HTMLAttributes<HTMLElement> {
   Icon: CustomizedSVGComponent;
   isExpand: boolean;
   isClicked: boolean;
+  color: string;
+  backgroundColor: string;
 }
-const IconBox: FC<IconBoxProps> = ({ Icon, isClicked, isExpand, ...rest }) => {
+const IconBox: FC<IconBoxProps> = ({
+  Icon,
+  isClicked,
+  isExpand,
+  color,
+  backgroundColor,
+  ...rest
+}) => {
   const label = Icon.name;
 
   return (
     <StyledIconBox isClicked={isClicked} {...rest}>
-      <IconBoxContent>
+      <IconBoxContent color={color} backgroundColor={backgroundColor}>
         {!isExpand ? (
           <Icon size="XL" />
         ) : (

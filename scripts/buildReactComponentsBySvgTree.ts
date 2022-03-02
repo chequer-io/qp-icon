@@ -1,6 +1,6 @@
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
 import { Builder, parseStringPromise } from 'xml2js';
-import { basename } from 'path';
+import * as path from 'path';
 import {
   checkOrCreateDir,
   getTreeFileBody,
@@ -20,15 +20,15 @@ export default async function buildReactComponentsBySvgTree({
   componentDir,
   treeFilename,
 }: Props) {
-  const onEachFile: DirectoryTreeCallback = async (item, path) => {
+  const onEachFile: DirectoryTreeCallback = async (item, svgPath) => {
     try {
       await buildComponentFromSvg({
         svg: {
-          path,
+          path: svgPath,
           dirname: svgDir,
         },
         component: {
-          name: toPascalCase(basename(item.name, '.svg')),
+          name: toPascalCase(path.basename(item.name, '.svg')),
           dirname: componentDir,
         },
       });
@@ -73,6 +73,8 @@ async function buildComponentFromSvg({
       ...svgJson,
       $: {
         viewBox: svgJson['$']['viewBox'],
+        className: 'querypie_icon',
+        ['data-qi-has-multi-path']: svgJson.path?.length > 1,
         temp: '{...props}',
       },
     },
@@ -90,17 +92,27 @@ async function buildComponentFromSvg({
 import ${innerComponentName} from '@/src/common/${innerComponentName}';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
-  ${newSvgCode.replace('temp="{...props}"', '{...props}')}
+  ${newSvgCode
+    .replace('dataQiHasMultiPath=', 'data-qi-has-multi-path=')
+    .replace('temp="{...props}"', '{...props}')}
 );
 
 export default ${component.name};
       `.trim();
 
   const componentPath = svg.path
-    .replace(new RegExp(`(?<=/?)${svg.dirname}(?=/)`), component.dirname)
-    .replace(/(?<=\/?)([\w-]+)\.svg$/, (_, basename: string) => {
-      return `${toPascalCase(basename)}.tsx`;
-    });
+    // change dirname
+    .replace(
+      new RegExp(`(?<=${path.sep}?)${svg.dirname}(?=${path.sep})`),
+      component.dirname,
+    )
+    // filename to pascal-case, and change extname
+    .replace(
+      new RegExp(`(?<=[${path.sep}]?)([\\w-]+)\\.svg$`),
+      (_, basename: string) => {
+        return `${toPascalCase(basename)}.tsx`;
+      },
+    );
 
   await makeFile(componentPath, componentCode);
 }

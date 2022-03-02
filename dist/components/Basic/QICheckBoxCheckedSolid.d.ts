@@ -1,0 +1,2 @@
+declare const QICheckBoxCheckedSolid: CustomizedSVGComponent;
+export default QICheckBoxCheckedSolid;

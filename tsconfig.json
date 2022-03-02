@@ -24,10 +24,6 @@
       "module": "CommonJS"
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "typings/**.d.ts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "typings/**.d.ts"],
   "exclude": ["node_modules"]
 }

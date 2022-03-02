@@ -12,7 +12,7 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "moduleResolution": "node",
     "isolatedModules": true,
@@ -28,12 +28,6 @@
       "module": "CommonJS"
     }
   },
-  "include": [
-    "typings",
-    "src/index.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/tree.ts"
-  ]
+  "include": ["typings", "src/index.ts"],
+  "exclude": ["node_modules", "**/tree.ts"]
 }

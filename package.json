@@ -56,6 +56,7 @@
     "lint-staged": "^10.2.13",
     "prettier": "^2.5.1",
     "tsconfig-paths": "^3.12.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
     "ttypescript": "^1.5.13",
     "typescript": "4.5.5",
     "typescript-transform-paths": "^3.3.1"
