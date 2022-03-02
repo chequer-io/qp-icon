@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIClose = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
         React.createElement("path", { d: "M25 8.4L23.6 7L16 14.6L8.4 7.00001L7 8.40001L14.6 16L6.99999 23.6L8.39999 25L16 17.4L23.6 25L25 23.6L17.4 16L25 8.4Z", fill: "black" })));
 };
 export default QIClose;

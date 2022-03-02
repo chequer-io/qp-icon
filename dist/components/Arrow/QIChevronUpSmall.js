@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIChevronUpSmall = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
         React.createElement("path", { d: "M16 12L23 19L21.59 20.41L16 14.83L10.41 20.41L9 19L16 12Z", fill: "black" })));
 };
 export default QIChevronUpSmall;

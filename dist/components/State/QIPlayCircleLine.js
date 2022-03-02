@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIPlayCircleLine = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
         React.createElement("path", { d: "M13 10.8217L21.1374 16L13 21.1783L13 10.8217L13.5369 9.97801L13 10.8217Z", stroke: "black", strokeWidth: "2" })));
 };
 export default QIPlayCircleLine;

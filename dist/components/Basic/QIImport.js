@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIImport = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M24.59 12.59L26 14L16 24L6 14L7.41 12.59L15 20.17V2H17V20.17L24.59 12.59ZM26 28V24H28V28C28 29.11 27.1 30 26 30H6C4.89 30 4 29.11 4 28V24H6V28H26Z", fill: "black" })));
 };
 export default QIImport;

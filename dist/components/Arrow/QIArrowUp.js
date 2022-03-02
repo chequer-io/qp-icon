@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIArrowUp = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
         React.createElement("path", { d: "M16 4L6 14L7.41 15.41L15 7.83V28H17V7.83L24.59 15.41L26 14L16 4Z", fill: "black" })));
 };
 export default QIArrowUp;

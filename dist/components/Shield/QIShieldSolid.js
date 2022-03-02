@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIShieldSolid = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
         React.createElement("path", { d: "M6.00003 15L6.00001 8.00001C6.00001 8.00001 9.93715 7.41682 11.4545 6.76924C13.0542 6.08655 16 4 16 4C16 4 18.9458 6.08655 20.5455 6.76924C22.0629 7.41682 26 8.00001 26 8.00001V15C26 21.1066 21.7333 26.6136 16 28C10.2667 26.6136 6.00003 21.1066 6.00003 15Z", fill: "black" })));
 };
 export default QIShieldSolid;

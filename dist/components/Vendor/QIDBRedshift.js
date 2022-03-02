@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIDBRedshift = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "true" }, props),
         React.createElement("path", { d: "M16.1985 22.3503L25.3251 24.5233V7.42841L16.1985 9.60143V22.3503Z", fill: "#205B97" }),
         React.createElement("path", { d: "M25.3248 7.42841L27.0632 8.29762V23.6541L25.3248 24.5233V7.42841ZM16.1982 22.3503L7.07153 24.5233V7.42841L16.1982 9.60143V22.3503Z", fill: "#5193CE" }),
         React.createElement("path", { d: "M7.07166 7.42841L5.33325 8.29762V23.6541L7.07166 24.5233V7.42841Z", fill: "#205B97" }),

@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIDBEdb = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "true" }, props),
         React.createElement("path", { d: "M16.0001 29.3333C23.3639 29.3333 29.3334 23.3638 29.3334 16C29.3334 8.63619 23.3639 2.66666 16.0001 2.66666C8.63628 2.66666 2.66675 8.63619 2.66675 16C2.66675 23.3638 8.63628 29.3333 16.0001 29.3333Z", fill: "#FF3E00" }),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M24.334 13.3781C24.334 12.0937 23.2589 11.1585 21.9331 11.29L19.9166 11.4899C19.7039 11.5108 19.5317 11.6948 19.5317 11.9008V15.368V15.8073V19.2745C19.5317 19.4802 19.7039 19.6303 19.9166 19.609L21.9331 19.4091C23.2589 19.278 24.334 18.1301 24.334 16.8453C24.334 16.1565 24.0245 15.5682 23.5331 15.1911C24.0245 14.7165 24.334 14.0669 24.334 13.3781Z", fill: "white" }),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M12.0849 11.4897L10.0688 11.29C8.74257 11.1586 7.66748 12.0934 7.66748 13.3779C7.66748 14.0669 7.97696 14.7163 8.46833 15.1909C7.97696 15.5681 7.66748 16.1563 7.66748 16.8453C7.66748 18.1298 8.74257 19.2779 10.0688 19.4093L12.0849 19.609C12.2976 19.6303 12.4697 19.4803 12.4697 19.2744V15.807V15.3681V11.9007C12.4697 11.6948 12.2976 11.5106 12.0849 11.4897Z", fill: "white" }),

@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIDBPresto = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "true" }, props),
         React.createElement("path", { d: "M26.6 14.1333C25.8 14.1333 25.2 14.7333 25.2 15.5333C25.2 16.3333 25.8 16.9333 26.6 16.9333C27.4 16.9333 28 16.3333 28 15.5333C28 14.7333 27.4 14.1333 26.6 14.1333Z", fill: "#669CFE" }),
         React.createElement("path", { d: "M23.4 17.1333C22.6 17.1333 22 17.9333 22 18.7333C22 19.5333 22.6 20.1333 23.4 20.1333C24.2 20.1333 24.8 19.5333 24.8 18.7333C25 17.9333 24.2 17.1333 23.4 17.1333Z", fill: "#3FE7FE" }),
         React.createElement("path", { d: "M20.4 20.3333C19.6 20.3333 19 20.9333 19 21.7333C19 22.5333 19.6 23.3333 20.4 23.3333C21.2 23.3333 21.8 22.7333 21.8 21.9333C21.8 21.1333 21.2 20.3333 20.4 20.3333Z", fill: "#050E14" }),

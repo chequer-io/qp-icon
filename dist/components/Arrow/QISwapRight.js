@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QISwapRight = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M21 23L28 16L21 9L19.59 10.41L24.1718 15L4 15L4 17L24.1718 17L19.59 21.59L21 23Z", fill: "black" })));
 };
 export default QISwapRight;

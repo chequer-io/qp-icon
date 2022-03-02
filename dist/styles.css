@@ -1,0 +1,6 @@
+svg[data-qi-has-multi-path="true"] * {
+
+}
+svg[data-qi-has-multi-path="false"] * {
+  fill: currentColor;
+}

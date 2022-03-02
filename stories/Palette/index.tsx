@@ -10,13 +10,16 @@ import {
   toastGlobalStyles,
 } from '@stories/Palette/styles';
 import { Global } from '@emotion/react';
+import React from 'react';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
   isExpand: boolean;
   pageTitle?: string;
+  color: string;
+  backgroundColor: string;
 }
-export const Palette = ({ icons, isExpand, pageTitle }: PaletteProps) => {
+export const Palette = ({ icons, isExpand, pageTitle, color, backgroundColor }: PaletteProps) => {
   const {
     searchWord,
     onChangeSearchWord,
@@ -60,6 +63,8 @@ export const Palette = ({ icons, isExpand, pageTitle }: PaletteProps) => {
                 isClicked={clickedIconName === Icon.name}
                 Icon={Icon}
                 isExpand={isExpand}
+                color={color}
+                backgroundColor={backgroundColor}
               />
             ))}
           </IconGallery>

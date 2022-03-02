@@ -73,6 +73,8 @@ async function buildComponentFromSvg({
       ...svgJson,
       $: {
         viewBox: svgJson['$']['viewBox'],
+        className: 'querypie_icon',
+        ['data-qi-has-multi-path']: svgJson.path?.length > 1,
         temp: '{...props}',
       },
     },
@@ -91,7 +93,9 @@ import React from 'react';
 import ${innerComponentName} from '@common/${innerComponentName}';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
-  ${newSvgCode.replace('temp="{...props}"', '{...props}')}
+  ${newSvgCode
+      .replace('dataQiHasMultiPath=', 'data-qi-has-multi-path=')
+      .replace('temp="{...props}"', '{...props}')}
 );
 
 export default ${component.name};

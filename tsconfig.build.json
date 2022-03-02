@@ -24,6 +24,6 @@
       "@components": ["src/components"]
     }
   },
-  "include": ["typings/**.d.ts", "src"],
+  "include": ["typings/**.d.ts", "src/**/*"],
   "exclude": ["node_modules", "**/tree.ts"]
 }

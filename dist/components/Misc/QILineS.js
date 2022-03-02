@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QILineS = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
-        React.createElement("rect", { x: "15", y: "8", width: "2", height: "16", fill: "black" })));
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
+        React.createElement("path", { d: "M15 8H17V24H15V8Z", fill: "black" })));
 };
 export default QILineS;

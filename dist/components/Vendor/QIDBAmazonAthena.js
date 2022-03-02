@@ -24,7 +24,7 @@ import React from 'react';
 import SvgComponent from '../../common/SvgComponent.js';
 var QIDBAmazonAthena = function (_a) {
     var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32" }, props),
+    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "true" }, props),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M15.9955 28L4 18.5066L15.9955 17.0133L27.991 18.5066L15.9955 28Z", fill: "#FCBF92" }),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M4 21.92L15.9955 28V22.1333L4 18.5067V21.92Z", fill: "#9D5025" }),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M27.9909 21.92L15.9954 28V22.1333L27.9909 18.5067V21.92Z", fill: "#F58534" }),

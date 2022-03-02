@@ -1,6 +1,5 @@
 import React from 'react';
 import type { SVGProps } from 'react';
-
 type IconSize = NotUndefined<CommonSVGComponentProps['size']>;
 type SVGElementProps = SVGProps<SVGSVGElement>;
 type SVGWidthOrHeight = NotUndefined<

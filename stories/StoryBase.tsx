@@ -1,5 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import Palette from '@stories/Palette';
+import React from 'react';
+import 'src/styles.css';
 
 export const paletteFactory = (): ComponentStory<typeof Palette> => args =>
   <Palette {...args} />;
@@ -23,6 +25,20 @@ const defaultMeta: ComponentMeta<typeof Palette> = {
       type: 'boolean',
       control: 'boolean',
       defaultValue: false,
+    },
+    color: {
+      name: 'color',
+      description: '',
+      type: 'string',
+      control: 'color',
+      defaultValue: '#000',
+    },
+    backgroundColor: {
+      name: 'backgroundColor',
+      description: '',
+      type: 'string',
+      control: 'color',
+      defaultValue: '#fff',
     },
   },
 };

@@ -117,8 +117,12 @@ export const IconBoxLabel = styled.p`
   user-select: none;
 `;
 
-export const IconBoxContent = styled.div`
-  background-color: #ffffff;
+export const IconBoxContent = styled.div<{
+  color?: string;
+  backgroundColor?: string;
+}>`
+  color: ${p => p.color ?? '#000'};
+  background-color: ${p => p.backgroundColor ?? '#fff'};
   display: flex;
   flex-direction: column;
   align-items: center;
