@@ -1,5 +1,5 @@
-import { makeFile, toPascalCase } from '@scripts/utils';
-import type { ComponentImportsMap } from '@scripts/getComponentModuleInfoByComponentTree';
+import { makeFile, toPascalCase } from '@/scripts/utils';
+import type { ComponentImportsMap } from '@/scripts/getComponentModuleInfoByComponentTree';
 import { Dirname } from '@/name.config';
 
 type Props = {
@@ -24,7 +24,7 @@ export default async function createStory({ storyDir, importsMap }: Props) {
 
   const getFileHeader = ({ subTitle = '' } = {}) =>
     `
-import { getStoryBase, paletteFactory } from '@stories/StoryBase';
+import { getStoryBase, paletteFactory } from '@/stories/StoryBase';
 import { ${willImportedComponents} } from '@/${Dirname.SRC}';
 
 const base = getStoryBase('${subTitle}');

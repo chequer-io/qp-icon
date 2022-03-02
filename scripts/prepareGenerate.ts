@@ -1,4 +1,4 @@
-import buildReactComponentsBySvgTree from '@scripts/buildReactComponentsBySvgTree';
+import buildReactComponentsBySvgTree from '@/scripts/buildReactComponentsBySvgTree';
 import { Dirname, Filename } from '@/name.config';
 import rimraf from 'rimraf';
 

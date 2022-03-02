@@ -1,25 +1,20 @@
 {
   "name": "querypie-icon",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.1",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "lint-staged": "npx lint-staged",
     "prepare-generate": "ts-node -r tsconfig-paths/register -T scripts/prepareGenerate.ts",
     "generate": "npm run prepare-generate && ts-node -r tsconfig-paths/register -T scripts/generate.ts",
     "storybook": "npm run generate && start-storybook -p 6006",
-    "build": "npm run generate && tsc --project tsconfig.build.json && tsc-alias --project tsconfig.build.json"
+    "build": "rm -rf dist && npm run generate && ttsc -p tsconfig.build.json && babel dist -d dist",
+    "clean": "rm -rf node_modules/ package-lock.json && npm cache clean -f && npm i",
+    "prepublishOnly": "npm run build"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,svg}": [
-      "npm run build",
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "prettier --write",
-      "git add ."
+      "prettier --write"
     ]
   },
   "dependencies": {
@@ -35,7 +30,6 @@
     "react-toastify": "^8.2.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.5.0",
-    "tsc-alias": "^1.6.3",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
@@ -51,6 +45,8 @@
     "@types/xml2js": "^0.4.9",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -59,9 +55,9 @@
     "husky": "^7.0.4",
     "lint-staged": "^10.2.13",
     "prettier": "^2.5.1",
-    "ts-loader": "^9.2.6",
     "tsconfig-paths": "^3.12.0",
-    "tsconfig-paths-webpack-plugin": "^3.5.2",
-    "typescript": "4.5.5"
+    "ttypescript": "^1.5.13",
+    "typescript": "4.5.5",
+    "typescript-transform-paths": "^3.3.1"
   }
 }

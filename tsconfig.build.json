@@ -4,6 +4,10 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "dist",
     "declaration": true,
+    "plugins": [{
+      "transform": "typescript-transform-paths",
+      "afterDeclarations": true
+    }],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,17 +15,12 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@": ["."],
       "@/*": ["./*"],
-      "@common/*": ["src/common/*"],
-      "@components/*": ["src/components/*"],
-      "@components": ["src/components"]
     }
   },
   "ts-node": {
@@ -30,9 +29,8 @@
     }
   },
   "include": [
-    "typings/**.d.ts",
-    "src/components/**.*",
-    "index.ts"
+    "typings",
+    "src/index.ts"
   ],
   "exclude": [
     "node_modules",

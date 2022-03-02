@@ -16,14 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@": ["."],
       "@/*": ["./*"],
-      "@scripts/*": ["scripts/*"],
-      "@stories/*": ["stories/*"],
-      "@icons/*": ["icons/*"],
-      "@common/*": ["src/common/*"],
-      "@components/*": ["src/components/*"],
-      "@components": ["src/components"]
     }
   },
   "ts-node": {

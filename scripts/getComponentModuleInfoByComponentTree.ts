@@ -1,5 +1,5 @@
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
-import { getTreeFileBody, makeFile } from '@scripts/utils';
+import { getTreeFileBody, makeFile } from '@/scripts/utils';
 
 export type ComponentNames = string[];
 export type ComponentImportsMap = {

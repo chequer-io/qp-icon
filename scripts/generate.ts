@@ -1,6 +1,6 @@
-import getComponentModuleInfoByComponentTree from '@scripts/getComponentModuleInfoByComponentTree';
-import createComponentIndexModule from '@scripts/createComponentIndexModule';
-import createStory from '@scripts/createStory';
+import getComponentModuleInfoByComponentTree from '@/scripts/getComponentModuleInfoByComponentTree';
+import createComponentIndexModule from '@/scripts/createComponentIndexModule';
+import createStory from '@/scripts/createStory';
 import { Dirname, Filename } from '@/name.config';
 
 const generate = async () => {
