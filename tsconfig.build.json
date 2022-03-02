@@ -29,13 +29,6 @@
       "module": "CommonJS"
     }
   },
-  "include": [
-    "typings/**.d.ts",
-    "src/components/**.*",
-    "index.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/tree.ts"
-  ]
+  "include": ["typings/**.d.ts", "src/components", "index.ts"],
+  "exclude": ["node_modules", "**/tree.ts"]
 }
