@@ -9,6 +9,7 @@ import {
   toCamelCase,
   toPascalCase,
 } from '@scripts/utils';
+import * as path from 'path';
 
 type Props = {
   svgDir: string;
@@ -48,7 +49,7 @@ export default async function buildReactComponentsBySvgTree({
   );
   const svgJsonTree = JSON.stringify(svgTree, null, '\t');
 
-  await makeFile(`${svgDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
+  await makeFile(path.join(svgDir,treeFilename), getTreeFileBody(svgJsonTree));
 }
 
 async function buildComponentFromSvg({
@@ -102,8 +103,8 @@ export default ${component.name};
       `.trim();
 
   const componentPath = svg.path
-    .replace(new RegExp(`(?<=/?)${svg.dirname}(?=/)`), component.dirname)
-    .replace(/(?<=\/?)([\w-]+)\.svg$/, (_, basename: string) => {
+    .replace(new RegExp(`(?<=[\\\\/]?)${svg.dirname}(?=[\\\\/])`), component.dirname)
+    .replace(/(?<=[\\\\/]?)([\w-]+)\.svg$/, (_, basename: string) => {
       return `${toPascalCase(basename)}.tsx`;
     });
 

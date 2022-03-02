@@ -1,6 +1,7 @@
 import { makeFile, toPascalCase } from '@scripts/utils';
 import type { ComponentImportsMap } from '@scripts/getComponentModuleInfoByComponentTree';
 import { Dirname } from '@/name.config';
+import path from 'path';
 
 type Props = {
   storyDir: string;
@@ -59,6 +60,6 @@ ${categoryName}.args = {
 }, '')}
   `.trim();
 
-  await makeFile(`${storyDir}/Icon.stories.tsx`, rootFile);
-  await makeFile(`${storyDir}/IconCategories.stories.tsx`, categoriesFile);
+  await makeFile(path.join(storyDir, `Icon.stories.tsx`), rootFile);
+  await makeFile(path.join(storyDir, `IconCategories.stories.tsx`), categoriesFile);
 }
