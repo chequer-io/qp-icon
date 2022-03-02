@@ -12,7 +12,7 @@
     "prepare-generate": "ts-node -r tsconfig-paths/register -T scripts/prepareGenerate.ts",
     "generate": "npm run prepare-generate && ts-node -r tsconfig-paths/register -T scripts/generate.ts",
     "storybook": "npm run generate && start-storybook -p 6006",
-    "build": "npm run generate && tsc --project tsconfig.build.json && tsc-alias --project tsconfig.build.json"
+    "build": "npm run generate && tsc -p tsconfig.build.json && tsc-alias -v -f -p tsconfig.build.json"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,svg}": [

@@ -9,6 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+import * as React from 'react';
 import SvgComponent from '../../common/SvgComponent';
 var QIOwner = function (_a) {
     var props = __rest(_a, []);

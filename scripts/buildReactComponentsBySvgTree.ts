@@ -87,6 +87,7 @@ async function buildComponentFromSvg({
     .replace(/([^\s]+-.+)(?==".+")/gm, w => toCamelCase(w));
 
   const componentCode = `
+import * as React from 'react';
 import ${innerComponentName} from '@common/${innerComponentName}';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (

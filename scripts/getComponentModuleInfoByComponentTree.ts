@@ -23,7 +23,7 @@ export default async function getComponentModuleInfoByComponentTree({
 
   const onEachFile: DirectoryTreeCallback = (item, itemPath) => {
     const componentName = item.name.replace(/\.tsx$/, '');
-    const componentAlias = `@/${itemPath.replace(/\.tsx$/, '')}`;
+    const componentAlias = `@${itemPath.substring(4).replace(/\.tsx$/, '')}`;
     const phrase = `export { default as ${componentName} } from '${componentAlias}';`;
     exportPhrases.push(phrase);
   };
