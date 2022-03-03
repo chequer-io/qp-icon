@@ -1,3 +1,4 @@
+import React from 'react';
 import SvgComponent from '../../common/SvgComponent';
 
 const QISetting_Solid: CustomizedSVGComponent = ({ ...props }) => (
