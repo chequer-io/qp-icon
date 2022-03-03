@@ -13,7 +13,7 @@
     "babel": "babel -x \".ts,.tsx\" ./src -d dist",
     "build": "rimraf dist && npm run generate && npm run build-dts && npm run babel && npm run copy-css",
     "clean": "rimraf node_modules/ package-lock.json && npm cache clean -f && npm i",
-    "deploy-storybook": "build-storybook && gh-pages -d storybook-static"
+    "deploy-storybook": "npm run build && build-storybook && gh-pages -d storybook-static"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
