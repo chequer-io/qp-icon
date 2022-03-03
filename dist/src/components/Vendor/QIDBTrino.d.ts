@@ -1,3 +1,5 @@
-import type { CustomizedSVGComponent } from '../../../typings';
-declare const QIDBTrino: CustomizedSVGComponent;
+import type { FC } from 'react';
+import type { CustomizedSvgProps } from '../../../typings';
+declare const QIDBTrino: FC<CustomizedSvgProps>;
 export default QIDBTrino;
+//# sourceMappingURL=QIDBTrino.d.ts.map

@@ -1,7 +1,8 @@
+import type { FC } from 'react';
 import SvgComponent from '../../common/SvgComponent';
-import type { CustomizedSVGComponent } from '../../../typings';
+import type { CustomizedSvgProps } from '../../../typings';
 
-const QIDBAzure: CustomizedSVGComponent = ({ ...props }) => (
+const QIDBAzure: FC<CustomizedSvgProps> = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"

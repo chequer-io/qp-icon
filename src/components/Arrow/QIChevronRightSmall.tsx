@@ -1,7 +1,8 @@
+import type { FC } from 'react';
 import SvgComponent from '../../common/SvgComponent';
-import type { CustomizedSVGComponent } from '../../../typings';
+import type { CustomizedSvgProps } from '../../../typings';
 
-const QIChevronRightSmall: CustomizedSVGComponent = ({ ...props }) => (
+const QIChevronRightSmall: FC<CustomizedSvgProps> = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"

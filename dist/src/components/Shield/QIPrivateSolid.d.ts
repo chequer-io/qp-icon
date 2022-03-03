@@ -1,3 +1,5 @@
-import type { CustomizedSVGComponent } from '../../../typings';
-declare const QIPrivateSolid: CustomizedSVGComponent;
+import type { FC } from 'react';
+import type { CustomizedSvgProps } from '../../../typings';
+declare const QIPrivateSolid: FC<CustomizedSvgProps>;
 export default QIPrivateSolid;
+//# sourceMappingURL=QIPrivateSolid.d.ts.map

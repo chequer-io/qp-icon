@@ -179,3 +179,4 @@ export { default as QIDBScylla } from './components/Vendor/QIDBScylla';
 export { default as QIDBSnowflake } from './components/Vendor/QIDBSnowflake';
 export { default as QIDBSqlserver } from './components/Vendor/QIDBSqlserver';
 export { default as QIDBTrino } from './components/Vendor/QIDBTrino';
+//# sourceMappingURL=index.d.ts.map

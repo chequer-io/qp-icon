@@ -1,17 +1,16 @@
 import type { SVGProps } from 'react';
 import type {
   CommonSVGComponent,
-  CommonSVGComponentProps,
+  IconSize,
   NotUndefined,
+  SVGElementProps,
 } from '../../typings';
 
-type IconSize = NotUndefined<CommonSVGComponentProps['size']>;
-type SVGElementProps = SVGProps<SVGSVGElement>;
 type SVGWidthOrHeight = NotUndefined<
   SVGElementProps['width'] | SVGElementProps['height']
 >;
 
-export const sizeMap: { [key in IconSize]: SVGWidthOrHeight } = {
+export const sizeMap: { [key in NotUndefined<IconSize>]: SVGWidthOrHeight } = {
   S: 16,
   M: 20,
   L: 24,

@@ -1,3 +1,5 @@
-import type { CustomizedSVGComponent } from '../../../typings';
-declare const QIExpandLine: CustomizedSVGComponent;
+import type { FC } from 'react';
+import type { CustomizedSvgProps } from '../../../typings';
+declare const QIExpandLine: FC<CustomizedSvgProps>;
 export default QIExpandLine;
+//# sourceMappingURL=QIExpandLine.d.ts.map

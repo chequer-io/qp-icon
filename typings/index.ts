@@ -1,13 +1,13 @@
 import type { FC, SVGProps } from 'react';
 
-type SVGElementProps = SVGProps<SVGSVGElement>;
+export type SVGElementProps = SVGProps<SVGSVGElement>;
 
 type IconSizeShort = 'S' | 'M' | 'L' | 'XL';
 type IconSizeLong = 'small' | 'medium' | 'large' | 'extraLarge';
-type IconSize = IconSizeShort | IconSizeLong | 'responsive';
+export type IconSize = IconSizeShort | IconSizeLong | 'responsive';
 
-type SizeAffectStyleProps = 'width' | 'height' | 'viewBox';
-interface CustomizedSvgProps {
+export type SizeAffectStyleProps = 'width' | 'height' | 'viewBox';
+export interface CustomizedSvgProps {
   /**
    * @default: 'responsive'
    *
@@ -29,7 +29,7 @@ interface CustomizedSvgProps {
   style?: Omit<SVGProps<SVGSVGElement>['style'], SizeAffectStyleProps>;
 }
 
-type FilteredSvgElementProps = Omit<
+export type FilteredSvgElementProps = Omit<
   SVGElementProps,
   SizeAffectStyleProps | keyof CustomizedSvgProps
 >;

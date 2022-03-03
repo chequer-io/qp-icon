@@ -1,3 +1,5 @@
-import type { CustomizedSVGComponent } from '../../../typings';
-declare const QIMail: CustomizedSVGComponent;
+import type { FC } from 'react';
+import type { CustomizedSvgProps } from '../../../typings';
+declare const QIMail: FC<CustomizedSvgProps>;
 export default QIMail;
+//# sourceMappingURL=QIMail.d.ts.map

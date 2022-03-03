@@ -1,3 +1,5 @@
-import type { CustomizedSVGComponent } from '../../../typings';
-declare const QISwapUp: CustomizedSVGComponent;
+import type { FC } from 'react';
+import type { CustomizedSvgProps } from '../../../typings';
+declare const QISwapUp: FC<CustomizedSvgProps>;
 export default QISwapUp;
+//# sourceMappingURL=QISwapUp.d.ts.map
