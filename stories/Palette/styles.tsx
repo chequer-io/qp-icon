@@ -60,7 +60,8 @@ export const Code = styled.p`
 `;
 
 export const SearchInput = styled.input`
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   font-size: 1rem;
   padding: 0.6em 0 0.6em 0.6em;
   color: #555;
