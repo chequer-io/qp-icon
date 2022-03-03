@@ -121,7 +121,7 @@ async function buildComponentFromSvg({
     });
 
   const componentCode = `
-import React from 'react';
+import * as React from 'react';
 import ${innerComponentName} from '../../common/${innerComponentName}';
 import type { CustomizedSVGComponent } from '../../../typings';
 
