@@ -8,7 +8,8 @@
     "prepare-generate": "ts-node scripts/prepareGenerate.ts",
     "generate": "npm run prepare-generate && ts-node scripts/generate.ts",
     "storybook": "npm run generate && start-storybook -p 6006",
-    "build": "rimraf dist/ && npm run generate && tsc -p tsconfig.build.json",
+    "copy-css": "ncp src/styles.css dist/styles.css",
+    "build": "rimraf dist/ && npm run generate && tsc -p tsconfig.build.json && npm run copy-css",
     "clean": "rimraf node_modules/ package-lock.json && npm cache clean -f && npm i",
     "deploy-storybook": "npm run generate && build-storybook && gh-pages -d storybook-static"
   },

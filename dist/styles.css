@@ -1,0 +1,6 @@
+svg[data-qi-color-controllable="true"] * {
+    fill: currentColor;
+}
+
+svg[data-qi-color-controllable="false"] * {
+}
