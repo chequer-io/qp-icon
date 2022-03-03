@@ -1,16 +1,28 @@
 {
-  "compact": false,
-  "retainLines": true,
-  "minified": false,
-  "inputSourceMap": false,
-  "sourceMaps": false,
+  "exclude": ["**/tree.ts"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "chrome": "85" },
+        "modules": false
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "allowDeclareFields": true
+      }
+    ],
+    "@babel/preset-react"
+  ],
   "plugins": [
     [
       "module-resolver",
       {
-        "root": ["./dist"],
+        "root": ["./src"],
         "alias": {
-          "@/src": "./dist"
+          "@/src": "./src"
         }
       }
     ]

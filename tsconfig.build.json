@@ -4,11 +4,6 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "dist",
     "declaration": true,
-    "plugins": [{
-      "transform": "typescript-transform-paths",
-      "afterDeclarations": true
-    }],
-    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,10 +12,9 @@
     "moduleResolution": "node",
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./*"]
     }
   },
   "ts-node": {
@@ -28,6 +22,6 @@
       "module": "CommonJS"
     }
   },
-  "include": ["typings", "src/index.ts"],
+  "include": ["typings", "src"],
   "exclude": ["node_modules", "**/tree.ts"]
 }

@@ -1,60 +1,15 @@
-var __assign =
-  (this && this.__assign) ||
-  function () {
-    __assign =
-      Object.assign ||
-      function (t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-      };
-    return __assign.apply(this, arguments);
-  };
-var __rest =
-  (this && this.__rest) ||
-  function (s, e) {
-    var t = {};
-    for (var p in s)
-      if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === 'function')
-      for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-        if (
-          e.indexOf(p[i]) < 0 &&
-          Object.prototype.propertyIsEnumerable.call(s, p[i])
-        )
-          t[p[i]] = s[p[i]];
-      }
-    return t;
-  };
-import { jsx as _jsx } from 'react/jsx-runtime';
-import SvgComponent from '../../common/SvgComponent';
-var QILock = function (_a) {
-  var props = __rest(_a, []);
-  return _jsx(
-    SvgComponent,
-    __assign(
-      {
-        viewBox: '0 0 32 32',
-        className: 'querypie_icon',
-        'data-qi-has-multi-path': 'false',
-      },
-      props,
-      {
-        children: _jsx(
-          'path',
-          {
-            d: 'M24 14H22V8C22 4.69 19.31 2 16 2C12.69 2 10 4.69 10 8V14H8C6.89 14 6 14.89 6 16V28C6 29.11 6.89 30 8 30H24C25.11 30 26 29.11 26 28V16C26 14.89 25.11 14 24 14ZM12 8C12 5.79 13.79 4 16 4C18.21 4 20 5.79 20 8V14H12V8ZM24 28H8V16H24V28Z',
-            fill: 'black',
-          },
-          void 0,
-        ),
-      },
-    ),
-    void 0,
-  );
-};
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import SvgComponent from "../../common/SvgComponent";
+
+const QILock = ({ ...props
+}) => /*#__PURE__*/React.createElement(SvgComponent, _extends({
+  viewBox: "0 0 32 32",
+  className: "querypie_icon",
+  "data-qi-has-multi-path": "false"
+}, props), /*#__PURE__*/React.createElement("path", {
+  d: "M24 14H22V8C22 4.69 19.31 2 16 2C12.69 2 10 4.69 10 8V14H8C6.89 14 6 14.89 6 16V28C6 29.11 6.89 30 8 30H24C25.11 30 26 29.11 26 28V16C26 14.89 25.11 14 24 14ZM12 8C12 5.79 13.79 4 16 4C18.21 4 20 5.79 20 8V14H12V8ZM24 28H8V16H24V28Z",
+  fill: "black"
+}));
+
 export default QILock;
