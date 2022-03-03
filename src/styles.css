@@ -1,6 +1,5 @@
-svg[data-qi-has-multi-path="true"] * {
-
+svg[data-qi-color-controllable='true'] * {
+  fill: currentColor;
 }
-svg[data-qi-has-multi-path="false"] * {
-    fill: currentColor;
+svg[data-qi-color-controllable='false'] * {
 }
