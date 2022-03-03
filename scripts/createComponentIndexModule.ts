@@ -1,7 +1,7 @@
 import { makeFile } from '@/scripts/utils';
 import type { ComponentsExportPhrases } from '@/scripts/getComponentModuleInfoByComponentTree';
 import * as path from 'path';
-import { Dirname } from '@/qi.config';
+import getConfig from './getConfig';
 
 type Props = {
   exportPhrases: ComponentsExportPhrases;
@@ -12,5 +12,6 @@ export default async function createComponentIndexModule({
   const fileBody = exportPhrases.reduce((acc, curr) => {
     return acc + curr + '\r\n';
   }, '');
-  await makeFile(path.join(Dirname.SRC, 'index.ts'), fileBody);
+  const { dirname } = await getConfig();
+  await makeFile(path.join(dirname.src, 'index.ts'), fileBody);
 }

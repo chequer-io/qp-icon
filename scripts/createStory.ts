@@ -1,6 +1,6 @@
 import { makeFile, toPascalCase } from '@/scripts/utils';
 import type { ComponentImportsMap } from '@/scripts/getComponentModuleInfoByComponentTree';
-import { Dirname } from '@/qi.config';
+import getConfig from './getConfig';
 
 type Props = {
   storyDir: string;
@@ -22,10 +22,11 @@ export default async function createStory({ storyDir, importsMap }: Props) {
     .flatMap(([, componentNames]) => componentNames)
     .join(', ');
 
+  const { dirname } = await getConfig();
   const getFileHeader = ({ subTitle = '' } = {}) =>
     `
 import { getStoryBase, paletteFactory } from '@/stories/StoryBase';
-import { ${willImportedComponents} } from '@/${Dirname.SRC}';
+import { ${willImportedComponents} } from '@/${dirname.src}';
 
 const base = getStoryBase('${subTitle}');
 export default base;
