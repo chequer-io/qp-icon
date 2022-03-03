@@ -19,3 +19,5 @@ Open [http://localhost:6006](http://localhost:6006) with your browser to see the
 - Paste the svg file into the `icons` folder in the project.
 - `npm run storybook`
 - Check your browser
+
+**Icon designer : Chloe**
