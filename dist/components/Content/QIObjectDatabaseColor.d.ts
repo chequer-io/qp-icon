@@ -1,2 +1,0 @@
-declare const QIObjectDatabaseColor: CustomizedSVGComponent;
-export default QIObjectDatabaseColor;

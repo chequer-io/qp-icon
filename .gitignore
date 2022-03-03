@@ -12,8 +12,6 @@
 /storybook-static
 
 # production
-/build
-/src/components
 **/*.stories.tsx
 **/tree.ts
 

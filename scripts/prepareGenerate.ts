@@ -1,5 +1,5 @@
-import buildReactComponentsBySvgTree from '@/scripts/buildReactComponentsBySvgTree';
-import getConfig from '@/scripts/getConfig';
+import buildReactComponentsBySvgTree from './buildReactComponentsBySvgTree';
+import getConfig from './getConfig';
 import rimraf from 'rimraf';
 
 const prepareGenerate = async () => {

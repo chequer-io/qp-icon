@@ -8,8 +8,8 @@ import {
   readFileWithUTF8,
   toCamelCase,
   toPascalCase,
-} from '@/scripts/utils';
-import getConfig from '@/scripts/getConfig';
+} from './utils';
+import getConfig from './getConfig';
 
 type SvgCustomProps = {
   [name: string]: {
@@ -119,7 +119,7 @@ async function buildComponentFromSvg({
     });
 
   const componentCode = `
-import ${innerComponentName} from '@/src/common/${innerComponentName}';
+import ${innerComponentName} from '../../common/${innerComponentName}';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
   ${newSvgCode.replace('temp="{...props}"', '{...props}')}

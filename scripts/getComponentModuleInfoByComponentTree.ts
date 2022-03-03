@@ -1,5 +1,6 @@
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
-import { getTreeFileBody, makeFile } from '@/scripts/utils';
+import { getTreeFileBody, makeFile } from './utils';
+import * as path from 'path';
 
 export type ComponentNames = string[];
 export type ComponentImportsMap = {
@@ -8,10 +9,12 @@ export type ComponentImportsMap = {
 export type ComponentsExportPhrases = string[];
 
 export type Props = {
+  srcDir: string;
   componentDir: string;
   treeFilename: string;
 };
 export default async function getComponentModuleInfoByComponentTree({
+  srcDir,
   componentDir,
   treeFilename,
 }: Props): Promise<{
@@ -22,9 +25,17 @@ export default async function getComponentModuleInfoByComponentTree({
   const exportPhrases: ComponentsExportPhrases = [];
 
   const onEachFile: DirectoryTreeCallback = (item, itemPath) => {
-    const componentName = item.name.replace(/\.tsx$/, '');
-    const componentAlias = `@/${itemPath.replace(/\.tsx$/, '')}`;
-    const phrase = `export { default as ${componentName} } from '${componentAlias}';`;
+    const exceptExtension = (str: string) => str.replace(/\.tsx$/, '');
+
+    const componentName = exceptExtension(item.name);
+    const componentPath = path.relative(
+      path.resolve(__dirname, srcDir),
+      path.resolve(__dirname, itemPath),
+    );
+
+    const phrase = `export { default as ${componentName} } from './${exceptExtension(
+      componentPath,
+    )}';`;
     exportPhrases.push(phrase);
   };
 

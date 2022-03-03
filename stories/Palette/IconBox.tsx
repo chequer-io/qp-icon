@@ -4,7 +4,7 @@ import {
   IconBoxLabel,
   IconsContainer,
   StyledIconBox,
-} from '@/stories/Palette/styles';
+} from './styles';
 
 type Size = CustomizedSVGComponentProps['size'];
 const iconSizes: NotUndefined<Size>[] = ['S', 'M', 'L', 'XL'];

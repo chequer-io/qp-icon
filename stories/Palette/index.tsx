@@ -1,14 +1,14 @@
-import useComponentNameSearch from '@/stories/Palette/useComponentNameSearch';
-import IconBox from '@/stories/Palette/IconBox';
+import useComponentNameSearch from './useComponentNameSearch';
+import IconBox from './IconBox';
 import 'react-toastify/dist/ReactToastify.css';
-import useIconCopyClick from '@/stories/Palette/useIconCopyClick';
+import useIconCopyClick from './useIconCopyClick';
 import {
   IconGallery,
   SearchInput,
   StyledPalette,
   ToastContainer,
   toastGlobalStyles,
-} from '@/stories/Palette/styles';
+} from './styles';
 import { Global } from '@emotion/react';
 
 interface PaletteProps {

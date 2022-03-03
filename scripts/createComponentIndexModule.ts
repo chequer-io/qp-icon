@@ -1,5 +1,5 @@
-import { makeFile } from '@/scripts/utils';
-import type { ComponentsExportPhrases } from '@/scripts/getComponentModuleInfoByComponentTree';
+import { makeFile } from './utils';
+import type { ComponentsExportPhrases } from './getComponentModuleInfoByComponentTree';
 import * as path from 'path';
 import getConfig from './getConfig';
 

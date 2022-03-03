@@ -1,7 +1,7 @@
-import getComponentModuleInfoByComponentTree from '@/scripts/getComponentModuleInfoByComponentTree';
-import createComponentIndexModule from '@/scripts/createComponentIndexModule';
-import createStory from '@/scripts/createStory';
-import getConfig from '@/scripts/getConfig';
+import getComponentModuleInfoByComponentTree from './getComponentModuleInfoByComponentTree';
+import createComponentIndexModule from './createComponentIndexModule';
+import createStory from './createStory';
+import getConfig from './getConfig';
 
 const generate = async () => {
   const { dirname, filename } = await getConfig();
@@ -9,6 +9,7 @@ const generate = async () => {
   console.log(`🚚 Getting component imports map ...`);
   const { importsMap, exportPhrases } =
     await getComponentModuleInfoByComponentTree({
+      srcDir: dirname.src,
       componentDir: dirname.component,
       treeFilename: filename.tree,
     });
