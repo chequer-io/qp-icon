@@ -6,7 +6,7 @@ const QIDBCassandra = ({ ...props
 }) => /*#__PURE__*/_jsxs(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "true",
+  "data-qi-color-controllable": "false",
   ...props,
   children: [/*#__PURE__*/_jsx("path", {
     d: "M23.9629 14.7152C24.1612 16.9944 20.5695 19.1703 15.9374 19.5658C11.3063 19.9602 7.40232 18.4304 7.2051 16.1512C7.00681 13.872 10.5984 11.6961 15.2295 11.3006C19.851 10.9051 23.7646 12.4253 23.9629 14.7152Z",

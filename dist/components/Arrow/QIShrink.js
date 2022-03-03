@@ -5,7 +5,7 @@ const QIShrink = ({ ...props
 }) => /*#__PURE__*/_jsx(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "false",
+  "data-qi-color-controllable": "true",
   ...props,
   children: /*#__PURE__*/_jsx("path", {
     fillRule: "evenodd",

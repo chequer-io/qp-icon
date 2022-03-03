@@ -5,7 +5,7 @@ const QIChevronRight = ({ ...props
 }) => /*#__PURE__*/_jsx(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "false",
+  "data-qi-color-controllable": "true",
   ...props,
   children: /*#__PURE__*/_jsx("path", {
     d: "M21.41 16L11.41 26L10 24.59L18.58 16L10 7.41L11.41 6L21.41 16Z",

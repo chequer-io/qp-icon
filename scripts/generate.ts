@@ -1,14 +1,16 @@
 import getComponentModuleInfoByComponentTree from '@/scripts/getComponentModuleInfoByComponentTree';
 import createComponentIndexModule from '@/scripts/createComponentIndexModule';
 import createStory from '@/scripts/createStory';
-import { Dirname, Filename } from '@/qi.config';
+import getConfig from '@/scripts/getConfig';
 
 const generate = async () => {
+  const { dirname, filename } = await getConfig();
+
   console.log(`🚚 Getting component imports map ...`);
   const { importsMap, exportPhrases } =
     await getComponentModuleInfoByComponentTree({
-      componentDir: Dirname.COMPONENT,
-      treeFilename: Filename.TREE,
+      componentDir: dirname.component,
+      treeFilename: filename.tree,
     });
 
   console.log(`🚚 Creating component's index module ...`);
@@ -18,7 +20,7 @@ const generate = async () => {
 
   console.log(`🚚 Creating story ...`);
   await createStory({
-    storyDir: Dirname.STORY,
+    storyDir: dirname.story,
     importsMap,
   });
 };

@@ -5,7 +5,7 @@ const QILineS = ({ ...props
 }) => /*#__PURE__*/_jsx(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "false",
+  "data-qi-color-controllable": "true",
   ...props,
   children: /*#__PURE__*/_jsx("path", {
     d: "M15 8H17V24H15V8Z",

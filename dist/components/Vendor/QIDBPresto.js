@@ -6,7 +6,7 @@ const QIDBPresto = ({ ...props
 }) => /*#__PURE__*/_jsxs(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "true",
+  "data-qi-color-controllable": "false",
   ...props,
   children: [/*#__PURE__*/_jsx("path", {
     d: "M26.6 14.1333C25.8 14.1333 25.2 14.7333 25.2 15.5333C25.2 16.3333 25.8 16.9333 26.6 16.9333C27.4 16.9333 28 16.3333 28 15.5333C28 14.7333 27.4 14.1333 26.6 14.1333Z",

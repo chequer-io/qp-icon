@@ -6,7 +6,7 @@ const QIDBRedshift = ({ ...props
 }) => /*#__PURE__*/_jsxs(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "true",
+  "data-qi-color-controllable": "false",
   ...props,
   children: [/*#__PURE__*/_jsx("path", {
     d: "M16.1985 22.3503L25.3251 24.5233V7.42841L16.1985 9.60143V22.3503Z",

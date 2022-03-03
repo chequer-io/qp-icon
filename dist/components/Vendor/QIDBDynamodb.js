@@ -6,7 +6,7 @@ const QIDBDynamodb = ({ ...props
 }) => /*#__PURE__*/_jsxs(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "true",
+  "data-qi-color-controllable": "false",
   ...props,
   children: [/*#__PURE__*/_jsx("path", {
     d: "M19.3471 28H19.6385L24.4018 25.618L24.4806 25.5055V6.49261L24.4018 6.38009L19.6385 4H19.3433L19.3471 28Z",

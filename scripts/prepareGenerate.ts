@@ -1,10 +1,12 @@
 import buildReactComponentsBySvgTree from '@/scripts/buildReactComponentsBySvgTree';
-import { Dirname, Filename } from '@/qi.config';
+import getConfig from '@/scripts/getConfig';
 import rimraf from 'rimraf';
 
 const prepareGenerate = async () => {
+  const { dirname, filename } = await getConfig();
+
   console.log(`🚚 Clear components directory ...`);
-  await rimraf(Dirname.COMPONENT, error => {
+  await rimraf(dirname.component, error => {
     if (error) {
       throw error;
     }
@@ -12,9 +14,9 @@ const prepareGenerate = async () => {
 
   console.log(`🚚 Building react components from svg files...`);
   await buildReactComponentsBySvgTree({
-    svgDir: Dirname.SVG,
-    componentDir: Dirname.COMPONENT,
-    treeFilename: Filename.TREE,
+    svgDir: dirname.svg,
+    componentDir: dirname.component,
+    treeFilename: filename.tree,
   });
 };
 

@@ -9,11 +9,12 @@ import {
   toCamelCase,
   toPascalCase,
 } from '@/scripts/utils';
+import getConfig from '@/scripts/getConfig';
 
 type SvgCustomProps = {
-  [key: string]: {
-    key: 'role' | `qi-${string}`;
-    value: string;
+  [name: string]: {
+    key: 'role' | `data-qi-${string}`;
+    value?: string;
   };
 };
 const svgCustomProps: SvgCustomProps = {
@@ -22,8 +23,7 @@ const svgCustomProps: SvgCustomProps = {
     value: 'querypie-icon',
   },
   controllable: {
-    key: 'qi-color-controllable',
-    value: 'false',
+    key: 'data-qi-color-controllable',
   },
 } as const;
 
@@ -85,13 +85,23 @@ async function buildComponentFromSvg({
   const svgJson = (await parseStringPromise(svgCode)).svg;
   const innerComponentName = 'SvgComponent';
 
+  const { colorControlExceptedIconDirnames } = await getConfig();
+
+  const pathLength = svgJson.path?.length ?? 0;
+  let colorControllable = false;
+  if (pathLength === 1) {
+    colorControllable = !colorControlExceptedIconDirnames.find((dirnameToken) => {
+      return svg.path.includes(dirnameToken);
+    });
+  }
+
   const styledJson = {
     [innerComponentName]: {
       ...svgJson,
       $: {
         viewBox: svgJson['$']['viewBox'],
         [svgCustomProps.role.key]: svgCustomProps.role.value,
-        [svgCustomProps.controllable.key]: svgJson.path?.length > 1,
+        [svgCustomProps.controllable.key]: colorControllable.toString(),
         temp: '{...props}',
       },
     },
@@ -103,7 +113,7 @@ async function buildComponentFromSvg({
   newSvgCode = newSvgCode
     .substring(newSvgCode.indexOf('\n'))
     .replace(/(?=.*-)([\w-]+)(?==".*")/gm, w => {
-      if (w.indexOf('qi-') > -1) return w;
+      if (w.indexOf('data-qi-') > -1) return w;
 
       return toCamelCase(w);
     });

@@ -6,7 +6,7 @@ const QIDBAmazonAthena = ({ ...props
 }) => /*#__PURE__*/_jsxs(SvgComponent, {
   viewBox: "0 0 32 32",
   role: "querypie-icon",
-  "qi-color-controllable": "true",
+  "data-qi-color-controllable": "false",
   ...props,
   children: [/*#__PURE__*/_jsx("path", {
     fillRule: "evenodd",
