@@ -8,3 +8,9 @@ export enum Dirname {
 export enum Filename {
   TREE = 'tree.ts',
 }
+
+const QIConfig = {
+
+};
+
+export default QIConfig;

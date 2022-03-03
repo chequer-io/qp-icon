@@ -1,7 +1,7 @@
 import getComponentModuleInfoByComponentTree from '@/scripts/getComponentModuleInfoByComponentTree';
 import createComponentIndexModule from '@/scripts/createComponentIndexModule';
 import createStory from '@/scripts/createStory';
-import { Dirname, Filename } from '@/name.config';
+import { Dirname, Filename } from '@/qi.config';
 
 const generate = async () => {
   console.log(`🚚 Getting component imports map ...`);

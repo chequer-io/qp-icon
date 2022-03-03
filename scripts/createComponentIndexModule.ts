@@ -1,7 +1,7 @@
 import { makeFile } from '@/scripts/utils';
 import type { ComponentsExportPhrases } from '@/scripts/getComponentModuleInfoByComponentTree';
 import * as path from 'path';
-import { Dirname } from '@/name.config';
+import { Dirname } from '@/qi.config';
 
 type Props = {
   exportPhrases: ComponentsExportPhrases;

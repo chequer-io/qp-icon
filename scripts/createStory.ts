@@ -1,6 +1,6 @@
 import { makeFile, toPascalCase } from '@/scripts/utils';
 import type { ComponentImportsMap } from '@/scripts/getComponentModuleInfoByComponentTree';
-import { Dirname } from '@/name.config';
+import { Dirname } from '@/qi.config';
 
 type Props = {
   storyDir: string;

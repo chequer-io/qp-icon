@@ -10,6 +10,23 @@ import {
   toPascalCase,
 } from '@/scripts/utils';
 
+type SvgCustomProps = {
+  [key: string]: {
+    key: 'role' | `qi-${string}`;
+    value: string;
+  };
+};
+const svgCustomProps: SvgCustomProps = {
+  role: {
+    key: 'role',
+    value: 'querypie-icon',
+  },
+  controllable: {
+    key: 'qi-color-controllable',
+    value: 'false',
+  },
+} as const;
+
 type Props = {
   svgDir: string;
   componentDir: string;
@@ -73,28 +90,29 @@ async function buildComponentFromSvg({
       ...svgJson,
       $: {
         viewBox: svgJson['$']['viewBox'],
-        className: 'querypie_icon',
-        ['data-qi-has-multi-path']: svgJson.path?.length > 1,
+        [svgCustomProps.role.key]: svgCustomProps.role.value,
+        [svgCustomProps.controllable.key]: svgJson.path?.length > 1,
         temp: '{...props}',
       },
     },
   };
 
   const xmlBuilder = new Builder();
-  const newSvgCode = xmlBuilder
-    .buildObject(styledJson)
-    .split('\n') // Remove the first line starting with "<xml...".
-    .slice(1)
-    .join('\n')
-    .replace(/([^\s]+-.+)(?==".+")/gm, w => toCamelCase(w));
+  let newSvgCode = xmlBuilder.buildObject(styledJson);
+
+  newSvgCode = newSvgCode
+    .substring(newSvgCode.indexOf('\n'))
+    .replace(/(?=.*-)([\w-]+)(?==".*")/gm, w => {
+      if (w.indexOf('qi-') > -1) return w;
+
+      return toCamelCase(w);
+    });
 
   const componentCode = `
 import ${innerComponentName} from '@/src/common/${innerComponentName}';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
-  ${newSvgCode
-    .replace('dataQiHasMultiPath=', 'data-qi-has-multi-path=')
-    .replace('temp="{...props}"', '{...props}')}
+  ${newSvgCode.replace('temp="{...props}"', '{...props}')}
 );
 
 export default ${component.name};

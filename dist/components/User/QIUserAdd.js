@@ -1,17 +1,18 @@
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 import SvgComponent from "../../common/SvgComponent";
+import { jsx as _jsx } from "react/jsx-runtime";
 
 const QIUserAdd = ({ ...props
-}) => /*#__PURE__*/React.createElement(SvgComponent, _extends({
+}) => /*#__PURE__*/_jsx(SvgComponent, {
   viewBox: "0 0 32 32",
-  className: "querypie_icon",
-  "data-qi-has-multi-path": "false"
-}, props), /*#__PURE__*/React.createElement("path", {
-  fillRule: "evenodd",
-  clipRule: "evenodd",
-  d: "M12 4C14.76 4 17 6.23999 17 9C17 11.76 14.76 14 12 14C9.23999 14 7 11.76 7 9C7 6.23999 9.23999 4 12 4ZM12 2C8.13 2 5 5.13 5 9C5 12.87 8.13 16 12 16C15.87 16 19 12.87 19 9C19 5.13 15.87 2 12 2ZM22 30H20V23C20 20.24 15.76 20 13 20H11C8.23999 20 4 20.24 4 23V30H2V23C2 19.14 7.14001 18.01 11 18H13C16.86 18.01 21.99 19.14 22 23V30ZM28 14H32V16H28V20H26V16H22V14H26V10H28V14Z",
-  fill: "black"
-}));
+  role: "querypie-icon",
+  "qi-color-controllable": "false",
+  ...props,
+  children: /*#__PURE__*/_jsx("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M12 4C14.76 4 17 6.23999 17 9C17 11.76 14.76 14 12 14C9.23999 14 7 11.76 7 9C7 6.23999 9.23999 4 12 4ZM12 2C8.13 2 5 5.13 5 9C5 12.87 8.13 16 12 16C15.87 16 19 12.87 19 9C19 5.13 15.87 2 12 2ZM22 30H20V23C20 20.24 15.76 20 13 20H11C8.23999 20 4 20.24 4 23V30H2V23C2 19.14 7.14001 18.01 11 18H13C16.86 18.01 21.99 19.14 22 23V30ZM28 14H32V16H28V20H26V16H22V14H26V10H28V14Z",
+    fill: "black"
+  })
+});
 
 export default QIUserAdd;
