@@ -1,4 +1,9 @@
 import { FC, HTMLAttributes, memo } from 'react';
+import type {
+  CustomizedSVGComponent,
+  CustomizedSVGComponentProps,
+  NotUndefined,
+} from '../../typings';
 import {
   IconBoxContent,
   IconBoxLabel,

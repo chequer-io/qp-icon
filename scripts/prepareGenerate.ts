@@ -14,6 +14,7 @@ const prepareGenerate = async () => {
 
   console.log(`🚚 Building react components from svg files...`);
   await buildReactComponentsBySvgTree({
+    srcDir: dirname.src,
     svgDir: dirname.svg,
     componentDir: dirname.component,
     treeFilename: filename.tree,

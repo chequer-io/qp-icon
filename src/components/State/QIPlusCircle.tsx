@@ -1,5 +1,6 @@
 import React from 'react';
 import SvgComponent from '../../common/SvgComponent';
+import type { CustomizedSVGComponent } from '../../../typings';
 
 const QIPlusCircle: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent

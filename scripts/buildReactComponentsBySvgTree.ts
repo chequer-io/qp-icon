@@ -28,11 +28,13 @@ const svgCustomProps: SvgCustomProps = {
 } as const;
 
 type Props = {
+  srcDir: string;
   svgDir: string;
   componentDir: string;
   treeFilename: string;
 };
 export default async function buildReactComponentsBySvgTree({
+  srcDir,
   svgDir,
   componentDir,
   treeFilename,
@@ -90,7 +92,7 @@ async function buildComponentFromSvg({
   const pathLength = svgJson.path?.length ?? 0;
   let colorControllable = false;
   if (pathLength === 1) {
-    colorControllable = !colorControlExceptedIconDirnames.find((dirnameToken) => {
+    colorControllable = !colorControlExceptedIconDirnames.find(dirnameToken => {
       return svg.path.includes(dirnameToken);
     });
   }
@@ -121,6 +123,7 @@ async function buildComponentFromSvg({
   const componentCode = `
 import React from 'react';
 import ${innerComponentName} from '../../common/${innerComponentName}';
+import type { CustomizedSVGComponent } from '../../../typings';
 
 const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
   ${newSvgCode.replace('temp="{...props}"', '{...props}')}

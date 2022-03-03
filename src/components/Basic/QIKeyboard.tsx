@@ -1,5 +1,6 @@
 import React from 'react';
 import SvgComponent from '../../common/SvgComponent';
+import type { CustomizedSVGComponent } from '../../../typings';
 
 const QIKeyboard: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
