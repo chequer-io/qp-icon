@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIStar: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIStar: CustomizedSVGComponent;
 export default QIStar;
 //# sourceMappingURL=QIStar.d.ts.map

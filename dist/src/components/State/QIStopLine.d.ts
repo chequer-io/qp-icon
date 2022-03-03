@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIStopLine: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIStopLine: CustomizedSVGComponent;
 export default QIStopLine;
 //# sourceMappingURL=QIStopLine.d.ts.map

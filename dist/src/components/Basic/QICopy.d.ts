@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QICopy: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QICopy: CustomizedSVGComponent;
 export default QICopy;
 //# sourceMappingURL=QICopy.d.ts.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"QITime.d.ts","sourceRoot":"","sources":["../../../../src/components/Basic/QITime.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,EAAE,EAAE,MAAM,OAAO,CAAC;AAEhC,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,kBAAkB,CAAC;AAE3D,QAAA,MAAM,MAAM,EAAE,EAAE,CAAC,kBAAkB,CAclC,CAAC;AAEF,eAAe,MAAM,CAAC"}
+{"version":3,"file":"QITime.d.ts","sourceRoot":"","sources":["../../../../src/components/Basic/QITime.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,kBAAkB,CAAC;AAE/D,QAAA,MAAM,MAAM,EAAE,sBAcb,CAAC;AAEF,eAAe,MAAM,CAAC"}

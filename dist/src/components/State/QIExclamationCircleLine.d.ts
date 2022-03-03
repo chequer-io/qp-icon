@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIExclamationCircleLine: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIExclamationCircleLine: CustomizedSVGComponent;
 export default QIExclamationCircleLine;
 //# sourceMappingURL=QIExclamationCircleLine.d.ts.map

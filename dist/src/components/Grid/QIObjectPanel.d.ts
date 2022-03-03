@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIObjectPanel: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIObjectPanel: CustomizedSVGComponent;
 export default QIObjectPanel;
 //# sourceMappingURL=QIObjectPanel.d.ts.map

@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIHistory: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIHistory: CustomizedSVGComponent;
 export default QIHistory;
 //# sourceMappingURL=QIHistory.d.ts.map

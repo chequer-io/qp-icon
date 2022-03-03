@@ -1,1 +1,1 @@
-{"version":3,"file":"QIDBMongodb.d.ts","sourceRoot":"","sources":["../../../../src/components/Vendor/QIDBMongodb.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,EAAE,EAAE,MAAM,OAAO,CAAC;AAEhC,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,kBAAkB,CAAC;AAE3D,QAAA,MAAM,WAAW,EAAE,EAAE,CAAC,kBAAkB,CAoBvC,CAAC;AAEF,eAAe,WAAW,CAAC"}
+{"version":3,"file":"QIDBMongodb.d.ts","sourceRoot":"","sources":["../../../../src/components/Vendor/QIDBMongodb.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,kBAAkB,CAAC;AAE/D,QAAA,MAAM,WAAW,EAAE,sBAoBlB,CAAC;AAEF,eAAe,WAAW,CAAC"}

@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QISwapRight: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QISwapRight: CustomizedSVGComponent;
 export default QISwapRight;
 //# sourceMappingURL=QISwapRight.d.ts.map

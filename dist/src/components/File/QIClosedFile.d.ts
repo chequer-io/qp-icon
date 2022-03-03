@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIClosedFile: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIClosedFile: CustomizedSVGComponent;
 export default QIClosedFile;
 //# sourceMappingURL=QIClosedFile.d.ts.map

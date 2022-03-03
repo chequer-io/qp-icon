@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIMore: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIMore: CustomizedSVGComponent;
 export default QIMore;
 //# sourceMappingURL=QIMore.d.ts.map

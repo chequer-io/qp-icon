@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIObjectProcedure: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIObjectProcedure: CustomizedSVGComponent;
 export default QIObjectProcedure;
 //# sourceMappingURL=QIObjectProcedure.d.ts.map

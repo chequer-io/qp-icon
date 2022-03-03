@@ -1,1 +1,1 @@
-{"version":3,"file":"QIMinus.d.ts","sourceRoot":"","sources":["../../../../src/components/Basic/QIMinus.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,EAAE,EAAE,MAAM,OAAO,CAAC;AAEhC,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,kBAAkB,CAAC;AAE3D,QAAA,MAAM,OAAO,EAAE,EAAE,CAAC,kBAAkB,CASnC,CAAC;AAEF,eAAe,OAAO,CAAC"}
+{"version":3,"file":"QIMinus.d.ts","sourceRoot":"","sources":["../../../../src/components/Basic/QIMinus.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,kBAAkB,CAAC;AAE/D,QAAA,MAAM,OAAO,EAAE,sBASd,CAAC;AAEF,eAAe,OAAO,CAAC"}

@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIRole: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIRole: CustomizedSVGComponent;
 export default QIRole;
 //# sourceMappingURL=QIRole.d.ts.map

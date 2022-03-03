@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDBBigquery: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDBBigquery: CustomizedSVGComponent;
 export default QIDBBigquery;
 //# sourceMappingURL=QIDBBigquery.d.ts.map

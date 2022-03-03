@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QILock: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QILock: CustomizedSVGComponent;
 export default QILock;
 //# sourceMappingURL=QILock.d.ts.map

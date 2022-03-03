@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIEnlarge: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIEnlarge: CustomizedSVGComponent;
 export default QIEnlarge;
 //# sourceMappingURL=QIEnlarge.d.ts.map

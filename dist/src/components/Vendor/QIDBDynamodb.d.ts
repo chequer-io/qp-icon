@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDBDynamodb: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDBDynamodb: CustomizedSVGComponent;
 export default QIDBDynamodb;
 //# sourceMappingURL=QIDBDynamodb.d.ts.map

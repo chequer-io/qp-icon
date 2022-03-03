@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDBImpala: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDBImpala: CustomizedSVGComponent;
 export default QIDBImpala;
 //# sourceMappingURL=QIDBImpala.d.ts.map

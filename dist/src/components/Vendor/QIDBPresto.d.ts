@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDBPresto: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDBPresto: CustomizedSVGComponent;
 export default QIDBPresto;
 //# sourceMappingURL=QIDBPresto.d.ts.map

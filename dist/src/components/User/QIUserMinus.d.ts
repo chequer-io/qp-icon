@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIUserMinus: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIUserMinus: CustomizedSVGComponent;
 export default QIUserMinus;
 //# sourceMappingURL=QIUserMinus.d.ts.map

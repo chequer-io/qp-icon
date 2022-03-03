@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDBRedshift: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDBRedshift: CustomizedSVGComponent;
 export default QIDBRedshift;
 //# sourceMappingURL=QIDBRedshift.d.ts.map

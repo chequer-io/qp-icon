@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIPlusCircle: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIPlusCircle: CustomizedSVGComponent;
 export default QIPlusCircle;
 //# sourceMappingURL=QIPlusCircle.d.ts.map

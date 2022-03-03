@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QINewTab: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QINewTab: CustomizedSVGComponent;
 export default QINewTab;
 //# sourceMappingURL=QINewTab.d.ts.map

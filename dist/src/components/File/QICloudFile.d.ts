@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QICloudFile: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QICloudFile: CustomizedSVGComponent;
 export default QICloudFile;
 //# sourceMappingURL=QICloudFile.d.ts.map

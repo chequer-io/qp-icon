@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIChevronLeft: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIChevronLeft: CustomizedSVGComponent;
 export default QIChevronLeft;
 //# sourceMappingURL=QIChevronLeft.d.ts.map

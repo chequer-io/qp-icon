@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIRollBackTool: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIRollBackTool: CustomizedSVGComponent;
 export default QIRollBackTool;
 //# sourceMappingURL=QIRollBackTool.d.ts.map

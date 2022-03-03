@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIArrowDown: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIArrowDown: CustomizedSVGComponent;
 export default QIArrowDown;
 //# sourceMappingURL=QIArrowDown.d.ts.map

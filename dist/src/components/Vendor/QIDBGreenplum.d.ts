@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDBGreenplum: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDBGreenplum: CustomizedSVGComponent;
 export default QIDBGreenplum;
 //# sourceMappingURL=QIDBGreenplum.d.ts.map

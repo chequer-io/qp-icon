@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QISettingShortcut: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QISettingShortcut: CustomizedSVGComponent;
 export default QISettingShortcut;
 //# sourceMappingURL=QISettingShortcut.d.ts.map

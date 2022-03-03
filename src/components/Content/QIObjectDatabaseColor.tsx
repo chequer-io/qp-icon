@@ -1,8 +1,7 @@
-import type { FC } from 'react';
 import SvgComponent from '../../common/SvgComponent';
-import type { CustomizedSvgProps } from '../../../typings';
+import type { CustomizedSVGComponent } from '../../../typings';
 
-const QIObjectDatabaseColor: FC<CustomizedSvgProps> = ({ ...props }) => (
+const QIObjectDatabaseColor: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"

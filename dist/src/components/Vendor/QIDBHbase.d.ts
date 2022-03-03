@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDBHbase: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDBHbase: CustomizedSVGComponent;
 export default QIDBHbase;
 //# sourceMappingURL=QIDBHbase.d.ts.map

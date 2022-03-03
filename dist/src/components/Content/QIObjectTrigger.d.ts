@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIObjectTrigger: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIObjectTrigger: CustomizedSVGComponent;
 export default QIObjectTrigger;
 //# sourceMappingURL=QIObjectTrigger.d.ts.map

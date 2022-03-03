@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDotS: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDotS: CustomizedSVGComponent;
 export default QIDotS;
 //# sourceMappingURL=QIDotS.d.ts.map

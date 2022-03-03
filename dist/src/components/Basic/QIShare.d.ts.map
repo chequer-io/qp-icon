@@ -1,1 +1,1 @@
-{"version":3,"file":"QIShare.d.ts","sourceRoot":"","sources":["../../../../src/components/Basic/QIShare.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,EAAE,EAAE,MAAM,OAAO,CAAC;AAEhC,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,kBAAkB,CAAC;AAE3D,QAAA,MAAM,OAAO,EAAE,EAAE,CAAC,kBAAkB,CAYnC,CAAC;AAEF,eAAe,OAAO,CAAC"}
+{"version":3,"file":"QIShare.d.ts","sourceRoot":"","sources":["../../../../src/components/Basic/QIShare.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,kBAAkB,CAAC;AAE/D,QAAA,MAAM,OAAO,EAAE,sBAYd,CAAC;AAEF,eAAe,OAAO,CAAC"}

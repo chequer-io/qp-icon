@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDisconnect: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDisconnect: CustomizedSVGComponent;
 export default QIDisconnect;
 //# sourceMappingURL=QIDisconnect.d.ts.map

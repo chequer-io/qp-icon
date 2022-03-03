@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIConnect: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIConnect: CustomizedSVGComponent;
 export default QIConnect;
 //# sourceMappingURL=QIConnect.d.ts.map

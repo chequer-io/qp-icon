@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QISettingLine: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QISettingLine: CustomizedSVGComponent;
 export default QISettingLine;
 //# sourceMappingURL=QISettingLine.d.ts.map

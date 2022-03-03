@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QIDatabaseLine: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QIDatabaseLine: CustomizedSVGComponent;
 export default QIDatabaseLine;
 //# sourceMappingURL=QIDatabaseLine.d.ts.map

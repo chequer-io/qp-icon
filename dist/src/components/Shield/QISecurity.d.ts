@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QISecurity: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QISecurity: CustomizedSVGComponent;
 export default QISecurity;
 //# sourceMappingURL=QISecurity.d.ts.map

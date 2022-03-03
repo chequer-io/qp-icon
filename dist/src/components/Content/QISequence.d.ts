@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-import type { CustomizedSvgProps } from '../../../typings';
-declare const QISequence: FC<CustomizedSvgProps>;
+import type { CustomizedSVGComponent } from '../../../typings';
+declare const QISequence: CustomizedSVGComponent;
 export default QISequence;
 //# sourceMappingURL=QISequence.d.ts.map
