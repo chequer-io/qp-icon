@@ -1,30 +1,17 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-import React from 'react';
-import SvgComponent from '../../common/SvgComponent.js';
-var QISecurity = function (_a) {
-    var props = __rest(_a, []);
-    return (React.createElement(SvgComponent, __assign({ viewBox: "0 0 32 32", className: "querypie_icon", "data-qi-has-multi-path": "false" }, props),
-        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M13 4C13 4 10.0542 6.08655 8.45453 6.76924C6.93713 7.41682 3 8.00001 3 8.00001L3.00002 15C3.00002 21.1066 7.26665 26.6136 13 28C13.6895 27.8333 14.3578 27.607 15 27.3272V25.1036C14.3651 25.4469 13.6958 25.7256 13 25.9301C8.43003 24.5865 5.00002 20.0458 5.00002 15L5 9.69214C5.17257 9.66061 5.35268 9.62687 5.53752 9.59117C6.68087 9.37034 8.25356 9.02952 9.23957 8.60873C10.2174 8.19144 11.4859 7.40909 12.415 6.80688C12.6213 6.67313 12.8181 6.54353 13 6.42236C13.1819 6.54353 13.3787 6.67313 13.585 6.80688C14.5141 7.40909 15.7826 8.19144 16.7604 8.60873C17.7464 9.02953 19.3191 9.37034 20.4625 9.59117C20.6473 9.62687 20.8274 9.66061 21 9.69215V13H23V8.00001C23 8.00001 19.0628 7.41682 17.5454 6.76924C15.9458 6.08655 13 4 13 4ZM27 21V19C27 16.79 25.21 15 23 15C20.79 15 19 16.79 19 19V21C17.9 21 17 21.9 17 23V28C17 29.1 17.9 30 19 30H27C28.1 30 29 29.1 29 28V23C29 21.9 28.1 21 27 21ZM21 19C21 17.9 21.9 17 23 17C24.1 17 25 17.9 25 19V21H21V19ZM27 23V28H19V23H27Z", fill: "black" })));
-};
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import SvgComponent from "../../common/SvgComponent";
+
+const QISecurity = ({ ...props
+}) => /*#__PURE__*/React.createElement(SvgComponent, _extends({
+  viewBox: "0 0 32 32",
+  className: "querypie_icon",
+  "data-qi-has-multi-path": "false"
+}, props), /*#__PURE__*/React.createElement("path", {
+  fillRule: "evenodd",
+  clipRule: "evenodd",
+  d: "M15 2C15 2 11.465 4.43431 9.54543 5.23078C7.72455 5.98629 3 6.66667 3 6.66667L3.00002 14.8333C3.00002 21.9577 8.11998 28.3826 15 30L15 30V27.9365L15 27.9365C9.25259 26.3586 5.00002 20.8688 5.00002 14.8333L5 8.37051C5.29855 8.31884 5.62225 8.26092 5.95899 8.19769C7.33736 7.93886 9.17832 7.54842 10.3119 7.07808C11.4474 6.60695 12.942 5.71258 14.0588 5.00875C14.4 4.79375 14.7193 4.58794 15 4.40456C15.2807 4.58794 15.5999 4.79375 15.9411 5.00875C17.0579 5.71258 18.5525 6.60695 19.688 7.07808C20.8216 7.54842 22.6626 7.93886 24.041 8.19769C24.3777 8.26092 24.7014 8.31885 25 8.37052V14H27V6.66667C27 6.66667 22.2754 5.98629 20.4545 5.23078C18.5349 4.43431 15 2 15 2ZM23.5 18C22.6716 18 22 18.6716 22 19.5V22H25V19.5C25 18.6716 24.3284 18 23.5 18ZM20 19.5V22H19C17.8954 22 17 22.8954 17 24V29C17 30.1046 17.8954 31 19 31H28C29.1046 31 30 30.1046 30 29V24C30 22.8954 29.1046 22 28 22H27V19.5C27 17.567 25.433 16 23.5 16C21.567 16 20 17.567 20 19.5ZM19 24V29H28V24H19Z",
+  fill: "black"
+}));
+
 export default QISecurity;

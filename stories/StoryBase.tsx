@@ -1,7 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import Palette from '@stories/Palette';
-import React from 'react';
-import 'src/styles.css';
+import Palette from '@/stories/Palette';
+import '@/src/styles.css';
 
 export const paletteFactory = (): ComponentStory<typeof Palette> => args =>
   <Palette {...args} />;

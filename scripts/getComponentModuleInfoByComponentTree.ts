@@ -1,6 +1,5 @@
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
-import { getTreeFileBody, makeFile } from '@scripts/utils';
-import path from 'path';
+import { getTreeFileBody, makeFile } from '@/scripts/utils';
 
 export type ComponentNames = string[];
 export type ComponentImportsMap = {
@@ -24,7 +23,7 @@ export default async function getComponentModuleInfoByComponentTree({
 
   const onEachFile: DirectoryTreeCallback = (item, itemPath) => {
     const componentName = item.name.replace(/\.tsx$/, '');
-    const componentAlias = `@${itemPath.substring(4).replace(/\.tsx$/, '').replace(/\\/g, '/')}`;
+    const componentAlias = `@/${itemPath.replace(/\.tsx$/, '')}`;
     const phrase = `export { default as ${componentName} } from '${componentAlias}';`;
     exportPhrases.push(phrase);
   };
@@ -44,14 +43,14 @@ export default async function getComponentModuleInfoByComponentTree({
     componentDir,
     {
       extensions: /\.tsx/,
-      attributes: ['type'], 
+      attributes: ['type'],
     },
     onEachFile,
     onEachDirectory,
   );
   const componentsJsonTree = JSON.stringify(componentsTree, null, '\t');
   await makeFile(
-    path.join(componentDir, treeFilename),
+    `${componentDir}/${treeFilename}`,
     getTreeFileBody(componentsJsonTree),
   );
 

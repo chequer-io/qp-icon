@@ -1,0 +1,30 @@
+{
+  "exclude": ["**/tree.ts"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "chrome": "85" },
+        "modules": false
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "allowDeclareFields": true
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@/src": "./src"
+        }
+      }
+    ]
+  ]
+}

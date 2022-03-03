@@ -1,16 +1,15 @@
-import useComponentNameSearch from '@stories/Palette/useComponentNameSearch';
-import IconBox from '@stories/Palette/IconBox';
+import useComponentNameSearch from '@/stories/Palette/useComponentNameSearch';
+import IconBox from '@/stories/Palette/IconBox';
 import 'react-toastify/dist/ReactToastify.css';
-import useIconCopyClick from '@stories/Palette/useIconCopyClick';
+import useIconCopyClick from '@/stories/Palette/useIconCopyClick';
 import {
   IconGallery,
   SearchInput,
   StyledPalette,
   ToastContainer,
   toastGlobalStyles,
-} from '@stories/Palette/styles';
+} from '@/stories/Palette/styles';
 import { Global } from '@emotion/react';
-import React from 'react';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
@@ -19,7 +18,13 @@ interface PaletteProps {
   color: string;
   backgroundColor: string;
 }
-export const Palette = ({ icons, isExpand, pageTitle, color, backgroundColor }: PaletteProps) => {
+export const Palette = ({
+  icons,
+  isExpand,
+  pageTitle,
+  color,
+  backgroundColor,
+}: PaletteProps) => {
   const {
     searchWord,
     onChangeSearchWord,

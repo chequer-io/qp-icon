@@ -1,7 +1,6 @@
-import { makeFile, toPascalCase } from '@scripts/utils';
-import type { ComponentImportsMap } from '@scripts/getComponentModuleInfoByComponentTree';
+import { makeFile, toPascalCase } from '@/scripts/utils';
+import type { ComponentImportsMap } from '@/scripts/getComponentModuleInfoByComponentTree';
 import { Dirname } from '@/name.config';
-import path from 'path';
 
 type Props = {
   storyDir: string;
@@ -25,7 +24,7 @@ export default async function createStory({ storyDir, importsMap }: Props) {
 
   const getFileHeader = ({ subTitle = '' } = {}) =>
     `
-import { getStoryBase, paletteFactory } from '@stories/StoryBase';
+import { getStoryBase, paletteFactory } from '@/stories/StoryBase';
 import { ${willImportedComponents} } from '@/${Dirname.SRC}';
 
 const base = getStoryBase('${subTitle}');
@@ -60,6 +59,6 @@ ${categoryName}.args = {
 }, '')}
   `.trim();
 
-  await makeFile(path.join(storyDir, `Icon.stories.tsx`), rootFile);
-  await makeFile(path.join(storyDir, `IconCategories.stories.tsx`), categoriesFile);
+  await makeFile(`${storyDir}/Icon.stories.tsx`, rootFile);
+  await makeFile(`${storyDir}/IconCategories.stories.tsx`, categoriesFile);
 }
