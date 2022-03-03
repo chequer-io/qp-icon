@@ -1,4 +1,4 @@
-const tree = {
+var tree = {
     path: 'src/components',
     name: 'components',
     children: [
