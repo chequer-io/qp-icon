@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIUnion: CustomizedSVGComponent;
-export default QIUnion;
+export declare const QIUnion: CustomizedSVGComponent;
 //# sourceMappingURL=QIUnion.d.ts.map

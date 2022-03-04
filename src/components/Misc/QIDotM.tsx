@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QIDotM: CustomizedSVGComponent = ({ ...props }) => (
+export const QIDotM: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -11,5 +11,3 @@ const QIDotM: CustomizedSVGComponent = ({ ...props }) => (
     <circle cx="16" cy="16" r="8" fill="black" />
   </SvgComponent>
 );
-
-export default QIDotM;

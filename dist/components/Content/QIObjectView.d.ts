@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIObjectView: CustomizedSVGComponent;
-export default QIObjectView;
+export declare const QIObjectView: CustomizedSVGComponent;
 //# sourceMappingURL=QIObjectView.d.ts.map

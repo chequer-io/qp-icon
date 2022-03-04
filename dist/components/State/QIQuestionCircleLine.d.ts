@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIQuestionCircleLine: CustomizedSVGComponent;
-export default QIQuestionCircleLine;
+export declare const QIQuestionCircleLine: CustomizedSVGComponent;
 //# sourceMappingURL=QIQuestionCircleLine.d.ts.map

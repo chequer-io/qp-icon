@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QISqlFile: CustomizedSVGComponent = ({ ...props }) => (
+export const QISqlFile: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -16,5 +16,3 @@ const QISqlFile: CustomizedSVGComponent = ({ ...props }) => (
     />
   </SvgComponent>
 );
-
-export default QISqlFile;

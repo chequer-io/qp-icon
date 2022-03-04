@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBScylla: CustomizedSVGComponent;
-export default QIDBScylla;
+export declare const QIDBScylla: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBScylla.d.ts.map

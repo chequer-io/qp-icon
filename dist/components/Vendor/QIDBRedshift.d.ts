@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBRedshift: CustomizedSVGComponent;
-export default QIDBRedshift;
+export declare const QIDBRedshift: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBRedshift.d.ts.map

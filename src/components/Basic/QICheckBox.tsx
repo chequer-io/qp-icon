@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QICheckBox: CustomizedSVGComponent = ({ ...props }) => (
+export const QICheckBox: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -14,5 +14,3 @@ const QICheckBox: CustomizedSVGComponent = ({ ...props }) => (
     />
   </SvgComponent>
 );
-
-export default QICheckBox;

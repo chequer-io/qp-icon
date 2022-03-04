@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDatabaseError: CustomizedSVGComponent;
-export default QIDatabaseError;
+export declare const QIDatabaseError: CustomizedSVGComponent;
 //# sourceMappingURL=QIDatabaseError.d.ts.map

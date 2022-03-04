@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QITreeOpen: CustomizedSVGComponent;
-export default QITreeOpen;
+export declare const QITreeOpen: CustomizedSVGComponent;
 //# sourceMappingURL=QITreeOpen.d.ts.map

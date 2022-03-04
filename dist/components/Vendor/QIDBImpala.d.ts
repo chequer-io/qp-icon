@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBImpala: CustomizedSVGComponent;
-export default QIDBImpala;
+export declare const QIDBImpala: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBImpala.d.ts.map

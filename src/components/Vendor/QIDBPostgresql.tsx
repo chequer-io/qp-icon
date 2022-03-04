@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QIDBPostgresql: CustomizedSVGComponent = ({ ...props }) => (
+export const QIDBPostgresql: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -42,5 +42,3 @@ const QIDBPostgresql: CustomizedSVGComponent = ({ ...props }) => (
     />
   </SvgComponent>
 );
-
-export default QIDBPostgresql;

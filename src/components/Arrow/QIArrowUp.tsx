@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QIArrowUp: CustomizedSVGComponent = ({ ...props }) => (
+export const QIArrowUp: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -14,5 +14,3 @@ const QIArrowUp: CustomizedSVGComponent = ({ ...props }) => (
     />
   </SvgComponent>
 );
-
-export default QIArrowUp;

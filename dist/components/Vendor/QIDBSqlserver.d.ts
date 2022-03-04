@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBSqlserver: CustomizedSVGComponent;
-export default QIDBSqlserver;
+export declare const QIDBSqlserver: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBSqlserver.d.ts.map

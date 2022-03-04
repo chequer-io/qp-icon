@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISqlFile: CustomizedSVGComponent;
-export default QISqlFile;
+export declare const QISqlFile: CustomizedSVGComponent;
 //# sourceMappingURL=QISqlFile.d.ts.map

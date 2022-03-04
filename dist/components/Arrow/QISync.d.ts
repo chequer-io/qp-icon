@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISync: CustomizedSVGComponent;
-export default QISync;
+export declare const QISync: CustomizedSVGComponent;
 //# sourceMappingURL=QISync.d.ts.map

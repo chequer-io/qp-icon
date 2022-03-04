@@ -1,1 +1,1 @@
-{"version":3,"file":"QILineM.d.ts","sourceRoot":"","sources":["../../../src/components/Misc/QILineM.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,OAAO,EAAE,sBASd,CAAC;AAEF,eAAe,OAAO,CAAC"}
+{"version":3,"file":"QILineM.d.ts","sourceRoot":"","sources":["../../../src/components/Misc/QILineM.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,OAAO,EAAE,sBASrB,CAAC"}

@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDelete: CustomizedSVGComponent;
-export default QIDelete;
+export declare const QIDelete: CustomizedSVGComponent;
 //# sourceMappingURL=QIDelete.d.ts.map

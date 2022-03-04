@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIUndefined: CustomizedSVGComponent;
-export default QIUndefined;
+export declare const QIUndefined: CustomizedSVGComponent;
 //# sourceMappingURL=QIUndefined.d.ts.map

@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QIDBAmazonAthena: CustomizedSVGComponent = ({ ...props }) => (
+export const QIDBAmazonAthena: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -100,5 +100,3 @@ const QIDBAmazonAthena: CustomizedSVGComponent = ({ ...props }) => (
     />
   </SvgComponent>
 );
-
-export default QIDBAmazonAthena;

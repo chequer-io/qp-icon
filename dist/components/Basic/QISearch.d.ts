@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISearch: CustomizedSVGComponent;
-export default QISearch;
+export declare const QISearch: CustomizedSVGComponent;
 //# sourceMappingURL=QISearch.d.ts.map

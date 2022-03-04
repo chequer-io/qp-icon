@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBAmazonAthena: CustomizedSVGComponent;
-export default QIDBAmazonAthena;
+export declare const QIDBAmazonAthena: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBAmazonAthena.d.ts.map

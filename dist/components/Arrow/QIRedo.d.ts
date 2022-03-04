@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIRedo: CustomizedSVGComponent;
-export default QIRedo;
+export declare const QIRedo: CustomizedSVGComponent;
 //# sourceMappingURL=QIRedo.d.ts.map

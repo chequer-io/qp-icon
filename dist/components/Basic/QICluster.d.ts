@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICluster: CustomizedSVGComponent;
-export default QICluster;
+export declare const QICluster: CustomizedSVGComponent;
 //# sourceMappingURL=QICluster.d.ts.map

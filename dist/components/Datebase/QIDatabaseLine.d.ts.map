@@ -1,1 +1,1 @@
-{"version":3,"file":"QIDatabaseLine.d.ts","sourceRoot":"","sources":["../../../src/components/Datebase/QIDatabaseLine.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,cAAc,EAAE,sBAcrB,CAAC;AAEF,eAAe,cAAc,CAAC"}
+{"version":3,"file":"QIDatabaseLine.d.ts","sourceRoot":"","sources":["../../../src/components/Datebase/QIDatabaseLine.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,cAAc,EAAE,sBAc5B,CAAC"}

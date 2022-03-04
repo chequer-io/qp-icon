@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIPanelViewStack: CustomizedSVGComponent;
-export default QIPanelViewStack;
+export declare const QIPanelViewStack: CustomizedSVGComponent;
 //# sourceMappingURL=QIPanelViewStack.d.ts.map

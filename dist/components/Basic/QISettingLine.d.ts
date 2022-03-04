@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISettingLine: CustomizedSVGComponent;
-export default QISettingLine;
+export declare const QISettingLine: CustomizedSVGComponent;
 //# sourceMappingURL=QISettingLine.d.ts.map

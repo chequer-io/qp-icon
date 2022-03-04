@@ -1,1 +1,1 @@
-{"version":3,"file":"QIChevronDownSmall.d.ts","sourceRoot":"","sources":["../../../src/components/Arrow/QIChevronDownSmall.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,kBAAkB,EAAE,sBAYzB,CAAC;AAEF,eAAe,kBAAkB,CAAC"}
+{"version":3,"file":"QIChevronDownSmall.d.ts","sourceRoot":"","sources":["../../../src/components/Arrow/QIChevronDownSmall.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,kBAAkB,EAAE,sBAYhC,CAAC"}

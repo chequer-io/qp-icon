@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIEnlarge: CustomizedSVGComponent;
-export default QIEnlarge;
+export declare const QIEnlarge: CustomizedSVGComponent;
 //# sourceMappingURL=QIEnlarge.d.ts.map

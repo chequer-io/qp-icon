@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIComment: CustomizedSVGComponent;
-export default QIComment;
+export declare const QIComment: CustomizedSVGComponent;
 //# sourceMappingURL=QIComment.d.ts.map

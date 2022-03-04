@@ -1,1 +1,1 @@
-{"version":3,"file":"QISecurity.d.ts","sourceRoot":"","sources":["../../../src/components/Shield/QISecurity.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,UAAU,EAAE,sBAcjB,CAAC;AAEF,eAAe,UAAU,CAAC"}
+{"version":3,"file":"QISecurity.d.ts","sourceRoot":"","sources":["../../../src/components/Shield/QISecurity.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,UAAU,EAAE,sBAcxB,CAAC"}

@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISwapDown: CustomizedSVGComponent;
-export default QISwapDown;
+export declare const QISwapDown: CustomizedSVGComponent;
 //# sourceMappingURL=QISwapDown.d.ts.map

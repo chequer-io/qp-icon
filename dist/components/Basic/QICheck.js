@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QICheck = function (_a) {
+export var QICheck = function (_a) {
     var props = __rest(_a, []);
     return (_jsx(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "true" }, props, { children: _jsx("path", { d: "M13 24.41L4 15.41L5.41 14L13 21.58L26.59 8L28 9.41L13 24.41Z", fill: "black" }, void 0) }), void 0));
 };
-export default QICheck;

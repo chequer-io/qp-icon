@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICaretUp: CustomizedSVGComponent;
-export default QICaretUp;
+export declare const QICaretUp: CustomizedSVGComponent;
 //# sourceMappingURL=QICaretUp.d.ts.map

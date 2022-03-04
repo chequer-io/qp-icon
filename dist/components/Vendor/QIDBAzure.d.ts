@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBAzure: CustomizedSVGComponent;
-export default QIDBAzure;
+export declare const QIDBAzure: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBAzure.d.ts.map

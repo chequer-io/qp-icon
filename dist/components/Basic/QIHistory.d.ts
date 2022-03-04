@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIHistory: CustomizedSVGComponent;
-export default QIHistory;
+export declare const QIHistory: CustomizedSVGComponent;
 //# sourceMappingURL=QIHistory.d.ts.map

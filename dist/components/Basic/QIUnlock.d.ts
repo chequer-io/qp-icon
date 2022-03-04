@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIUnlock: CustomizedSVGComponent;
-export default QIUnlock;
+export declare const QIUnlock: CustomizedSVGComponent;
 //# sourceMappingURL=QIUnlock.d.ts.map

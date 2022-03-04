@@ -1,1 +1,1 @@
-{"version":3,"file":"QIDBSqlserver.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBSqlserver.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,aAAa,EAAE,sBAoBpB,CAAC;AAEF,eAAe,aAAa,CAAC"}
+{"version":3,"file":"QIDBSqlserver.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBSqlserver.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,aAAa,EAAE,sBAoB3B,CAAC"}

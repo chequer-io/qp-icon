@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICloseCircleLine: CustomizedSVGComponent;
-export default QICloseCircleLine;
+export declare const QICloseCircleLine: CustomizedSVGComponent;
 //# sourceMappingURL=QICloseCircleLine.d.ts.map

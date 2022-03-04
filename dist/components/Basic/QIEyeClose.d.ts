@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIEyeClose: CustomizedSVGComponent;
-export default QIEyeClose;
+export declare const QIEyeClose: CustomizedSVGComponent;
 //# sourceMappingURL=QIEyeClose.d.ts.map

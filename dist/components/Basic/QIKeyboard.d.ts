@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIKeyboard: CustomizedSVGComponent;
-export default QIKeyboard;
+export declare const QIKeyboard: CustomizedSVGComponent;
 //# sourceMappingURL=QIKeyboard.d.ts.map

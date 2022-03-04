@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIMinus: CustomizedSVGComponent;
-export default QIMinus;
+export declare const QIMinus: CustomizedSVGComponent;
 //# sourceMappingURL=QIMinus.d.ts.map

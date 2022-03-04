@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIStopLine: CustomizedSVGComponent;
-export default QIStopLine;
+export declare const QIStopLine: CustomizedSVGComponent;
 //# sourceMappingURL=QIStopLine.d.ts.map

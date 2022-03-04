@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QIDotS: CustomizedSVGComponent = ({ ...props }) => (
+export const QIDotS: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -11,5 +11,3 @@ const QIDotS: CustomizedSVGComponent = ({ ...props }) => (
     <circle cx="16" cy="16" r="4" fill="black" />
   </SvgComponent>
 );
-
-export default QIDotS;

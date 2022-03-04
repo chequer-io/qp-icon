@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIObjectDatabaseColor: CustomizedSVGComponent;
-export default QIObjectDatabaseColor;
+export declare const QIObjectDatabaseColor: CustomizedSVGComponent;
 //# sourceMappingURL=QIObjectDatabaseColor.d.ts.map

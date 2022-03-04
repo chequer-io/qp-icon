@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICalendar: CustomizedSVGComponent;
-export default QICalendar;
+export declare const QICalendar: CustomizedSVGComponent;
 //# sourceMappingURL=QICalendar.d.ts.map

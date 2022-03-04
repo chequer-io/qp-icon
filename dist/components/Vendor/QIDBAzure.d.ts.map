@@ -1,1 +1,1 @@
-{"version":3,"file":"QIDBAzure.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBAzure.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,SAAS,EAAE,sBAYhB,CAAC;AAEF,eAAe,SAAS,CAAC"}
+{"version":3,"file":"QIDBAzure.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBAzure.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,SAAS,EAAE,sBAYvB,CAAC"}

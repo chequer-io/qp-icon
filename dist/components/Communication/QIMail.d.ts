@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIMail: CustomizedSVGComponent;
-export default QIMail;
+export declare const QIMail: CustomizedSVGComponent;
 //# sourceMappingURL=QIMail.d.ts.map

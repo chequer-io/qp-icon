@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICheckBoxCheckedSolid: CustomizedSVGComponent;
-export default QICheckBoxCheckedSolid;
+export declare const QICheckBoxCheckedSolid: CustomizedSVGComponent;
 //# sourceMappingURL=QICheckBoxCheckedSolid.d.ts.map

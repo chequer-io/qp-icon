@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QIAzureCloud = function (_a) {
+export var QIAzureCloud = function (_a) {
     var props = __rest(_a, []);
     return (_jsxs(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "false" }, props, { children: [_jsx("path", { d: "M0 4C0 1.79086 1.79086 0 4 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H4C1.79086 32 0 30.2091 0 28V4Z", fill: "#0072C6" }, void 0), _jsx("path", { d: "M17.1126 6L10.0374 12.1354L4 22.9728H9.44416L17.1126 6ZM18.0534 7.4352L15.0342 15.9456L20.824 23.2195L9.592 25.1491H28L18.0534 7.4352Z", fill: "white" }, void 0)] }), void 0));
 };
-export default QIAzureCloud;

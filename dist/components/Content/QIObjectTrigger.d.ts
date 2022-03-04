@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIObjectTrigger: CustomizedSVGComponent;
-export default QIObjectTrigger;
+export declare const QIObjectTrigger: CustomizedSVGComponent;
 //# sourceMappingURL=QIObjectTrigger.d.ts.map

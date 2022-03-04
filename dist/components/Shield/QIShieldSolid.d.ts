@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIShieldSolid: CustomizedSVGComponent;
-export default QIShieldSolid;
+export declare const QIShieldSolid: CustomizedSVGComponent;
 //# sourceMappingURL=QIShieldSolid.d.ts.map

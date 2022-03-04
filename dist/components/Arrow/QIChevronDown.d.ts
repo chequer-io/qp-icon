@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIChevronDown: CustomizedSVGComponent;
-export default QIChevronDown;
+export declare const QIChevronDown: CustomizedSVGComponent;
 //# sourceMappingURL=QIChevronDown.d.ts.map

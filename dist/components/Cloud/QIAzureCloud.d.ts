@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIAzureCloud: CustomizedSVGComponent;
-export default QIAzureCloud;
+export declare const QIAzureCloud: CustomizedSVGComponent;
 //# sourceMappingURL=QIAzureCloud.d.ts.map

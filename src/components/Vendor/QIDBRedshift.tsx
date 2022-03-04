@@ -1,7 +1,7 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QIDBRedshift: CustomizedSVGComponent = ({ ...props }) => (
+export const QIDBRedshift: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -31,5 +31,3 @@ const QIDBRedshift: CustomizedSVGComponent = ({ ...props }) => (
     <path d="M13.8799 4H18.5636V27.9516H13.8799V4Z" fill="#2E73B7" />
   </SvgComponent>
 );
-
-export default QIDBRedshift;

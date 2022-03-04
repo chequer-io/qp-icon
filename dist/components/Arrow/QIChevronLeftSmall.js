@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QIChevronLeftSmall = function (_a) {
+export var QIChevronLeftSmall = function (_a) {
     var props = __rest(_a, []);
     return (_jsx(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "true" }, props, { children: _jsx("path", { d: "M12 16L19 9L20.41 10.41L14.83 16L20.41 21.59L19 23L12 16Z", fill: "black" }, void 0) }), void 0));
 };
-export default QIChevronLeftSmall;

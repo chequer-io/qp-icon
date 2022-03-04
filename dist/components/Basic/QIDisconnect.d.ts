@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDisconnect: CustomizedSVGComponent;
-export default QIDisconnect;
+export declare const QIDisconnect: CustomizedSVGComponent;
 //# sourceMappingURL=QIDisconnect.d.ts.map

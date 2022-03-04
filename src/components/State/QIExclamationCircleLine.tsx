@@ -1,7 +1,9 @@
 import SvgComponent from '../../common/SvgComponent';
 import type { CustomizedSVGComponent } from '../../typings';
 
-const QIExclamationCircleLine: CustomizedSVGComponent = ({ ...props }) => (
+export const QIExclamationCircleLine: CustomizedSVGComponent = ({
+  ...props
+}) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
@@ -16,5 +18,3 @@ const QIExclamationCircleLine: CustomizedSVGComponent = ({ ...props }) => (
     />
   </SvgComponent>
 );
-
-export default QIExclamationCircleLine;

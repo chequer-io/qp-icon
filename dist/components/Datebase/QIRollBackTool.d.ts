@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIRollBackTool: CustomizedSVGComponent;
-export default QIRollBackTool;
+export declare const QIRollBackTool: CustomizedSVGComponent;
 //# sourceMappingURL=QIRollBackTool.d.ts.map

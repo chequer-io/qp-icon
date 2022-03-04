@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBPresto: CustomizedSVGComponent;
-export default QIDBPresto;
+export declare const QIDBPresto: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBPresto.d.ts.map

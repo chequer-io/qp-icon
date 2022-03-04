@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISave: CustomizedSVGComponent;
-export default QISave;
+export declare const QISave: CustomizedSVGComponent;
 //# sourceMappingURL=QISave.d.ts.map

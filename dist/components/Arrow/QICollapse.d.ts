@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICollapse: CustomizedSVGComponent;
-export default QICollapse;
+export declare const QICollapse: CustomizedSVGComponent;
 //# sourceMappingURL=QICollapse.d.ts.map

@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIIconHeartSolid: CustomizedSVGComponent;
-export default QIIconHeartSolid;
+export declare const QIIconHeartSolid: CustomizedSVGComponent;
 //# sourceMappingURL=QIIconHeartSolid.d.ts.map

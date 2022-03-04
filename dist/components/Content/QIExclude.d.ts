@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIExclude: CustomizedSVGComponent;
-export default QIExclude;
+export declare const QIExclude: CustomizedSVGComponent;
 //# sourceMappingURL=QIExclude.d.ts.map

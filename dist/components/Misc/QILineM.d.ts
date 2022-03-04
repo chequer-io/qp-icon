@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QILineM: CustomizedSVGComponent;
-export default QILineM;
+export declare const QILineM: CustomizedSVGComponent;
 //# sourceMappingURL=QILineM.d.ts.map

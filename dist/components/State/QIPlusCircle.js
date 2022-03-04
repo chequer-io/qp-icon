@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QIPlusCircle = function (_a) {
+export var QIPlusCircle = function (_a) {
     var props = __rest(_a, []);
     return (_jsx(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "true" }, props, { children: _jsx("path", { d: "M16 2C8.4 2 2 8.4 2 16C2 23.6 8.4 30 16 30C23.6 30 30 23.6 30 16C30 8.4 23.6 2 16 2ZM24 17H17V24H15V17H8V15H15V8H17V15H24V17Z", fill: "black" }, void 0) }), void 0));
 };
-export default QIPlusCircle;

@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIShrink: CustomizedSVGComponent;
-export default QIShrink;
+export declare const QIShrink: CustomizedSVGComponent;
 //# sourceMappingURL=QIShrink.d.ts.map

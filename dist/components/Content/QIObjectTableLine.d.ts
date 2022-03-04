@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIObjectTableLine: CustomizedSVGComponent;
-export default QIObjectTableLine;
+export declare const QIObjectTableLine: CustomizedSVGComponent;
 //# sourceMappingURL=QIObjectTableLine.d.ts.map

@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QIClose = function (_a) {
+export var QIClose = function (_a) {
     var props = __rest(_a, []);
     return (_jsx(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "true" }, props, { children: _jsx("path", { d: "M25 8.4L23.6 7L16 14.6L8.4 7.00001L7 8.40001L14.6 16L6.99999 23.6L8.39999 25L16 17.4L23.6 25L25 23.6L17.4 16L25 8.4Z", fill: "black" }, void 0) }), void 0));
 };
-export default QIClose;

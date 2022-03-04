@@ -1,1 +1,1 @@
-{"version":3,"file":"QIAzureCloud.d.ts","sourceRoot":"","sources":["../../../src/components/Cloud/QIAzureCloud.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,YAAY,EAAE,sBAgBnB,CAAC;AAEF,eAAe,YAAY,CAAC"}
+{"version":3,"file":"QIAzureCloud.d.ts","sourceRoot":"","sources":["../../../src/components/Cloud/QIAzureCloud.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,YAAY,EAAE,sBAgB1B,CAAC"}

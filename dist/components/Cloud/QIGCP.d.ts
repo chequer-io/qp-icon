@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIGCP: CustomizedSVGComponent;
-export default QIGCP;
+export declare const QIGCP: CustomizedSVGComponent;
 //# sourceMappingURL=QIGCP.d.ts.map

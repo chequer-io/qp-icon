@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICommitTool: CustomizedSVGComponent;
-export default QICommitTool;
+export declare const QICommitTool: CustomizedSVGComponent;
 //# sourceMappingURL=QICommitTool.d.ts.map

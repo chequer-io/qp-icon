@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBBigquery: CustomizedSVGComponent;
-export default QIDBBigquery;
+export declare const QIDBBigquery: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBBigquery.d.ts.map

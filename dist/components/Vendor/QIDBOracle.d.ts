@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBOracle: CustomizedSVGComponent;
-export default QIDBOracle;
+export declare const QIDBOracle: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBOracle.d.ts.map

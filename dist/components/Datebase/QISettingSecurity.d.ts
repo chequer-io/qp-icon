@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISettingSecurity: CustomizedSVGComponent;
-export default QISettingSecurity;
+export declare const QISettingSecurity: CustomizedSVGComponent;
 //# sourceMappingURL=QISettingSecurity.d.ts.map

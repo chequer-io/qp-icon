@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QIExpandLine = function (_a) {
+export var QIExpandLine = function (_a) {
     var props = __rest(_a, []);
     return (_jsx(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "true" }, props, { children: _jsx("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M23 11L16 4L9 11L10.41 12.41L16 6.82996L21.59 12.41L23 11ZM9 21L16 28L23 21L21.59 19.59L16 25.1699L10.41 19.59L9 21Z", fill: "black" }, void 0) }), void 0));
 };
-export default QIExpandLine;

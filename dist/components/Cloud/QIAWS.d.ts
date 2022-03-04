@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIAWS: CustomizedSVGComponent;
-export default QIAWS;
+export declare const QIAWS: CustomizedSVGComponent;
 //# sourceMappingURL=QIAWS.d.ts.map

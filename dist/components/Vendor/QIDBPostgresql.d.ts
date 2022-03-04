@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBPostgresql: CustomizedSVGComponent;
-export default QIDBPostgresql;
+export declare const QIDBPostgresql: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBPostgresql.d.ts.map

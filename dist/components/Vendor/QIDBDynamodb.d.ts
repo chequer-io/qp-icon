@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBDynamodb: CustomizedSVGComponent;
-export default QIDBDynamodb;
+export declare const QIDBDynamodb: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBDynamodb.d.ts.map

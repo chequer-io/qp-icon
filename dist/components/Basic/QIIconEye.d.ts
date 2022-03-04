@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIIconEye: CustomizedSVGComponent;
-export default QIIconEye;
+export declare const QIIconEye: CustomizedSVGComponent;
 //# sourceMappingURL=QIIconEye.d.ts.map

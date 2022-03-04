@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QIOpenWeb = function (_a) {
+export var QIOpenWeb = function (_a) {
     var props = __rest(_a, []);
     return (_jsx(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "true" }, props, { children: _jsx("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M20 4V2H30V12H28V5.40997L19.41 14L18 12.59L26.59 4H20ZM4 26C4 27.1 4.90002 28 6 28H26C27.1 28 28 27.1 28 26V16H26V26H6V6H16V4H6C4.90002 4 4 4.90002 4 6V26Z", fill: "black" }, void 0) }), void 0));
 };
-export default QIOpenWeb;

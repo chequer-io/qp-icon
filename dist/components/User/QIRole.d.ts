@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIRole: CustomizedSVGComponent;
-export default QIRole;
+export declare const QIRole: CustomizedSVGComponent;
 //# sourceMappingURL=QIRole.d.ts.map

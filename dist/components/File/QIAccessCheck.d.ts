@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIAccessCheck: CustomizedSVGComponent;
-export default QIAccessCheck;
+export declare const QIAccessCheck: CustomizedSVGComponent;
 //# sourceMappingURL=QIAccessCheck.d.ts.map

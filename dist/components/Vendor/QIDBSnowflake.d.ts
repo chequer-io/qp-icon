@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBSnowflake: CustomizedSVGComponent;
-export default QIDBSnowflake;
+export declare const QIDBSnowflake: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBSnowflake.d.ts.map

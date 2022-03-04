@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIPlusCircle: CustomizedSVGComponent;
-export default QIPlusCircle;
+export declare const QIPlusCircle: CustomizedSVGComponent;
 //# sourceMappingURL=QIPlusCircle.d.ts.map

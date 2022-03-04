@@ -22,8 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import SvgComponent from '../../common/SvgComponent';
-var QIArrowUp = function (_a) {
+export var QIArrowUp = function (_a) {
     var props = __rest(_a, []);
     return (_jsx(SvgComponent, __assign({ viewBox: "0 0 32 32", role: "querypie-icon", "data-qi-color-controllable": "true" }, props, { children: _jsx("path", { d: "M16 4L6 14L7.41 15.41L15 7.83V28H17V7.83L24.59 15.41L26 14L16 4Z", fill: "black" }, void 0) }), void 0));
 };
-export default QIArrowUp;

@@ -1,1 +1,1 @@
-{"version":3,"file":"QIClose.d.ts","sourceRoot":"","sources":["../../../src/components/Basic/QIClose.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,OAAO,EAAE,sBAYd,CAAC;AAEF,eAAe,OAAO,CAAC"}
+{"version":3,"file":"QIClose.d.ts","sourceRoot":"","sources":["../../../src/components/Basic/QIClose.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,OAAO,EAAE,sBAYrB,CAAC"}

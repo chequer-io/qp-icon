@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISettingShortcut: CustomizedSVGComponent;
-export default QISettingShortcut;
+export declare const QISettingShortcut: CustomizedSVGComponent;
 //# sourceMappingURL=QISettingShortcut.d.ts.map

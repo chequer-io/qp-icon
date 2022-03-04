@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QISuccessCircleLine: CustomizedSVGComponent;
-export default QISuccessCircleLine;
+export declare const QISuccessCircleLine: CustomizedSVGComponent;
 //# sourceMappingURL=QISuccessCircleLine.d.ts.map

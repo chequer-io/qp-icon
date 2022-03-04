@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIArrowRight: CustomizedSVGComponent;
-export default QIArrowRight;
+export declare const QIArrowRight: CustomizedSVGComponent;
 //# sourceMappingURL=QIArrowRight.d.ts.map

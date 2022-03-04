@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QIDBMongodb: CustomizedSVGComponent;
-export default QIDBMongodb;
+export declare const QIDBMongodb: CustomizedSVGComponent;
 //# sourceMappingURL=QIDBMongodb.d.ts.map

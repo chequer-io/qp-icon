@@ -1,1 +1,1 @@
-{"version":3,"file":"QIDBEdb.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBEdb.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,OAAO,EAAE,sBA8Bd,CAAC;AAEF,eAAe,OAAO,CAAC"}
+{"version":3,"file":"QIDBEdb.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBEdb.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,OAAO,EAAE,sBA8BrB,CAAC"}

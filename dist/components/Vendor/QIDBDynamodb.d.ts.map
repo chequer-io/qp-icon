@@ -1,1 +1,1 @@
-{"version":3,"file":"QIDBDynamodb.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBDynamodb.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,QAAA,MAAM,YAAY,EAAE,sBAyBnB,CAAC;AAEF,eAAe,YAAY,CAAC"}
+{"version":3,"file":"QIDBDynamodb.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBDynamodb.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAE5D,eAAO,MAAM,YAAY,EAAE,sBAyB1B,CAAC"}

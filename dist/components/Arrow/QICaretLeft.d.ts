@@ -1,4 +1,3 @@
 import type { CustomizedSVGComponent } from '../../typings';
-declare const QICaretLeft: CustomizedSVGComponent;
-export default QICaretLeft;
+export declare const QICaretLeft: CustomizedSVGComponent;
 //# sourceMappingURL=QICaretLeft.d.ts.map
