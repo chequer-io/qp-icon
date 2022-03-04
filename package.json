@@ -2,14 +2,14 @@
   "name": "querypie-icon",
   "version": "0.0.1",
   "homepage": "https://chequer-io.github.io/querypie-icon",
-  "main": "dist/index",
-  "typings": "dist/index",
+  "main": "src/index",
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {
     "prepare-generate": "ts-node scripts/prepareGenerate.ts",
     "generate": "npm run prepare-generate && ts-node scripts/generate.ts",
     "storybook": "npm run generate && start-storybook -p 6006",
-    "copy-css": "ncp src/styles.css dist/styles.css",
-    "build": "rimraf dist/ && npm run generate && tsc -p tsconfig.build.json && npm run copy-css",
     "clean": "rimraf node_modules/ package-lock.json && npm cache clean -f && npm i",
     "deploy-storybook": "npm run generate && build-storybook && gh-pages -d storybook-static"
   },
