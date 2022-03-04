@@ -11,6 +11,7 @@ import {
 } from './styles';
 import { Global } from '@emotion/react';
 import { CustomizedSVGComponent } from '../../src/typings';
+import ImportCodeBox from './ImportCodeBox';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
@@ -41,15 +42,15 @@ export const Palette = ({
     <>
       <Global styles={toastGlobalStyles} />
       <StyledPalette>
-        {/*<header>*/}
-        {/*  <h1>Querypie Icons</h1>*/}
-        {/*</header>*/}
-        {/*<section>*/}
-        {/*  <header>*/}
-        {/*    <h2>Import</h2>*/}
-        {/*  </header>*/}
-        {/*  <ImportCodeBox />*/}
-        {/*</section>*/}
+        <header>
+          <h1>Querypie Icons</h1>
+        </header>
+        <section>
+          <header>
+            <h2>Import</h2>
+          </header>
+          <ImportCodeBox />
+        </section>
         <section>
           <header>
             <h2>{pageTitle ?? 'Icons'}</h2>
