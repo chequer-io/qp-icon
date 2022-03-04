@@ -12,7 +12,7 @@ export const QIDBAmazonAthena: CustomizedSVGComponent = ({ ...props }) => (
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M15.9955 28L4 18.5066L15.9955 17.0133L27.991 18.5066L15.9955 28Z"
+      d="M15.9955 28L4 18.5067L15.9955 17.0133L27.991 18.5067L15.9955 28Z"
       fill="#FCBF92"
     />
     <path
@@ -42,13 +42,13 @@ export const QIDBAmazonAthena: CustomizedSVGComponent = ({ ...props }) => (
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M8.42502 9.04001L10.291 13.3467L8.42502 17.68L6.38574 17.2533V9.44001L8.42502 9.04001Z"
+      d="M8.42502 9.03999L10.291 13.3467L8.42502 17.68L6.38574 17.2533V9.44L8.42502 9.03999Z"
       fill="#9D5025"
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M10.2917 9.25335L8.42505 9.04001V17.68L10.2917 17.4667V9.25335Z"
+      d="M10.2917 9.25333L8.42505 9.03999V17.68L10.2917 17.4667V9.25333Z"
       fill="#F58534"
     />
     <path
@@ -72,13 +72,13 @@ export const QIDBAmazonAthena: CustomizedSVGComponent = ({ ...props }) => (
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M17.7415 8.50665L19.5808 8.22665L22.393 13.3467L19.5808 18.5067L17.7415 18.1867V8.50665Z"
+      d="M17.7415 8.50667L19.5808 8.22667L22.393 13.3467L19.5808 18.5067L17.7415 18.1867V8.50667Z"
       fill="#9D5025"
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M17.7415 8.50665L19.5808 8.22665L22.393 13.3467"
+      d="M17.7415 8.50667L19.5808 8.22667L22.393 13.3467"
       fill="#9D5025"
     />
     <path
