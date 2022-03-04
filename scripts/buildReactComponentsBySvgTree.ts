@@ -129,7 +129,7 @@ const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
 );
 
 export default ${component.name};
-      `.trim();
+  `.trim();
 
   const componentPath = svg.path
     // change dirname

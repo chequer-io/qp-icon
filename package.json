@@ -2,8 +2,8 @@
   "name": "querypie-icon",
   "version": "0.0.1",
   "homepage": "https://chequer-io.github.io/querypie-icon",
-  "main": "dist/index",
-  "typings": "dist/index",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "prepare-generate": "ts-node scripts/prepareGenerate.ts",
     "generate": "npm run prepare-generate && ts-node scripts/generate.ts",
