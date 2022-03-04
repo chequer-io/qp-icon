@@ -92,9 +92,9 @@ async function buildComponentFromSvg({
   const pathLength = svgJson.path?.length ?? 0;
   let colorControllable = false;
   if (pathLength === 1) {
-    colorControllable = !colorControlExceptedIconDirnames.find(dirnameToken => {
-      return svg.path.includes(dirnameToken);
-    });
+    colorControllable = !colorControlExceptedIconDirnames.find(dirnameToken =>
+      new RegExp(`${dirnameToken}[\\/]`).test(svg.path),
+    );
   }
 
   const styledJson = {

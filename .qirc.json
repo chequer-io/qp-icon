@@ -1,6 +1,8 @@
 {
   "colorControlExceptedIconDirnames": [
     "Vendor",
-    "Cloud"
+    "Cloud",
+    "Symbol",
+    "ColorIcon"
   ]
 }
