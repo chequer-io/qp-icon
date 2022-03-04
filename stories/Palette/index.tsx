@@ -10,7 +10,7 @@ import {
   toastGlobalStyles,
 } from './styles';
 import { Global } from '@emotion/react';
-import type { CustomizedSVGComponent } from '../../src/typings';
+import { CustomizedSVGComponent } from '../../src/typings';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];

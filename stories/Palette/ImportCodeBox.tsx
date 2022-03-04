@@ -2,7 +2,7 @@ import SvgComponent from '../../src/common/SvgComponent';
 import { useCallback, useRef } from 'react';
 import { toast } from 'react-toastify';
 import { Code } from './styles';
-import type { CustomizedSVGComponent } from '../../src/typings';
+import { CustomizedSVGComponent } from '../../src/typings';
 
 const CopyIcon: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent viewBox="0 0 32 32" {...props}>

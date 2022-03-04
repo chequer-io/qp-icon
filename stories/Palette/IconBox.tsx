@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, memo } from 'react';
-import type {
+import {
   CustomizedSVGComponent,
   CustomizedSVGComponentProps,
   NotUndefined,

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import SvgComponent from '../../common/SvgComponent';
-import type { CustomizedSVGComponent } from '../../typings';
+import { CustomizedSVGComponent } from '../../typings';
 
 export const QIUser: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent

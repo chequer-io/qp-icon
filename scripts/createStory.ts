@@ -1,5 +1,5 @@
 import { makeFile, toPascalCase } from './utils';
-import type { ComponentImportsMap } from './getComponentModuleInfoByComponentTree';
+import { ComponentImportsMap } from './getComponentModuleInfoByComponentTree';
 import getConfig from './getConfig';
 
 type Props = {

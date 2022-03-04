@@ -1,4 +1,4 @@
-import type { FC, SVGProps } from 'react';
+import { FC, SVGProps } from 'react';
 
 export type SVGElementProps = SVGProps<SVGSVGElement>;
 
@@ -34,7 +34,8 @@ export type FilteredSvgElementProps = Omit<
   SizeAffectStyleProps | 'style'
 >;
 
-export type CustomizedSVGComponentProps= CustomizedSvgProps & FilteredSvgElementProps;
+export type CustomizedSVGComponentProps = CustomizedSvgProps &
+  FilteredSvgElementProps;
 export type CustomizedSVGComponent = FC<CustomizedSVGComponentProps>;
 
 export interface CommonSVGComponentProps extends CustomizedSVGComponentProps {

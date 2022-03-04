@@ -1,5 +1,5 @@
-import type { SVGProps } from 'react';
-import type {
+import * as React from 'react';
+import {
   CommonSVGComponent,
   IconSize,
   NotUndefined,

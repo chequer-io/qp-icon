@@ -123,7 +123,7 @@ async function buildComponentFromSvg({
   const componentCode = `
 import * as React from 'react';
 import ${innerComponentName} from '../../common/${innerComponentName}';
-import type { CustomizedSVGComponent } from '../../typings';
+import { CustomizedSVGComponent } from '../../typings';
 
 export const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
   ${newSvgCode.replace('temp="{...props}"', '{...props}')}
