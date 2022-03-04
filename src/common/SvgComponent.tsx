@@ -4,7 +4,7 @@ import type {
   IconSize,
   NotUndefined,
   SVGElementProps,
-} from '../../typings';
+} from '../typings';
 
 type SVGWidthOrHeight = NotUndefined<
   SVGElementProps['width'] | SVGElementProps['height']

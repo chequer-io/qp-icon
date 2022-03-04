@@ -24,9 +24,8 @@ export interface CustomizedSvgProps {
      */
     style?: Omit<SVGProps<SVGSVGElement>['style'], SizeAffectStyleProps>;
 }
-export declare type FilteredSvgElementProps = Omit<SVGElementProps, SizeAffectStyleProps | keyof CustomizedSvgProps>;
-export interface CustomizedSVGComponentProps extends CustomizedSvgProps, FilteredSvgElementProps {
-}
+export declare type FilteredSvgElementProps = Omit<SVGElementProps, SizeAffectStyleProps | 'style'>;
+export declare type CustomizedSVGComponentProps = CustomizedSvgProps & FilteredSvgElementProps;
 export declare type CustomizedSVGComponent = FC<CustomizedSVGComponentProps>;
 export interface CommonSVGComponentProps extends CustomizedSVGComponentProps {
     viewBox: SVGProps<SVGSVGElement>['viewBox'];

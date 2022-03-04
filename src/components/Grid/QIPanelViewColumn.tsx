@@ -1,5 +1,5 @@
 import SvgComponent from '../../common/SvgComponent';
-import type { CustomizedSVGComponent } from '../../../typings';
+import type { CustomizedSVGComponent } from '../../typings';
 
 const QIPanelViewColumn: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent

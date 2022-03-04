@@ -20,7 +20,8 @@
       "module": "CommonJS"
     }
   },
-  "typeRoots": ["./typings", "node_modules/@types"],
+  "typeRoots": [
+    "./src/typings", "node_modules/@types"],
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

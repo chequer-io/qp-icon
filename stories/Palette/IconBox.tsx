@@ -3,7 +3,7 @@ import type {
   CustomizedSVGComponent,
   CustomizedSVGComponentProps,
   NotUndefined,
-} from '../../typings';
+} from '../../src/typings';
 import {
   IconBoxContent,
   IconBoxLabel,
