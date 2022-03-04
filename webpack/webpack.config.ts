@@ -31,14 +31,6 @@ const config: webpack.Configuration = {
         ],
         exclude: [/node_modules/],
       },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'css-loader',
-          },
-        ],
-      },
     ],
   },
   externals: [/react.*/],
