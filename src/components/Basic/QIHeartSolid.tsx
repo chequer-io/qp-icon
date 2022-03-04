@@ -2,7 +2,7 @@ import * as React from 'react';
 import SvgComponent from '../../common/SvgComponent';
 import { CustomizedSVGComponent } from '../../typings';
 
-export const QIIconHeartSolid: CustomizedSVGComponent = ({ ...props }) => (
+export const QIHeartSolid: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
