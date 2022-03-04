@@ -27,15 +27,12 @@ export default async function getComponentModuleInfoByComponentTree({
   const onEachFile: DirectoryTreeCallback = (item, itemPath) => {
     const exceptExtension = (str: string) => str.replace(/\.tsx$/, '');
 
-    const componentName = exceptExtension(item.name);
     const componentPath = path.relative(
       path.resolve(__dirname, srcDir),
       path.resolve(__dirname, itemPath),
     );
 
-    const phrase = `export { default as ${componentName} } from './${exceptExtension(
-      componentPath,
-    )}';`;
+    const phrase = `export * from './${exceptExtension(componentPath)}';`;
     exportPhrases.push(phrase);
   };
 
