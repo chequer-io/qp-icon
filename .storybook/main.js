@@ -1,5 +1,3 @@
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-
 module.exports = {
   core: { builder: 'webpack5' },
   stories: [
@@ -18,7 +16,6 @@ module.exports = {
   },
 
   webpackFinal: async config => {
-    config.resolve.plugins = [new TsconfigPathsPlugin({})];
     config.plugins = [
       ...(config.plugins ?? []).filter(
         plugin => plugin.name !== 'React Docgen Typescript Plugin',
