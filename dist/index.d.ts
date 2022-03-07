@@ -1,3 +1,6 @@
+export * from './components/Agent/QIApple';
+export * from './components/Agent/QILinux';
+export * from './components/Agent/QIWindows';
 export * from './components/Arrow/QIArrowDown';
 export * from './components/Arrow/QIArrowLeft';
 export * from './components/Arrow/QIArrowRight';
@@ -41,6 +44,8 @@ export * from './components/Basic/QIConnections';
 export * from './components/Basic/QICopy';
 export * from './components/Basic/QIDelete';
 export * from './components/Basic/QIDisconnect';
+export * from './components/Basic/QIDrag';
+export * from './components/Basic/QIDrag_Legacy';
 export * from './components/Basic/QIEdit';
 export * from './components/Basic/QIExport';
 export * from './components/Basic/QIEye';
