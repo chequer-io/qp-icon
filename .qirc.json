@@ -3,7 +3,8 @@
     "Vendor",
     "Cloud",
     "Symbol",
+    "IdentityProvider",
     "ColorIcon",
-    "IdentityProvider"
+    "Agent"
   ]
 }
