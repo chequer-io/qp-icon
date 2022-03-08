@@ -150,6 +150,7 @@ export * from './components/Shield/QISecurity_Legacy';
 export * from './components/Shield/QIShield';
 export * from './components/Shield/QIShieldSolid';
 export * from './components/State/QICloseCircleLine';
+export * from './components/State/QIExclamationCircleBoldSolid';
 export * from './components/State/QIExclamationCircleLine';
 export * from './components/State/QIExclamationCircleSolid';
 export * from './components/State/QIFailed';
