@@ -2,14 +2,16 @@ import { FC, SVGProps } from 'react';
 
 export type SVGElementProps = SVGProps<SVGSVGElement>;
 
-type IconSizeShort = 'S' | 'M' | 'L' | 'XL';
-type IconSizeLong = 'small' | 'medium' | 'large' | 'extraLarge';
+type IconSizeShort = 'XS' | 'S' | 'M' | 'L' | 'XL';
+type IconSizeLong = 'extraSmall' | 'small' | 'medium' | 'large' | 'extraLarge';
 export type IconSize = IconSizeShort | IconSizeLong | 'responsive';
 
 export type SizeAffectStyleProps = 'width' | 'height' | 'viewBox';
 export interface CustomizedSvgProps {
   /**
    * @default: 'responsive'
+   *
+   * XS_extraSmall: 12
    *
    * S_small: 16
    *

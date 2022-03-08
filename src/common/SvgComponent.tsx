@@ -11,10 +11,12 @@ type SVGWidthOrHeight = NotUndefined<
 >;
 
 export const sizeMap: { [key in NotUndefined<IconSize>]: SVGWidthOrHeight } = {
+  XS: 12,
   S: 16,
   M: 20,
   L: 24,
   XL: 32,
+  extraSmall: 12,
   small: 16,
   medium: 20,
   large: 24,

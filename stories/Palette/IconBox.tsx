@@ -12,7 +12,7 @@ import {
 } from './styles';
 
 type Size = CustomizedSVGComponentProps['size'];
-const iconSizes: NotUndefined<Size>[] = ['S', 'M', 'L', 'XL'];
+const iconSizes: NotUndefined<Size>[] = ['XS', 'S', 'M', 'L', 'XL'];
 
 interface IconBoxProps extends HTMLAttributes<HTMLElement> {
   Icon: CustomizedSVGComponent;
