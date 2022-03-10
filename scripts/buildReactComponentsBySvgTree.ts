@@ -130,15 +130,15 @@ export const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
 );
   `.trim();
 
-  const componentPath = svg.path
+  const componentPath = svg.path.split(path.sep).join(path.posix.sep)
     // change dirname
     .replace(
-      new RegExp(`(?<=${path.sep}?)${svg.dirname}(?=${path.sep})`),
+      new RegExp(`(?<=${path.posix.sep}?)${svg.dirname}(?=${path.posix.sep})`),
       component.dirname,
     )
     // filename to pascal-case, and change extname
     .replace(
-      new RegExp(`(?<=[${path.sep}]?)([\\w-]+)\\.svg$`),
+      new RegExp(`(?<=[${path.posix.sep}]?)([\\w-]+)\\.svg$`),
       (_, basename: string) => {
         return `${toPascalCase(basename)}.tsx`;
       },

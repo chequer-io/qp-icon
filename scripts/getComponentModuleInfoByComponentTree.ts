@@ -30,7 +30,7 @@ export default async function getComponentModuleInfoByComponentTree({
     const componentPath = path.relative(
       path.resolve(__dirname, srcDir),
       path.resolve(__dirname, itemPath),
-    );
+    ).split(path.sep).join(path.posix.sep);
 
     const phrase = `export * from './${exceptExtension(componentPath)}';`;
     exportPhrases.push(phrase);
