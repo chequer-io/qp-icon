@@ -177,6 +177,7 @@ export * from './components/User/QIUserAdd';
 export * from './components/User/QIUserMinus';
 export * from './components/Vendor/QIDBAmazonAthena';
 export * from './components/Vendor/QIDBAmazonDocumentDB';
+export * from './components/Vendor/QIDBAthena';
 export * from './components/Vendor/QIDBAzure';
 export * from './components/Vendor/QIDBBigquery';
 export * from './components/Vendor/QIDBCassandra';
