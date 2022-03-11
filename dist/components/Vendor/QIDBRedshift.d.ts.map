@@ -1,1 +1,1 @@
-{"version":3,"file":"QIDBRedshift.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBRedshift.tsx"],"names":[],"mappings":"AAEA,OAAO,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAEvD,eAAO,MAAM,YAAY,EAAE,sBAyC1B,CAAC"}
+{"version":3,"file":"QIDBRedshift.d.ts","sourceRoot":"","sources":["../../../src/components/Vendor/QIDBRedshift.tsx"],"names":[],"mappings":"AAEA,OAAO,EAAE,sBAAsB,EAAE,MAAM,eAAe,CAAC;AAEvD,eAAO,MAAM,YAAY,EAAE,sBAuB1B,CAAC"}
