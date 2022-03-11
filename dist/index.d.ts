@@ -157,6 +157,8 @@ export * from './components/State/QIFailed';
 export * from './components/State/QIInfoCircleLine';
 export * from './components/State/QIMinusCircleLine';
 export * from './components/State/QIPlayCircleLine';
+export * from './components/State/QIPlayCircleSolid';
+export * from './components/State/QIPlayCircleSolidLine';
 export * from './components/State/QIPlusCircle';
 export * from './components/State/QIPlusCircleLine';
 export * from './components/State/QIQuestionCircleLine';
