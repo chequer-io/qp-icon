@@ -44,6 +44,7 @@ export * from './components/Basic/QIConnections';
 export * from './components/Basic/QICopy';
 export * from './components/Basic/QIDelete';
 export * from './components/Basic/QIDisconnect';
+export * from './components/Basic/QIDownload';
 export * from './components/Basic/QIDrag';
 export * from './components/Basic/QIDrag_Legacy';
 export * from './components/Basic/QIEdit';
