@@ -6,13 +6,14 @@ export const QISequence: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
-    data-qi-color-controllable="true"
+    data-qi-color-controllable="false"
     {...props}
   >
+    <path d="M5 8H7V22H10V24H2V22H5V12H3V10H5V8Z" fill="black" />
+    <path d="M13 22H15V24H13V22Z" fill="black" />
+    <path d="M19 22H17V24H19V22Z" fill="black" />
     <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M8 9V21H10V23H4V21H6V12H4V10H6V9H8ZM22 9H26C26.5304 9 27.0391 9.21074 27.4142 9.58582C27.7893 9.96089 28 10.4696 28 11V21C28 21.5304 27.7893 22.0391 27.4142 22.4142C27.0391 22.7893 26.5304 23 26 23H22V21H26V17H23V15H26V11H22V9ZM13 21H15V23H13V21ZM19 21H17V23H19V21Z"
+      d="M22 22H28V17H23V15H28V10H22V8H28C29.1046 8 30 8.89543 30 10V22C30 23.1046 29.1046 24 28 24H22V22Z"
       fill="black"
     />
   </SvgComponent>
