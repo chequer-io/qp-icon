@@ -89,13 +89,9 @@ async function buildComponentFromSvg({
 
   const { colorControlExceptedIconDirnames } = await getConfig();
 
-  const pathLength = svgJson.path?.length ?? 0;
-  let colorControllable = false;
-  if (pathLength === 1) {
-    colorControllable = !colorControlExceptedIconDirnames.find(dirnameToken =>
-      new RegExp(`${dirnameToken}[\\/]`).test(svg.path),
-    );
-  }
+  const colorControllable = !colorControlExceptedIconDirnames.find(
+    dirnameToken => new RegExp(`${dirnameToken}[\\/]`).test(svg.path),
+  );
 
   const styledJson = {
     [innerComponentName]: {
@@ -130,7 +126,9 @@ export const ${component.name}: CustomizedSVGComponent = ({ ...props }) => (
 );
   `.trim();
 
-  const componentPath = svg.path.split(path.sep).join(path.posix.sep)
+  const componentPath = svg.path
+    .split(path.sep)
+    .join(path.posix.sep)
     // change dirname
     .replace(
       new RegExp(`(?<=${path.posix.sep}?)${svg.dirname}(?=${path.posix.sep})`),

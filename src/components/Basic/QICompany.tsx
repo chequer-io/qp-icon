@@ -6,7 +6,7 @@ export const QICompany: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
-    data-qi-color-controllable="false"
+    data-qi-color-controllable="true"
     {...props}
   >
     <path d="M8 7.5H12V9.5H8V7.5Z" fill="black" />

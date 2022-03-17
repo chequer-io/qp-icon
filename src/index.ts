@@ -42,7 +42,6 @@ export * from './components/Basic/QICluster';
 export * from './components/Basic/QICompany';
 export * from './components/Basic/QIConnect';
 export * from './components/Basic/QIConnections';
-export * from './components/Basic/QICopy';
 export * from './components/Basic/QICopyM';
 export * from './components/Basic/QICopyS';
 export * from './components/Basic/QIDelete';

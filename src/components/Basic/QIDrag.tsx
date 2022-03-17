@@ -6,7 +6,7 @@ export const QIDrag: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="querypie-icon"
-    data-qi-color-controllable="false"
+    data-qi-color-controllable="true"
     {...props}
   >
     <path d="M14 6H10V10H14V6Z" fill="black" />
