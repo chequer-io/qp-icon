@@ -41,6 +41,7 @@ export * from './components/Basic/QICloseL';
 export * from './components/Basic/QICluster';
 export * from './components/Basic/QICompany';
 export * from './components/Basic/QIConnect';
+export * from './components/Basic/QIConnectHalfSolid';
 export * from './components/Basic/QIConnections';
 export * from './components/Basic/QICopyM';
 export * from './components/Basic/QICopyS';
