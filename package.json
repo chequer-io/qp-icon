@@ -1,7 +1,7 @@
 {
-  "name": "querypie-icon",
-  "version": "0.0.1",
-  "homepage": "https://chequer-io.github.io/querypie-icon",
+  "name": "qp-icon",
+  "version": "0.0.0",
+  "homepage": "https://chequer-io.github.io/qp-icon",
   "main": "dist/main",
   "typings": "dist/index",
   "scripts": {
