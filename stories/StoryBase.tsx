@@ -43,5 +43,5 @@ const defaultMeta: ComponentMeta<typeof Palette> = {
 };
 export const getStoryBase = (subTitle?: string) => ({
   ...defaultMeta,
-  title: `querypie-icon${subTitle ? `/${subTitle}` : ''}`,
+  title: `qp-icon${subTitle ? `/${subTitle}` : ''}`,
 });

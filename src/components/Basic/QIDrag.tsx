@@ -5,7 +5,7 @@ import { CustomizedSVGComponent } from '../../typings';
 export const QIDrag: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
-    role="querypie-icon"
+    role="qp-icon"
     data-qi-color-controllable="true"
     {...props}
   >

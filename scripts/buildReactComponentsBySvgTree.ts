@@ -20,7 +20,7 @@ type SvgCustomProps = {
 const svgCustomProps: SvgCustomProps = {
   role: {
     key: 'role',
-    value: 'querypie-icon',
+    value: 'qp-icon',
   },
   controllable: {
     key: 'data-qi-color-controllable',
