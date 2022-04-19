@@ -147,6 +147,66 @@ export const IconText = styled.div`
   }
 `;
 
+export const ToggleWrapper = styled.section`
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 14px;
+
+  span {
+    font-size: 14px;
+  }
+`;
+
+export const Toggle = styled.div`
+  position: relative;
+  top: 1px;
+
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+
+    :checked + label {
+      background: #57a9cf;
+    }
+
+    :checked + label:after {
+      left: calc(100% - 3px);
+      transform: translateX(-100%);
+    }
+  }
+
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 24px;
+    height: 15px;
+    background: grey;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+
+    :after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 9px;
+      height: 9px;
+      background: #fff;
+      border-radius: 9px;
+      transition: 0.3s;
+    }
+
+    :active:after {
+      width: 15px;
+    }
+  }
+`;
+
 export const ToastContainer = styled(_ToastContainer)`
   width: initial !important;
 `;

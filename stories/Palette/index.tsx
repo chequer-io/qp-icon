@@ -8,10 +8,13 @@ import {
   StyledPalette,
   ToastContainer,
   toastGlobalStyles,
+  Toggle,
+  ToggleWrapper,
 } from './styles';
 import { Global } from '@emotion/react';
 import { CustomizedSVGComponent } from '../../src/typings';
 import ImportCodeBox from './ImportCodeBox';
+import { useCallback, useState } from 'react';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
@@ -31,12 +34,17 @@ export const Palette = ({
     searchWord,
     onChangeSearchWord,
     filteredComponents: filteredIcons,
+    setUseFuse,
   } = useComponentNameSearch<CustomizedSVGComponent>(icons);
 
   const { clickedIconName, copyClickedIconName } = useIconCopyClick({
     selector: '[data-role="icon-box"]',
     iconComponentNameDataSetKey: 'componentName',
   });
+
+  const handleChangeFuse = useCallback(() => {
+    setUseFuse(prev => !prev);
+  }, []);
 
   return (
     <>
@@ -60,6 +68,17 @@ export const Palette = ({
               placeholder="Search icons here, click icon to copy code ..."
               autoComplete="false"
             />
+            <ToggleWrapper>
+              <span>Fuse </span>
+              <Toggle>
+                <input
+                  type="checkbox"
+                  id="toggle"
+                  onChange={handleChangeFuse}
+                />
+                <label htmlFor="toggle" />
+              </Toggle>
+            </ToggleWrapper>
           </header>
           <IconGallery onClick={copyClickedIconName}>
             {filteredIcons.map(Icon => (
