@@ -43,7 +43,7 @@ const ImportCodeBox = () => {
       <span data-color="purple">{`}`}</span> <span data-color="cyan">from</span>{' '}
       <span data-color="green">'qp-icon'</span>
       <span data-color="purple">;</span>
-      <CopyIcon size="S" onClick={handleClickCopyIcon} />
+      <CopyIcon fontSize={16} onClick={handleClickCopyIcon} />
     </Code>
   );
 };

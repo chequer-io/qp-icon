@@ -1,44 +1,19 @@
 import * as React from 'react';
-import {
-  CommonSVGComponent,
-  IconSize,
-  NotUndefined,
-  SVGElementProps,
-} from '../typings';
-
-type SVGWidthOrHeight = NotUndefined<
-  SVGElementProps['width'] | SVGElementProps['height']
->;
-
-export const sizeMap: { [key in NotUndefined<IconSize>]: SVGWidthOrHeight } = {
-  XS: 12,
-  S: 16,
-  M: 20,
-  L: 24,
-  XL: 32,
-  extraSmall: 12,
-  small: 16,
-  medium: 20,
-  large: 24,
-  extraLarge: 32,
-  responsive: '1em',
-};
+import { CommonSVGComponent } from '../typings';
 
 const SvgComponent: CommonSVGComponent = ({
-  size = 'responsive',
+  fontSize = '1em',
   style = {},
   viewBox,
   children,
   ...rest
 }) => {
-  const iconSize = sizeMap[size];
-
   return (
     <svg
       viewBox={viewBox}
       style={style}
-      width={iconSize}
-      height={iconSize}
+      width={fontSize}
+      height={fontSize}
       {...rest}
     >
       {children}

@@ -15,15 +15,15 @@ import ImportCodeBox from './ImportCodeBox';
 
 interface PaletteProps {
   icons: CustomizedSVGComponent[];
-  isExpand: boolean;
   pageTitle?: string;
+  iconSize: number;
   color: string;
   backgroundColor: string;
 }
 export const Palette = ({
   icons,
-  isExpand,
   pageTitle,
+  iconSize,
   color,
   backgroundColor,
 }: PaletteProps) => {
@@ -69,7 +69,7 @@ export const Palette = ({
                 data-component-name={Icon.name}
                 isClicked={clickedIconName === Icon.name}
                 Icon={Icon}
-                isExpand={isExpand}
+                iconSize={iconSize}
                 color={color}
                 backgroundColor={backgroundColor}
               />

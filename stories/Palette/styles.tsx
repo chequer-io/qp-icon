@@ -82,7 +82,7 @@ export const IconGallery = styled.div`
   display: grid;
   grid-auto-rows: auto;
   grid-auto-columns: max-content;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
   height: 100%;
 `;
@@ -129,12 +129,6 @@ export const IconBoxContent = styled.div<{
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-`;
-
-export const IconsContainer = styled.div`
-  display: flex;
-  align-items: flex-end;
-  gap: 1rem;
 `;
 
 export const IconText = styled.div`

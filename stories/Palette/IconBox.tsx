@@ -1,30 +1,18 @@
 import { FC, HTMLAttributes, memo } from 'react';
-import {
-  CustomizedSVGComponent,
-  CustomizedSVGComponentProps,
-  NotUndefined,
-} from '../../src/typings';
-import {
-  IconBoxContent,
-  IconBoxLabel,
-  IconsContainer,
-  StyledIconBox,
-} from './styles';
-
-type Size = CustomizedSVGComponentProps['size'];
-const iconSizes: NotUndefined<Size>[] = ['XS', 'S', 'M', 'L', 'XL'];
+import { CustomizedSVGComponent } from '../../src/typings';
+import { IconBoxContent, IconBoxLabel, StyledIconBox } from './styles';
 
 interface IconBoxProps extends HTMLAttributes<HTMLElement> {
   Icon: CustomizedSVGComponent;
-  isExpand: boolean;
   isClicked: boolean;
+  iconSize: number;
   color: string;
   backgroundColor: string;
 }
 const IconBox: FC<IconBoxProps> = ({
   Icon,
   isClicked,
-  isExpand,
+  iconSize,
   color,
   backgroundColor,
   ...rest
@@ -34,30 +22,7 @@ const IconBox: FC<IconBoxProps> = ({
   return (
     <StyledIconBox isClicked={isClicked} {...rest}>
       <IconBoxContent color={color} backgroundColor={backgroundColor}>
-        {!isExpand ? (
-          <Icon size="XL" />
-        ) : (
-          <>
-            <IconsContainer>
-              {iconSizes.map(size => (
-                <section title={size} key={`${label}--icon-${size}`}>
-                  <Icon size={size} />
-                </section>
-              ))}
-            </IconsContainer>
-            {/*<article>*/}
-            {/*  {iconSizes.map(size => (*/}
-            {/*    <IconText*/}
-            {/*      title={size}*/}
-            {/*      key={`${label}--icon-text-${size}`}*/}
-            {/*      style={{ fontSize: sizeMap[size] }}*/}
-            {/*    >*/}
-            {/*      <Icon size={size} /> {size} Text*/}
-            {/*    </IconText>*/}
-            {/*  ))}*/}
-            {/*</article>*/}
-          </>
-        )}
+        <Icon fontSize={iconSize} />
       </IconBoxContent>
 
       <IconBoxLabel>{label}</IconBoxLabel>

@@ -18,12 +18,16 @@ const defaultMeta: ComponentMeta<typeof Palette> = {
         disable: true,
       },
     },
-    isExpand: {
-      name: 'Expand',
-      description: `false일 경우 "1em" 사이즈 아이콘만 표시`,
-      type: 'boolean',
-      control: 'boolean',
-      defaultValue: false,
+    iconSize: {
+      name: 'iconSize',
+      description: '',
+      type: 'number',
+      control: {
+        type: 'range',
+        min: 5,
+        max: 40,
+      },
+      defaultValue: 32,
     },
     color: {
       name: 'color',
