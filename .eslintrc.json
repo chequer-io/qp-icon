@@ -12,7 +12,8 @@
     "prettier"
   ],
   "ignorePatterns": [
-    "dist/**"
+    "dist/**",
+    "storybook-static/**"
   ],
   "rules": {
     "react/display-name": 0
