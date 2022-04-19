@@ -1,4 +1,3 @@
-import { readFile } from 'fs/promises';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -39,7 +38,7 @@ export default async function getConfig(): Promise<Config> {
       return defaultConfig;
     }
 
-    const config = require(configFilePath);
+    const { default: config } = await import(configFilePath);
 
     return {
       ...defaultConfig,
