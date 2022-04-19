@@ -3,7 +3,7 @@ import getConfig from './getConfig';
 import rimraf from 'rimraf';
 
 const prepareGenerate = async () => {
-  const { dirname, filename } = await getConfig();
+  const { dirname } = await getConfig();
 
   console.log(`🚚 Clear components directory ...`);
   await rimraf(dirname.component, error => {
@@ -13,12 +13,7 @@ const prepareGenerate = async () => {
   });
 
   console.log(`🚚 Building react components from svg files...`);
-  await buildReactComponentsBySvgTree({
-    srcDir: dirname.src,
-    svgDir: dirname.svg,
-    componentDir: dirname.component,
-    treeFilename: filename.tree,
-  });
+  await buildReactComponentsBySvgTree();
 };
 
 (async () => {

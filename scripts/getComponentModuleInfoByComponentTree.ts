@@ -1,6 +1,7 @@
+import * as path from 'path';
 import dirTree, { DirectoryTreeCallback } from 'directory-tree';
 import { getTreeFileBody, makeFile } from './utils';
-import * as path from 'path';
+import getConfig from './getConfig';
 
 export type ComponentNames = string[];
 export type ComponentImportsMap = {
@@ -8,31 +9,24 @@ export type ComponentImportsMap = {
 };
 export type ComponentsExportPhrases = string[];
 
-export type Props = {
-  srcDir: string;
-  componentDir: string;
-  treeFilename: string;
-};
-export default async function getComponentModuleInfoByComponentTree({
-  srcDir,
-  componentDir,
-  treeFilename,
-}: Props): Promise<{
+export default async function getComponentModuleInfoByComponentTree(): Promise<{
   importsMap: ComponentImportsMap;
   exportPhrases: ComponentsExportPhrases;
 }> {
+  const { dirname, filename } = await getConfig();
+
   const importsMap: ComponentImportsMap = {};
   const exportPhrases: ComponentsExportPhrases = [];
 
   const onEachFile: DirectoryTreeCallback = (item, itemPath) => {
     const exceptExtension = (str: string) => str.replace(/\.tsx$/, '');
 
-    const componentPath = path.relative(
-      path.resolve(__dirname, srcDir),
+    const componentRelativePath = './' + path.relative(
+      path.resolve(__dirname, dirname.src),
       path.resolve(__dirname, itemPath),
     ).split(path.sep).join(path.posix.sep);
 
-    const phrase = `export * from './${exceptExtension(componentPath)}';`;
+    const phrase = `export * from '${exceptExtension(componentRelativePath)}';`;
     exportPhrases.push(phrase);
   };
 
@@ -42,13 +36,13 @@ export default async function getComponentModuleInfoByComponentTree({
 
     if (!hasChildFile) return;
 
-    const isRootDir = item.name === componentDir;
+    const isRootDir = item.name === dirname.component;
     const dirName = isRootDir ? 'none' : item.name;
     importsMap[dirName] = childFiles.map(file => file.name.replace('.tsx', ''));
   };
 
   const componentsTree = dirTree(
-    componentDir,
+    dirname.component,
     {
       extensions: /\.tsx/,
       attributes: ['type'],
@@ -58,7 +52,7 @@ export default async function getComponentModuleInfoByComponentTree({
   );
   const componentsJsonTree = JSON.stringify(componentsTree, null, '\t');
   await makeFile(
-    `${componentDir}/${treeFilename}`,
+    `${dirname.component}/${filename.tree}`,
     getTreeFileBody(componentsJsonTree),
   );
 

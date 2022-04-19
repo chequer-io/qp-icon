@@ -9,9 +9,11 @@ type Props = {
 export default async function createComponentIndexModule({
   exportPhrases,
 }: Props) {
+  const { dirname } = await getConfig();
+
   const fileBody = exportPhrases.reduce((acc, curr) => {
     return acc + curr + '\r\n';
   }, '');
-  const { dirname } = await getConfig();
+
   await makeFile(path.join(dirname.src, 'index.ts'), fileBody);
 }

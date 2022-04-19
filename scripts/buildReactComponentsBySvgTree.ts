@@ -27,28 +27,19 @@ const svgCustomProps: SvgCustomProps = {
   },
 } as const;
 
-type Props = {
-  srcDir: string;
-  svgDir: string;
-  componentDir: string;
-  treeFilename: string;
-};
-export default async function buildReactComponentsBySvgTree({
-  srcDir,
-  svgDir,
-  componentDir,
-  treeFilename,
-}: Props) {
+export default async function buildReactComponentsBySvgTree() {
+  const { dirname, filename } = await getConfig();
+
   const onEachFile: DirectoryTreeCallback = async (item, svgPath) => {
     try {
       await buildComponentFromSvg({
         svg: {
           path: svgPath,
-          dirname: svgDir,
+          dirname: dirname.svg,
         },
         component: {
           name: toPascalCase(path.basename(item.name, '.svg')),
-          dirname: componentDir,
+          dirname: dirname.component,
         },
       });
     } catch (err) {
@@ -56,9 +47,9 @@ export default async function buildReactComponentsBySvgTree({
     }
   };
 
-  await checkOrCreateDir([componentDir, svgDir]);
+  await checkOrCreateDir([dirname.component, dirname.svg]);
   const svgTree = dirTree(
-    svgDir,
+    dirname.svg,
     {
       extensions: /\.svg/,
       attributes: ['type'],
@@ -67,7 +58,7 @@ export default async function buildReactComponentsBySvgTree({
   );
   const svgJsonTree = JSON.stringify(svgTree, null, '\t');
 
-  await makeFile(`${svgDir}/${treeFilename}`, getTreeFileBody(svgJsonTree));
+  await makeFile(`${dirname.svg}/${filename.tree}`, getTreeFileBody(svgJsonTree));
 }
 
 async function buildComponentFromSvg({

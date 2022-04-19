@@ -3,10 +3,11 @@ import { ComponentImportsMap } from './getComponentModuleInfoByComponentTree';
 import getConfig from './getConfig';
 
 type Props = {
-  storyDir: string;
   importsMap: ComponentImportsMap;
 };
-export default async function createStory({ storyDir, importsMap }: Props) {
+export default async function createStory({ importsMap }: Props) {
+  const { dirname } = await getConfig();
+
   const sortedImportsMapArr = Object.entries(importsMap).sort(
     ([dirnameA], [dirnameB]) => {
       if (dirnameA < dirnameB) {
@@ -22,7 +23,6 @@ export default async function createStory({ storyDir, importsMap }: Props) {
     .flatMap(([, componentNames]) => componentNames)
     .join(', ');
 
-  const { dirname } = await getConfig();
   const getFileHeader = ({ subTitle = '' } = {}) =>
     `
 import { getStoryBase, paletteFactory } from './StoryBase';
@@ -60,6 +60,6 @@ ${categoryName}.args = {
 }, '')}
   `.trim();
 
-  await makeFile(`${storyDir}/Icon.stories.tsx`, rootFile);
-  await makeFile(`${storyDir}/IconCategories.stories.tsx`, categoriesFile);
+  await makeFile(`${dirname.story}/Icon.stories.tsx`, rootFile);
+  await makeFile(`${dirname.story}/IconCategories.stories.tsx`, categoriesFile);
 }
