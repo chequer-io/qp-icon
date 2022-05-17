@@ -200,6 +200,7 @@ export * from './components/Vendor/QIDBMysql';
 export * from './components/Vendor/QIDBOracle';
 export * from './components/Vendor/QIDBPostgresql';
 export * from './components/Vendor/QIDBPresto';
+export * from './components/Vendor/QIDBRedis';
 export * from './components/Vendor/QIDBRedshift';
 export * from './components/Vendor/QIDBScylla';
 export * from './components/Vendor/QIDBSnowflake';
