@@ -1,6 +1,6 @@
 {
   "name": "qp-icon",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://chequer-io.github.io/qp-icon",
   "main": "dist/main",
   "typings": "dist/index",
@@ -11,7 +11,7 @@
     "clean": "rimraf node_modules/ package-lock.json && npm cache clean -f && npm i",
     "build": "rimraf dist && npm run generate && webpack --config ./webpack/webpack.config.ts && ncp ./src/styles.css ./dist/styles.css",
     "deploy-storybook": "npm run generate && build-storybook && gh-pages -d storybook-static",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
