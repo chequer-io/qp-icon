@@ -99,6 +99,7 @@ export * from './components/Cloud/QIAzureCloud';
 export * from './components/Cloud/QIGCP';
 export * from './components/ColorIcon/QIObjectDatabaseColor';
 export * from './components/ColorIcon/QIObjectTableColor';
+export * from './components/ColorIcon/QIledger';
 export * from './components/Communication/QIComment';
 export * from './components/Communication/QIMail';
 export * from './components/Communication/QIMessage';
