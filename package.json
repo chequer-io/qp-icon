@@ -7,11 +7,11 @@
   "scripts": {
     "prepare-generate": "ts-node scripts/prepareGenerate.ts",
     "generate": "npm run prepare-generate && ts-node scripts/generate.ts",
-    "storybook": "npm run generate && start-storybook -p 6006",
     "clean": "rimraf node_modules/ package-lock.json && npm cache clean -f && npm i",
     "build": "rimraf dist && npm run generate && webpack --config ./webpack/webpack.config.ts && ncp ./src/styles.css ./dist/styles.css",
-    "deploy-storybook": "npm run generate && build-storybook && gh-pages -d storybook-static",
-    "prepublishOnly": "npm run build"
+    "storybook": "npm run generate && start-storybook -p 6006",
+    "deploy-storybook": "build-storybook && gh-pages -d storybook-static",
+    "deploy": "npm run build && npm run deploy-storybook && npm publish"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
