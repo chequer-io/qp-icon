@@ -1,6 +1,6 @@
 {
   "name": "qp-icon",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "homepage": "https://chequer-io.github.io/qp-icon",
   "main": "dist/main",
   "typings": "dist/index",
