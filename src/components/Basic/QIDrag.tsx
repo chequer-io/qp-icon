@@ -9,11 +9,11 @@ export const QIDrag: CustomizedSVGComponent = ({ ...props }) => (
     data-qi-color-controllable="true"
     {...props}
   >
-    <path d="M14 6H10V10H14V6Z" fill="black" />
-    <path d="M22 6H18V10H22V6Z" fill="black" />
-    <path d="M14 14H10V18H14V14Z" fill="black" />
-    <path d="M22 14H18V18H22V14Z" fill="black" />
-    <path d="M14 22H10V26H14V22Z" fill="black" />
-    <path d="M22 22H18V26H22V22Z" fill="black" />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M14 6H10V10H14V6ZM14 14H10V18H14V14ZM10 22H14V26H10V22ZM22 6H18V10H22V6ZM18 14H22V18H18V14ZM22 22H18V26H22V22Z"
+      fill="#656C72"
+    />
   </SvgComponent>
 );
