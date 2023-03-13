@@ -9,6 +9,6 @@ export const QILineM: CustomizedSVGComponent = ({ ...props }) => (
     data-qi-color-controllable="true"
     {...props}
   >
-    <path d="M15 5H17V27H15V5Z" fill="black" />
+    <path d="M15 5H17V27H15V5Z" fill="#656C72" />
   </SvgComponent>
 );

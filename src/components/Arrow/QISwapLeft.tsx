@@ -13,7 +13,7 @@ export const QISwapLeft: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M11 9L4 16L11 23L12.41 21.59L7.82821 17L28 17L28 15L7.82821 15L12.41 10.41L11 9Z"
-      fill="black"
+      fill="#656C72"
     />
   </SvgComponent>
 );
