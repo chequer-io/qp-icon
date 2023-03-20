@@ -199,6 +199,7 @@ export * from './components/Server/QIServerSingle';
 export * from './components/Server/QIServerStore';
 export * from './components/Server/QIServerTime';
 export * from './components/Server/QIServerView';
+export * from './components/Server/QIServerlist';
 export * from './components/Server/QIStorageRequest';
 export * from './components/Server/QITerminal';
 export * from './components/Server/QIimageService';
