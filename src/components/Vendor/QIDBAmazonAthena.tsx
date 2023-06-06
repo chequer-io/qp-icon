@@ -60,7 +60,7 @@ export const QIDBAmazonAthena: CustomizedSVGComponent = ({ ...props }) => (
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M14.3036 18.1867V10.9333L12.3969 10.7867V18.5067L14.3036 18.1867V18.1867Z"
+      d="M14.3036 18.1867V10.9333L12.3969 10.7867V18.5067L14.3036 18.1867Z"
       fill="#F58534"
     />
     <path
