@@ -219,6 +219,7 @@ export * from './components/State/QIExclamationCircleSolid';
 export * from './components/State/QIFailed';
 export * from './components/State/QIInfoCircleLine';
 export * from './components/State/QIMinusCircleLine';
+export * from './components/State/QIPauseLineSolid';
 export * from './components/State/QIPlayCircleLine';
 export * from './components/State/QIPlayCircleLineSolid';
 export * from './components/State/QIPlayCircleSolid';
