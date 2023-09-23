@@ -148,6 +148,7 @@ export * from './components/File/QIRequestFile';
 export * from './components/File/QIResult';
 export * from './components/File/QISettingEdit';
 export * from './components/File/QISqlFile';
+export * from './components/File/QIUpstairsFile';
 export * from './components/File/QIWorkspace';
 export * from './components/Grid/QIObjectPanel';
 export * from './components/Grid/QIPanelViewColumn';
