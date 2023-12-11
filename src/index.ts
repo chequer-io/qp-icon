@@ -58,6 +58,7 @@ export * from './components/Basic/QIDownload';
 export * from './components/Basic/QIDrag';
 export * from './components/Basic/QIDrag_Legacy';
 export * from './components/Basic/QIEdit';
+export * from './components/Basic/QIEnter';
 export * from './components/Basic/QIEnterprise';
 export * from './components/Basic/QIExport';
 export * from './components/Basic/QIEye';
