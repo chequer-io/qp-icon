@@ -1,6 +1,6 @@
 {
   "name": "qp-icon",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "homepage": "https://chequer-io.github.io/qp-icon",
   "main": "dist/main",
   "typings": "dist/index",
@@ -34,7 +34,7 @@
     "react-toastify": "^8.2.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.5.0",
-    "xml2js": "^0.4.23",
+    "xml2js": "^0.5.0",
     "@storybook/addon-actions": "^6.5.5",
     "@storybook/addon-controls": "^6.5.5",
     "@storybook/addon-essentials": "^6.5.5",
