@@ -29,7 +29,7 @@ npm install qp-icon
 
 ## Example
 
-```typescript
+```JavaScript
 import { QILogout } from 'qp-icon';
 
 function App() {
