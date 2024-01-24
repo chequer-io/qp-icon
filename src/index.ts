@@ -274,4 +274,5 @@ export * from './components/Vendor/QIDBRedshift';
 export * from './components/Vendor/QIDBScylla';
 export * from './components/Vendor/QIDBSnowflake';
 export * from './components/Vendor/QIDBSqlserver';
+export * from './components/Vendor/QIDBTibero';
 export * from './components/Vendor/QIDBTrino';
