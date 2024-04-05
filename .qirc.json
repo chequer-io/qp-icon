@@ -5,6 +5,7 @@
     "Symbol",
     "IdentityProvider",
     "ColorIcon",
-    "Agent"
+    "Agent",
+    "OS"
   ]
 }
