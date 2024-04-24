@@ -169,6 +169,7 @@ export * from './components/Misc/QILineS';
 export * from './components/OS/QIAmazonLinux';
 export * from './components/OS/QICentOS';
 export * from './components/OS/QIRedHat';
+export * from './components/OS/QISingleStore';
 export * from './components/OS/QIubuntu';
 export * from './components/Server/QIBareMetalServer01';
 export * from './components/Server/QIBareMetalServer02';
