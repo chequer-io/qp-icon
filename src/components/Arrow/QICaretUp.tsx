@@ -13,7 +13,7 @@ export const QICaretUp: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M16 11L9 19H23L16 11Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );

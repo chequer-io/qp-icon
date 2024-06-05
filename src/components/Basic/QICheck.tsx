@@ -11,7 +11,7 @@ export const QICheck: CustomizedSVGComponent = ({ ...props }) => (
   >
     <path
       d="M13 24.41L4 15.41L5.41 14L13 21.58L26.59 8L28 9.41L13 24.41Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );

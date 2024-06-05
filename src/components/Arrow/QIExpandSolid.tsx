@@ -13,7 +13,7 @@ export const QIExpandSolid: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M16 4L9 12H23L16 4ZM16 28L23 20H9L16 28Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );
