@@ -13,7 +13,7 @@ export const QITreeClosed: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M21 16L13 9L13 23L21 16Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );

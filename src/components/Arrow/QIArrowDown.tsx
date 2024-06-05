@@ -11,7 +11,7 @@ export const QIArrowDown: CustomizedSVGComponent = ({ ...props }) => (
   >
     <path
       d="M24.59 16.59L17 24.17V4H15V24.17L7.41003 16.59L6 18L16 28L26 18L24.59 16.59Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );

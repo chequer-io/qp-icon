@@ -13,13 +13,13 @@ export const QITableExpand: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M16 32L5 20L27 20L16 32Z"
-      fill="#656C72"
+      fill="#818589"
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M16 0L5 12L27 12L16 0Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );

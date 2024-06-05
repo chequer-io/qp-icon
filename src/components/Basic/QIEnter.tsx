@@ -10,8 +10,8 @@ export const QIEnter: CustomizedSVGComponent = ({ ...props }) => (
     {...props}
   >
     <path
-      d="M28 21H5.83L9.42 24.59L8 26L2 20L8 14L9.41 15.41L5.83 19H28V8H18V6H28C29.1 6 30 6.9 30 8V19C30 20.1 29.1 21 28 21Z"
-      fill="#656C72"
+      d="M26 20H7.83L11.42 23.59L10 25L4 19L10 13L11.41 14.41L7.83 18H26V7H28V18C28 19.1 27.1 20 26 20Z"
+      fill="#818589"
     />
   </SvgComponent>
 );

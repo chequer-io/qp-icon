@@ -13,7 +13,7 @@ export const QITableDown: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M16 27L1 9L31 9L16 27Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );

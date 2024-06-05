@@ -9,6 +9,6 @@ export const QIMinus: CustomizedSVGComponent = ({ ...props }) => (
     data-qi-color-controllable="true"
     {...props}
   >
-    <path d="M25 15H7V17H25V15Z" fill="#656C72" />
+    <path d="M25 15H7V17H25V15Z" fill="#818589" />
   </SvgComponent>
 );

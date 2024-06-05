@@ -13,7 +13,7 @@ export const QIImport: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M16 22L9 15L10.41 13.59L15 18.1718L15 4H17L17 18.1718L21.59 13.59L23 15L16 22ZM26 22V26H6V22H4V26C4 27.11 4.89 28 6 28H26C27.1 28 28 27.11 28 26V22H26Z"
-      fill="#656C72"
+      fill="#818589"
     />
   </SvgComponent>
 );
