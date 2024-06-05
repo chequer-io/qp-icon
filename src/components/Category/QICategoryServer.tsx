@@ -2,11 +2,11 @@ import * as React from 'react';
 import SvgComponent from '../../common/SvgComponent';
 import { CustomizedSVGComponent } from '../../typings';
 
-export const Server: CustomizedSVGComponent = ({ ...props }) => (
+export const QICategoryServer: CustomizedSVGComponent = ({ ...props }) => (
   <SvgComponent
     viewBox="0 0 32 32"
     role="qp-icon"
-    data-qi-color-controllable="true"
+    data-qi-color-controllable="false"
     {...props}
   >
     <rect x="2" y="2" width="28" height="28" rx="4" fill="#4DB70D" />
