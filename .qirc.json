@@ -6,6 +6,8 @@
     "IdentityProvider",
     "ColorIcon",
     "Agent",
-    "OS"
+    "OS",
+    "Service",
+    "Category"
   ]
 }
