@@ -13,7 +13,7 @@ export const QISwapUp: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M23 11L16 4L9 11L10.41 12.41L15 7.82821V28H17V7.82821L21.59 12.41L23 11Z"
-      fill="#818589"
+      fill="#7E848A"
     />
   </SvgComponent>
 );

@@ -11,7 +11,7 @@ export const QIChevronUp: CustomizedSVGComponent = ({ ...props }) => (
   >
     <path
       d="M16 9L26 19L24.59 20.41L16 11.83L7.40997 20.41L6 19L16 9Z"
-      fill="#818589"
+      fill="#7E848A"
     />
   </SvgComponent>
 );

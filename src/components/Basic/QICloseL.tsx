@@ -11,7 +11,7 @@ export const QICloseL: CustomizedSVGComponent = ({ ...props }) => (
   >
     <path
       d="M28 5.4L26.6 4L16 14.6L5.40016 4L4.00016 5.4L14.6 16L4.00002 26.6L5.40003 28L16 17.4L26.6 28L28 26.6L17.4 16L28 5.4Z"
-      fill="#818589"
+      fill="#7E848A"
     />
   </SvgComponent>
 );
