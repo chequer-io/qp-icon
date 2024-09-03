@@ -11,7 +11,7 @@ export const QIDotM: CustomizedSVGComponent = ({ ...props }) => (
   >
     <path
       d="M24 16C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16C8 11.5817 11.5817 8 16 8C20.4183 8 24 11.5817 24 16Z"
-      fill="#818589"
+      fill="#7E848A"
     />
   </SvgComponent>
 );

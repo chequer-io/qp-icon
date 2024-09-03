@@ -11,7 +11,7 @@ export const QIChevronDownSmall: CustomizedSVGComponent = ({ ...props }) => (
   >
     <path
       d="M16 20.41L9 13.41L10.41 12L16 17.58L21.59 12L23 13.41L16 20.41Z"
-      fill="#818589"
+      fill="#7E848A"
     />
   </SvgComponent>
 );

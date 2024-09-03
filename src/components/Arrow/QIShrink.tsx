@@ -13,7 +13,7 @@ export const QIShrink: CustomizedSVGComponent = ({ ...props }) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M28.59 2L30 3.42004L21.41 12H28V14H18V4H20V10.59L28.59 2ZM4 20V18H14V28H12V21.41L3.41 30L2 28.58L10.59 20H4Z"
-      fill="#818589"
+      fill="#7E848A"
     />
   </SvgComponent>
 );

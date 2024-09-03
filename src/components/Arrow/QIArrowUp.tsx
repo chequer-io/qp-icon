@@ -11,7 +11,7 @@ export const QIArrowUp: CustomizedSVGComponent = ({ ...props }) => (
   >
     <path
       d="M16 4L6 14L7.41 15.41L15 7.83V28H17V7.83L24.59 15.41L26 14L16 4Z"
-      fill="#818589"
+      fill="#7E848A"
     />
   </SvgComponent>
 );
