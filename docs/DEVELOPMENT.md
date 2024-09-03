@@ -7,7 +7,7 @@ This document provides instructions on how to update the icons.
 
 ## 1. Download New Resources
 
-In QueryPie, icons are managed on Figma. Before starting development, access [this Figma page](https://www.figma.com/file/9UskG2nA4dI9fFHpmhcwFG/QueryPie-Icon?type=design&node-id=0%3A1&mode=design&t=PfTKr0f3oI4UjCwA-1).
+In QueryPie, icons are managed on Figma. Before starting development, access [this Figma page](https://www.figma.com/design/CPouIoDUkSLJg2pyUYbMZE/QueryPie-Icon?node-id=0-1&t=AWt8GqZXl1nduCIL-1).
 
 Once ready, export the required icon SVG files from the Figma page.
 
