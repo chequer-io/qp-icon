@@ -213,7 +213,6 @@ export * from './components/Qube/QIQubeSheet';
 export * from './components/Qube/QIQubeSlide';
 export * from './components/Qube/QIQubeTXT';
 export * from './components/Qube/QIQubeVideo';
-export * from './components/Qube/QIQubeWord';
 export * from './components/Server/QIBareMetalServer01';
 export * from './components/Server/QIBareMetalServer02';
 export * from './components/Server/QIBlockStorage';
